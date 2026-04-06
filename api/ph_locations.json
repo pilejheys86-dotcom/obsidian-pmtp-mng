@@ -1,0 +1,6762 @@
+{
+  "ABRA": [
+    {
+      "name": "BANGUED",
+      "zip": "2800"
+    },
+    {
+      "name": "BOLINEY",
+      "zip": "2815"
+    },
+    {
+      "name": "BUCAY",
+      "zip": "2805"
+    },
+    {
+      "name": "BUCLOC",
+      "zip": "2817"
+    },
+    {
+      "name": "DAGUIOMAN",
+      "zip": "2816"
+    },
+    {
+      "name": "DANGLAS",
+      "zip": "2825"
+    },
+    {
+      "name": "DOLORES",
+      "zip": "2801"
+    },
+    {
+      "name": "LA PAZ",
+      "zip": "2826"
+    },
+    {
+      "name": "LACUB",
+      "zip": "2821"
+    },
+    {
+      "name": "LAGANGILANG",
+      "zip": "2802"
+    },
+    {
+      "name": "LAGAYAN",
+      "zip": "2824"
+    },
+    {
+      "name": "LANGIDEN",
+      "zip": "2807"
+    },
+    {
+      "name": "LICUAN-BAAY (LICUAN)",
+      "zip": ""
+    },
+    {
+      "name": "LUBA",
+      "zip": "2813"
+    },
+    {
+      "name": "MALIBCONG",
+      "zip": "2820"
+    },
+    {
+      "name": "MANABO",
+      "zip": "2810"
+    },
+    {
+      "name": "PEÑARRUBIA",
+      "zip": "2804"
+    },
+    {
+      "name": "PIDIGAN",
+      "zip": "2806"
+    },
+    {
+      "name": "PILAR",
+      "zip": "2812"
+    },
+    {
+      "name": "SALLAPADAN",
+      "zip": "2818"
+    },
+    {
+      "name": "SAN ISIDRO",
+      "zip": "2809"
+    },
+    {
+      "name": "SAN JUAN",
+      "zip": "2823"
+    },
+    {
+      "name": "SAN QUINTIN",
+      "zip": "2808"
+    },
+    {
+      "name": "TAYUM",
+      "zip": "2803"
+    },
+    {
+      "name": "TINEG",
+      "zip": "2822"
+    },
+    {
+      "name": "TUBO",
+      "zip": "2814"
+    },
+    {
+      "name": "VILLAVICIOSA",
+      "zip": "2811"
+    }
+  ],
+  "AGUSAN DEL NORTE": [
+    {
+      "name": "BUENAVISTA",
+      "zip": "8601"
+    },
+    {
+      "name": "BUTUAN CITY",
+      "zip": "8600"
+    },
+    {
+      "name": "CABADBARAN CITY",
+      "zip": "8605"
+    },
+    {
+      "name": "CARMEN",
+      "zip": "8603"
+    },
+    {
+      "name": "JABONGA",
+      "zip": "8607"
+    },
+    {
+      "name": "KITCHARAO",
+      "zip": "8609"
+    },
+    {
+      "name": "LAS NIEVES",
+      "zip": "8610"
+    },
+    {
+      "name": "MAGALLANES",
+      "zip": "8604"
+    },
+    {
+      "name": "NASIPIT",
+      "zip": "8602"
+    },
+    {
+      "name": "REMEDIOS T. ROMUALDEZ",
+      "zip": "8611"
+    },
+    {
+      "name": "SANTIAGO",
+      "zip": "8608"
+    },
+    {
+      "name": "TUBAY",
+      "zip": "8606"
+    }
+  ],
+  "AGUSAN DEL SUR": [
+    {
+      "name": "BAYUGAN CITY",
+      "zip": "8502"
+    },
+    {
+      "name": "BUNAWAN",
+      "zip": "8506"
+    },
+    {
+      "name": "ESPERANZA",
+      "zip": "8513"
+    },
+    {
+      "name": "LA PAZ",
+      "zip": "8508"
+    },
+    {
+      "name": "LORETO",
+      "zip": "8507"
+    },
+    {
+      "name": "PROSPERIDAD",
+      "zip": "8500"
+    },
+    {
+      "name": "ROSARIO",
+      "zip": "8504"
+    },
+    {
+      "name": "SAN FRANCISCO",
+      "zip": "8501"
+    },
+    {
+      "name": "SAN LUIS",
+      "zip": "8511"
+    },
+    {
+      "name": "SANTA JOSEFA",
+      "zip": "8512"
+    },
+    {
+      "name": "SIBAGAT",
+      "zip": "8503"
+    },
+    {
+      "name": "TALACOGON",
+      "zip": "8510"
+    },
+    {
+      "name": "TRENTO",
+      "zip": "8505"
+    },
+    {
+      "name": "VERUELA",
+      "zip": "8509"
+    }
+  ],
+  "AKLAN": [
+    {
+      "name": "ALTAVAS",
+      "zip": "5616"
+    },
+    {
+      "name": "BALETE",
+      "zip": "5614"
+    },
+    {
+      "name": "BANGA",
+      "zip": "5601"
+    },
+    {
+      "name": "BATAN",
+      "zip": "5615"
+    },
+    {
+      "name": "BURUANGA",
+      "zip": "5609"
+    },
+    {
+      "name": "IBAJAY",
+      "zip": "5613"
+    },
+    {
+      "name": "KALIBO",
+      "zip": "5600"
+    },
+    {
+      "name": "LEZO",
+      "zip": "5605"
+    },
+    {
+      "name": "LIBACAO",
+      "zip": "5602"
+    },
+    {
+      "name": "MADALAG",
+      "zip": "5603"
+    },
+    {
+      "name": "MAKATO",
+      "zip": "5611"
+    },
+    {
+      "name": "MALAY",
+      "zip": "5608"
+    },
+    {
+      "name": "MALINAO",
+      "zip": "5606"
+    },
+    {
+      "name": "NABAS",
+      "zip": "5607"
+    },
+    {
+      "name": "NEW WASHINGTON",
+      "zip": "5610"
+    },
+    {
+      "name": "NUMANCIA",
+      "zip": "5604"
+    },
+    {
+      "name": "TANGALAN",
+      "zip": "5612"
+    }
+  ],
+  "ALBAY": [
+    {
+      "name": "BACACAY",
+      "zip": "4509"
+    },
+    {
+      "name": "CAMALIG",
+      "zip": "4502"
+    },
+    {
+      "name": "CITY OF LIGAO",
+      "zip": ""
+    },
+    {
+      "name": "DARAGA (LOCSIN)",
+      "zip": "4501"
+    },
+    {
+      "name": "GUINOBATAN",
+      "zip": "4503"
+    },
+    {
+      "name": "JOVELLAR",
+      "zip": "4515"
+    },
+    {
+      "name": "LEGAZPI CITY",
+      "zip": "4500"
+    },
+    {
+      "name": "LIBON",
+      "zip": "4507"
+    },
+    {
+      "name": "MALILIPOT",
+      "zip": "4510"
+    },
+    {
+      "name": "MALINAO",
+      "zip": "4512"
+    },
+    {
+      "name": "MANITO",
+      "zip": "4514"
+    },
+    {
+      "name": "OAS",
+      "zip": "4505"
+    },
+    {
+      "name": "PIO DURAN",
+      "zip": ""
+    },
+    {
+      "name": "POLANGUI",
+      "zip": "4506"
+    },
+    {
+      "name": "RAPU-RAPU",
+      "zip": "4517"
+    },
+    {
+      "name": "SANTO DOMINGO (LIBOG)",
+      "zip": ""
+    },
+    {
+      "name": "TABACO CITY",
+      "zip": "4511"
+    },
+    {
+      "name": "TIWI",
+      "zip": "4513"
+    }
+  ],
+  "ANTIQUE": [
+    {
+      "name": "ANINI-Y",
+      "zip": "5717"
+    },
+    {
+      "name": "BARBAZA",
+      "zip": "5706"
+    },
+    {
+      "name": "BELISON",
+      "zip": "5701"
+    },
+    {
+      "name": "BUGASONG",
+      "zip": "5704"
+    },
+    {
+      "name": "CALUYA",
+      "zip": "5711"
+    },
+    {
+      "name": "CULASI",
+      "zip": "5708"
+    },
+    {
+      "name": "HAMTIC",
+      "zip": "5715"
+    },
+    {
+      "name": "LAUA-AN",
+      "zip": "5705"
+    },
+    {
+      "name": "LIBERTAD",
+      "zip": "5710"
+    },
+    {
+      "name": "PANDAN",
+      "zip": "5712"
+    },
+    {
+      "name": "PATNONGON",
+      "zip": "5702"
+    },
+    {
+      "name": "SAN JOSE",
+      "zip": "5700"
+    },
+    {
+      "name": "SAN REMIGIO",
+      "zip": "5714"
+    },
+    {
+      "name": "SEBASTE",
+      "zip": "5709"
+    },
+    {
+      "name": "SIBALOM",
+      "zip": "5713"
+    },
+    {
+      "name": "TIBIAO",
+      "zip": "5707"
+    },
+    {
+      "name": "TOBIAS FORNIER (DAO)",
+      "zip": "5716"
+    },
+    {
+      "name": "VALDERRAMA",
+      "zip": "5703"
+    }
+  ],
+  "APAYAO": [
+    {
+      "name": "CALANASAN (BAYAG)",
+      "zip": "3814"
+    },
+    {
+      "name": "CONNER",
+      "zip": "3807"
+    },
+    {
+      "name": "FLORA",
+      "zip": "3810"
+    },
+    {
+      "name": "KABUGAO",
+      "zip": "3809"
+    },
+    {
+      "name": "LUNA",
+      "zip": "3813"
+    },
+    {
+      "name": "PUDTOL",
+      "zip": "3812"
+    },
+    {
+      "name": "SANTA MARCELA",
+      "zip": "3811"
+    }
+  ],
+  "AURORA": [
+    {
+      "name": "BALER",
+      "zip": "3200"
+    },
+    {
+      "name": "CASIGURAN",
+      "zip": "3204"
+    },
+    {
+      "name": "DILASAG",
+      "zip": "3205"
+    },
+    {
+      "name": "DINALUNGAN",
+      "zip": "3206"
+    },
+    {
+      "name": "DINGALAN",
+      "zip": "3207"
+    },
+    {
+      "name": "DIPACULAO",
+      "zip": "3203"
+    },
+    {
+      "name": "MARIA AURORA",
+      "zip": "3202"
+    },
+    {
+      "name": "SAN LUIS",
+      "zip": "3201"
+    }
+  ],
+  "BASILAN": [
+    {
+      "name": "AKBAR",
+      "zip": ""
+    },
+    {
+      "name": "AL-BARKA",
+      "zip": ""
+    },
+    {
+      "name": "HADJI MOHAMMAD AJUL",
+      "zip": ""
+    },
+    {
+      "name": "HADJI MUHTAMAD",
+      "zip": ""
+    },
+    {
+      "name": "ISABELA CITY",
+      "zip": "7300"
+    },
+    {
+      "name": "LAMITAN CITY",
+      "zip": "7302"
+    },
+    {
+      "name": "LANTAWAN",
+      "zip": "7301"
+    },
+    {
+      "name": "MALUSO",
+      "zip": "7303"
+    },
+    {
+      "name": "SUMISIP",
+      "zip": "7305"
+    },
+    {
+      "name": "TABUAN-LASA",
+      "zip": ""
+    },
+    {
+      "name": "TIPO-TIPO",
+      "zip": "7304"
+    },
+    {
+      "name": "TUBURAN",
+      "zip": "7306"
+    },
+    {
+      "name": "UNGKAYA PUKAN",
+      "zip": ""
+    }
+  ],
+  "BATAAN": [
+    {
+      "name": "ABUCAY",
+      "zip": "2114"
+    },
+    {
+      "name": "BAGAC",
+      "zip": "2107"
+    },
+    {
+      "name": "BALANGA CITY",
+      "zip": "2100"
+    },
+    {
+      "name": "DINALUPIHAN",
+      "zip": "2110"
+    },
+    {
+      "name": "HERMOSA",
+      "zip": "2111"
+    },
+    {
+      "name": "LIMAY",
+      "zip": "2103"
+    },
+    {
+      "name": "MARIVELES",
+      "zip": "2105"
+    },
+    {
+      "name": "MORONG",
+      "zip": "2108"
+    },
+    {
+      "name": "ORANI",
+      "zip": "2112"
+    },
+    {
+      "name": "ORION",
+      "zip": "2102"
+    },
+    {
+      "name": "PILAR",
+      "zip": "2101"
+    },
+    {
+      "name": "SAMAL",
+      "zip": "2113"
+    }
+  ],
+  "BATANES": [
+    {
+      "name": "BASCO",
+      "zip": "3900"
+    },
+    {
+      "name": "ITBAYAT",
+      "zip": "3905"
+    },
+    {
+      "name": "IVANA",
+      "zip": "3902"
+    },
+    {
+      "name": "MAHATAO",
+      "zip": "3901"
+    },
+    {
+      "name": "SABTANG",
+      "zip": "3904"
+    },
+    {
+      "name": "UYUGAN",
+      "zip": "3903"
+    }
+  ],
+  "BATANGAS": [
+    {
+      "name": "AGONCILLO",
+      "zip": "4211"
+    },
+    {
+      "name": "ALITAGTAG",
+      "zip": "4205"
+    },
+    {
+      "name": "BALAYAN",
+      "zip": "4213"
+    },
+    {
+      "name": "BALETE",
+      "zip": "4219"
+    },
+    {
+      "name": "BATANGAS CITY",
+      "zip": "4200"
+    },
+    {
+      "name": "BAUAN",
+      "zip": "4201"
+    },
+    {
+      "name": "CALACA",
+      "zip": "4212"
+    },
+    {
+      "name": "CALATAGAN",
+      "zip": ""
+    },
+    {
+      "name": "CUENCA",
+      "zip": "4222"
+    },
+    {
+      "name": "IBAAN",
+      "zip": "4230"
+    },
+    {
+      "name": "LAUREL",
+      "zip": ""
+    },
+    {
+      "name": "LEMERY",
+      "zip": "4209"
+    },
+    {
+      "name": "LIAN",
+      "zip": ""
+    },
+    {
+      "name": "LIPA CITY",
+      "zip": "4217"
+    },
+    {
+      "name": "LOBO",
+      "zip": ""
+    },
+    {
+      "name": "MABINI",
+      "zip": "4202"
+    },
+    {
+      "name": "MALVAR",
+      "zip": "4233"
+    },
+    {
+      "name": "MATAAS NA KAHOY",
+      "zip": "4223"
+    },
+    {
+      "name": "NASUGBU",
+      "zip": ""
+    },
+    {
+      "name": "PADRE GARCIA",
+      "zip": "4224"
+    },
+    {
+      "name": "ROSARIO",
+      "zip": "4225"
+    },
+    {
+      "name": "SAN JOSE",
+      "zip": "4227"
+    },
+    {
+      "name": "SAN JUAN",
+      "zip": "4226"
+    },
+    {
+      "name": "SAN LUIS",
+      "zip": "4210"
+    },
+    {
+      "name": "SAN NICOLAS",
+      "zip": "4207"
+    },
+    {
+      "name": "SAN PASCUAL",
+      "zip": "4204"
+    },
+    {
+      "name": "SANTA TERESITA",
+      "zip": "4206"
+    },
+    {
+      "name": "SANTO TOMAS",
+      "zip": "4234"
+    },
+    {
+      "name": "TAAL",
+      "zip": "4208"
+    },
+    {
+      "name": "TALISAY",
+      "zip": "4220"
+    },
+    {
+      "name": "TANAUAN CITY",
+      "zip": "4232"
+    },
+    {
+      "name": "TAYSAN",
+      "zip": "4228"
+    },
+    {
+      "name": "TINGLOY",
+      "zip": "4203"
+    },
+    {
+      "name": "TUY",
+      "zip": "4214"
+    }
+  ],
+  "BENGUET": [
+    {
+      "name": "ATOK",
+      "zip": "2612"
+    },
+    {
+      "name": "BAGUIO CITY",
+      "zip": "2600"
+    },
+    {
+      "name": "BAKUN",
+      "zip": "2610"
+    },
+    {
+      "name": "BOKOD",
+      "zip": "2605"
+    },
+    {
+      "name": "BUGUIAS",
+      "zip": "2607"
+    },
+    {
+      "name": "ITOGON",
+      "zip": "2604"
+    },
+    {
+      "name": "KABAYAN",
+      "zip": "2606"
+    },
+    {
+      "name": "KAPANGAN",
+      "zip": "2613"
+    },
+    {
+      "name": "KIBUNGAN",
+      "zip": "2611"
+    },
+    {
+      "name": "LA TRINIDAD",
+      "zip": ""
+    },
+    {
+      "name": "MANKAYAN",
+      "zip": "2608"
+    },
+    {
+      "name": "SABLAN",
+      "zip": "2614"
+    },
+    {
+      "name": "TUBA",
+      "zip": ""
+    },
+    {
+      "name": "TUBLAY",
+      "zip": "2615"
+    }
+  ],
+  "BILIRAN": [
+    {
+      "name": "ALMERIA",
+      "zip": "6544"
+    },
+    {
+      "name": "BILIRAN",
+      "zip": "6549"
+    },
+    {
+      "name": "CABUCGAYAN",
+      "zip": "6550"
+    },
+    {
+      "name": "CAIBIRAN",
+      "zip": "6548"
+    },
+    {
+      "name": "CULABA",
+      "zip": "6547"
+    },
+    {
+      "name": "KAWAYAN",
+      "zip": "6545"
+    },
+    {
+      "name": "MARIPIPI",
+      "zip": "6546"
+    },
+    {
+      "name": "NAVAL",
+      "zip": "6543"
+    }
+  ],
+  "BOHOL": [
+    {
+      "name": "ALBURQUERQUE",
+      "zip": "6302"
+    },
+    {
+      "name": "ALICIA",
+      "zip": "6314"
+    },
+    {
+      "name": "ANDA",
+      "zip": "6311"
+    },
+    {
+      "name": "ANTEQUERA",
+      "zip": "6335"
+    },
+    {
+      "name": "BACLAYON",
+      "zip": "6301"
+    },
+    {
+      "name": "BALILIHAN",
+      "zip": "6342"
+    },
+    {
+      "name": "BATUAN",
+      "zip": "6318"
+    },
+    {
+      "name": "BIEN UNIDO",
+      "zip": "6326"
+    },
+    {
+      "name": "BILAR",
+      "zip": "6317"
+    },
+    {
+      "name": "BUENAVISTA",
+      "zip": "6333"
+    },
+    {
+      "name": "CALAPE",
+      "zip": "6328"
+    },
+    {
+      "name": "CANDIJAY",
+      "zip": "6312"
+    },
+    {
+      "name": "CARMEN",
+      "zip": "6319"
+    },
+    {
+      "name": "CATIGBIAN",
+      "zip": "6343"
+    },
+    {
+      "name": "CLARIN",
+      "zip": "6330"
+    },
+    {
+      "name": "CORELLA",
+      "zip": "6337"
+    },
+    {
+      "name": "CORTES",
+      "zip": "6341"
+    },
+    {
+      "name": "DAGOHOY",
+      "zip": "6322"
+    },
+    {
+      "name": "DANAO",
+      "zip": "6344"
+    },
+    {
+      "name": "DAUIS",
+      "zip": "6339"
+    },
+    {
+      "name": "DIMIAO",
+      "zip": "6305"
+    },
+    {
+      "name": "DUERO",
+      "zip": "6309"
+    },
+    {
+      "name": "GARCIA HERNANDEZ",
+      "zip": "6307"
+    },
+    {
+      "name": "GUINDULMAN",
+      "zip": "6310"
+    },
+    {
+      "name": "INABANGA",
+      "zip": "6332"
+    },
+    {
+      "name": "JAGNA",
+      "zip": "6308"
+    },
+    {
+      "name": "JETAFE",
+      "zip": "6334"
+    },
+    {
+      "name": "LILA",
+      "zip": "6304"
+    },
+    {
+      "name": "LOAY",
+      "zip": "6202"
+    },
+    {
+      "name": "LOBOC",
+      "zip": "6316"
+    },
+    {
+      "name": "LOON",
+      "zip": "6327"
+    },
+    {
+      "name": "MABINI",
+      "zip": "6313"
+    },
+    {
+      "name": "MARIBOJOC",
+      "zip": "6336"
+    },
+    {
+      "name": "PANGLAO",
+      "zip": "6340"
+    },
+    {
+      "name": "PILAR",
+      "zip": "6321"
+    },
+    {
+      "name": "PRES. CARLOS P. GARCIA (PITOGO)",
+      "zip": "6346"
+    },
+    {
+      "name": "SAGBAYAN (BORJA)",
+      "zip": ""
+    },
+    {
+      "name": "SAN ISIDRO",
+      "zip": "6345"
+    },
+    {
+      "name": "SAN MIGUEL",
+      "zip": "6323"
+    },
+    {
+      "name": "SEVILLA",
+      "zip": "6347"
+    },
+    {
+      "name": "SIERRA BULLONES",
+      "zip": "6320"
+    },
+    {
+      "name": "SIKATUNA",
+      "zip": "6338"
+    },
+    {
+      "name": "TAGBILARAN CITY",
+      "zip": "6300"
+    },
+    {
+      "name": "TALIBON",
+      "zip": "6325"
+    },
+    {
+      "name": "TRINIDAD",
+      "zip": "6324"
+    },
+    {
+      "name": "TUBIGON",
+      "zip": "6329"
+    },
+    {
+      "name": "UBAY",
+      "zip": "6315"
+    },
+    {
+      "name": "VALENCIA",
+      "zip": "6306"
+    }
+  ],
+  "BUKIDNON": [
+    {
+      "name": "BAUNGON",
+      "zip": "8707"
+    },
+    {
+      "name": "CABANGLASAN",
+      "zip": "8723"
+    },
+    {
+      "name": "CITY OF MALAYBALAY",
+      "zip": ""
+    },
+    {
+      "name": "DAMULOG",
+      "zip": "8721"
+    },
+    {
+      "name": "DANGCAGAN",
+      "zip": "8719"
+    },
+    {
+      "name": "DON CARLOS",
+      "zip": "8712"
+    },
+    {
+      "name": "IMPASUG-ONG",
+      "zip": "8702"
+    },
+    {
+      "name": "KADINGILAN",
+      "zip": "8713"
+    },
+    {
+      "name": "KALILANGAN",
+      "zip": "8718"
+    },
+    {
+      "name": "KIBAWE",
+      "zip": "8720"
+    },
+    {
+      "name": "KITAOTAO",
+      "zip": "8716"
+    },
+    {
+      "name": "LANTAPAN",
+      "zip": "8722"
+    },
+    {
+      "name": "LIBONA",
+      "zip": "8706"
+    },
+    {
+      "name": "MALITBOG",
+      "zip": "8704"
+    },
+    {
+      "name": "MANOLO FORTICH",
+      "zip": "8703"
+    },
+    {
+      "name": "MARAMAG",
+      "zip": "8714"
+    },
+    {
+      "name": "PANGANTUCAN",
+      "zip": "8717"
+    },
+    {
+      "name": "QUEZON",
+      "zip": "8715"
+    },
+    {
+      "name": "SAN FERNANDO",
+      "zip": "8711"
+    },
+    {
+      "name": "SUMILAO",
+      "zip": "8701"
+    },
+    {
+      "name": "TALAKAG",
+      "zip": "8708"
+    },
+    {
+      "name": "VALENCIA CITY",
+      "zip": "8709"
+    }
+  ],
+  "BULACAN": [
+    {
+      "name": "ANGAT",
+      "zip": "3012"
+    },
+    {
+      "name": "BALAGTAS (BIGAA)",
+      "zip": "3016"
+    },
+    {
+      "name": "BALIUAG",
+      "zip": "3006"
+    },
+    {
+      "name": "BOCAUE",
+      "zip": "3018"
+    },
+    {
+      "name": "BULACAN",
+      "zip": "3017"
+    },
+    {
+      "name": "BUSTOS",
+      "zip": "3007"
+    },
+    {
+      "name": "CALUMPIT",
+      "zip": "3003"
+    },
+    {
+      "name": "DOÑA REMEDIOS TRINIDAD",
+      "zip": ""
+    },
+    {
+      "name": "GUIGUINTO",
+      "zip": "3015"
+    },
+    {
+      "name": "HAGONOY",
+      "zip": "3002"
+    },
+    {
+      "name": "MALOLOS CITY",
+      "zip": "3000"
+    },
+    {
+      "name": "MARILAO",
+      "zip": "3019"
+    },
+    {
+      "name": "MEYCAUAYAN CITY",
+      "zip": "3020"
+    },
+    {
+      "name": "NORZAGARAY",
+      "zip": "3013"
+    },
+    {
+      "name": "OBANDO",
+      "zip": "3021"
+    },
+    {
+      "name": "PANDI",
+      "zip": "3014"
+    },
+    {
+      "name": "PAOMBONG",
+      "zip": "3001"
+    },
+    {
+      "name": "PLARIDEL",
+      "zip": "3004"
+    },
+    {
+      "name": "PULILAN",
+      "zip": "3005"
+    },
+    {
+      "name": "SAN ILDEFONSO",
+      "zip": "3010"
+    },
+    {
+      "name": "SAN JOSE DEL MONTE CITY",
+      "zip": "3023"
+    },
+    {
+      "name": "SAN MIGUEL",
+      "zip": "3011"
+    },
+    {
+      "name": "SAN RAFAEL",
+      "zip": "3008"
+    },
+    {
+      "name": "SANTA MARIA",
+      "zip": "3022"
+    }
+  ],
+  "CAGAYAN": [
+    {
+      "name": "ABULUG",
+      "zip": "3517"
+    },
+    {
+      "name": "ALCALA",
+      "zip": "3507"
+    },
+    {
+      "name": "ALLACAPAN",
+      "zip": "3523"
+    },
+    {
+      "name": "AMULUNG",
+      "zip": "3505"
+    },
+    {
+      "name": "APARRI",
+      "zip": "3515"
+    },
+    {
+      "name": "BAGGAO",
+      "zip": "3506"
+    },
+    {
+      "name": "BALLESTEROS",
+      "zip": "3516"
+    },
+    {
+      "name": "BUGUEY",
+      "zip": "3511"
+    },
+    {
+      "name": "CALAYAN",
+      "zip": "3520"
+    },
+    {
+      "name": "CAMALANIUGAN",
+      "zip": "3510"
+    },
+    {
+      "name": "CLAVERIA",
+      "zip": "3519"
+    },
+    {
+      "name": "ENRILE",
+      "zip": "3501"
+    },
+    {
+      "name": "GATTARAN",
+      "zip": "3508"
+    },
+    {
+      "name": "GONZAGA",
+      "zip": "3513"
+    },
+    {
+      "name": "IGUIG",
+      "zip": "3504"
+    },
+    {
+      "name": "LAL-LO",
+      "zip": "3509"
+    },
+    {
+      "name": "LASAM",
+      "zip": "3524"
+    },
+    {
+      "name": "PAMPLONA",
+      "zip": "3522"
+    },
+    {
+      "name": "PEÑABLANCA",
+      "zip": "3502"
+    },
+    {
+      "name": "PIAT",
+      "zip": "3527"
+    },
+    {
+      "name": "RIZAL",
+      "zip": "3526"
+    },
+    {
+      "name": "SANCHEZ-MIRA",
+      "zip": "3518"
+    },
+    {
+      "name": "SANTA ANA",
+      "zip": "3514"
+    },
+    {
+      "name": "SANTA PRAXEDES",
+      "zip": "3521"
+    },
+    {
+      "name": "SANTA TERESITA",
+      "zip": "3512"
+    },
+    {
+      "name": "SANTO NIÑO (FAIRE)",
+      "zip": ""
+    },
+    {
+      "name": "SOLANA",
+      "zip": "3503"
+    },
+    {
+      "name": "TUAO",
+      "zip": "3528"
+    },
+    {
+      "name": "TUGUEGARAO CITY",
+      "zip": "3500"
+    }
+  ],
+  "CAMARINES NORTE": [
+    {
+      "name": "BASUD",
+      "zip": "4608"
+    },
+    {
+      "name": "CAPALONGA",
+      "zip": "4607"
+    },
+    {
+      "name": "DAET",
+      "zip": "4600"
+    },
+    {
+      "name": "JOSE PANGANIBAN",
+      "zip": "4606"
+    },
+    {
+      "name": "LABO",
+      "zip": "4604"
+    },
+    {
+      "name": "MERCEDES",
+      "zip": "4601"
+    },
+    {
+      "name": "PARACALE",
+      "zip": "4605"
+    },
+    {
+      "name": "SAN LORENZO RUIZ (IMELDA)",
+      "zip": ""
+    },
+    {
+      "name": "SAN VICENTE",
+      "zip": "4609"
+    },
+    {
+      "name": "SANTA ELENA",
+      "zip": "4611"
+    },
+    {
+      "name": "TALISAY",
+      "zip": "4602"
+    },
+    {
+      "name": "VINZONS",
+      "zip": "4603"
+    }
+  ],
+  "CAMARINES SUR": [
+    {
+      "name": "BAAO",
+      "zip": "4432"
+    },
+    {
+      "name": "BALATAN",
+      "zip": "4436"
+    },
+    {
+      "name": "BATO",
+      "zip": "4435"
+    },
+    {
+      "name": "BOMBON",
+      "zip": "4404"
+    },
+    {
+      "name": "BUHI",
+      "zip": "4433"
+    },
+    {
+      "name": "BULA",
+      "zip": "4430"
+    },
+    {
+      "name": "CABUSAO",
+      "zip": "4406"
+    },
+    {
+      "name": "CALABANGA",
+      "zip": "4405"
+    },
+    {
+      "name": "CAMALIGAN",
+      "zip": "4401"
+    },
+    {
+      "name": "CANAMAN",
+      "zip": "4402"
+    },
+    {
+      "name": "CARAMOAN",
+      "zip": "4429"
+    },
+    {
+      "name": "DEL GALLEGO",
+      "zip": "4411"
+    },
+    {
+      "name": "GAINZA",
+      "zip": "4412"
+    },
+    {
+      "name": "GARCHITORENA",
+      "zip": "4428"
+    },
+    {
+      "name": "GOA",
+      "zip": "4422"
+    },
+    {
+      "name": "IRIGA CITY",
+      "zip": "4431"
+    },
+    {
+      "name": "LAGONOY",
+      "zip": "4425"
+    },
+    {
+      "name": "LIBMANAN",
+      "zip": "4407"
+    },
+    {
+      "name": "LUPI",
+      "zip": "4409"
+    },
+    {
+      "name": "MAGARAO",
+      "zip": "4403"
+    },
+    {
+      "name": "MILAOR",
+      "zip": "4413"
+    },
+    {
+      "name": "MINALABAC",
+      "zip": "4414"
+    },
+    {
+      "name": "NABUA",
+      "zip": "4434"
+    },
+    {
+      "name": "NAGA CITY",
+      "zip": "4400"
+    },
+    {
+      "name": "OCAMPO",
+      "zip": "4419"
+    },
+    {
+      "name": "PAMPLONA",
+      "zip": "4416"
+    },
+    {
+      "name": "PASACAO",
+      "zip": "4417"
+    },
+    {
+      "name": "PILI",
+      "zip": "4418"
+    },
+    {
+      "name": "PRESENTACION (PARUBCAN)",
+      "zip": ""
+    },
+    {
+      "name": "RAGAY",
+      "zip": "4410"
+    },
+    {
+      "name": "SAGÑAY",
+      "zip": ""
+    },
+    {
+      "name": "SAN FERNANDO",
+      "zip": "4415"
+    },
+    {
+      "name": "SAN JOSE",
+      "zip": "4423"
+    },
+    {
+      "name": "SIPOCOT",
+      "zip": "4408"
+    },
+    {
+      "name": "SIRUMA",
+      "zip": "4427"
+    },
+    {
+      "name": "TIGAON",
+      "zip": "4420"
+    },
+    {
+      "name": "TINAMBAC",
+      "zip": "4426"
+    }
+  ],
+  "CAMIGUIN": [
+    {
+      "name": "CATARMAN",
+      "zip": "9104"
+    },
+    {
+      "name": "GUINSILIBAN",
+      "zip": "9102"
+    },
+    {
+      "name": "MAHINOG",
+      "zip": "9101"
+    },
+    {
+      "name": "MAMBAJAO",
+      "zip": "9100"
+    },
+    {
+      "name": "SAGAY",
+      "zip": "9103"
+    }
+  ],
+  "CAPIZ": [
+    {
+      "name": "CUARTERO",
+      "zip": "5811"
+    },
+    {
+      "name": "DAO",
+      "zip": "5810"
+    },
+    {
+      "name": "DUMALAG",
+      "zip": "5813"
+    },
+    {
+      "name": "DUMARAO",
+      "zip": "5812"
+    },
+    {
+      "name": "IVISAN",
+      "zip": "5805"
+    },
+    {
+      "name": "JAMINDAN",
+      "zip": "5808"
+    },
+    {
+      "name": "MA-AYON",
+      "zip": "5809"
+    },
+    {
+      "name": "MAMBUSAO",
+      "zip": "5807"
+    },
+    {
+      "name": "PANAY",
+      "zip": "5801"
+    },
+    {
+      "name": "PANITAN",
+      "zip": "5815"
+    },
+    {
+      "name": "PILAR",
+      "zip": "5804"
+    },
+    {
+      "name": "PONTEVEDRA",
+      "zip": "5802"
+    },
+    {
+      "name": "PRESIDENT ROXAS",
+      "zip": "5803"
+    },
+    {
+      "name": "ROXAS CITY",
+      "zip": "5800"
+    },
+    {
+      "name": "SAPI-AN",
+      "zip": "5806"
+    },
+    {
+      "name": "SIGMA",
+      "zip": "5816"
+    },
+    {
+      "name": "TAPAZ",
+      "zip": "5814"
+    }
+  ],
+  "CATANDUANES": [
+    {
+      "name": "BAGAMANOC",
+      "zip": "4807"
+    },
+    {
+      "name": "BARAS",
+      "zip": "4803"
+    },
+    {
+      "name": "BATO",
+      "zip": "4801"
+    },
+    {
+      "name": "CARAMORAN",
+      "zip": "4808"
+    },
+    {
+      "name": "GIGMOTO",
+      "zip": "4804"
+    },
+    {
+      "name": "PANDAN",
+      "zip": "4809"
+    },
+    {
+      "name": "PANGANIBAN (PAYO)",
+      "zip": ""
+    },
+    {
+      "name": "SAN ANDRES (CALOLBON)",
+      "zip": ""
+    },
+    {
+      "name": "SAN MIGUEL",
+      "zip": "4802"
+    },
+    {
+      "name": "VIGA",
+      "zip": "4805"
+    },
+    {
+      "name": "VIRAC",
+      "zip": "4800"
+    }
+  ],
+  "CAVITE": [
+    {
+      "name": "ALFONSO",
+      "zip": "4123"
+    },
+    {
+      "name": "AMADEO",
+      "zip": "4119"
+    },
+    {
+      "name": "BACOOR CITY",
+      "zip": "4102"
+    },
+    {
+      "name": "CARMONA",
+      "zip": "4116"
+    },
+    {
+      "name": "CAVITE CITY",
+      "zip": "4100"
+    },
+    {
+      "name": "DASMARIÑAS CITY",
+      "zip": "4114"
+    },
+    {
+      "name": "GEN. MARIANO ALVAREZ",
+      "zip": ""
+    },
+    {
+      "name": "GENERAL EMILIO AGUINALDO",
+      "zip": ""
+    },
+    {
+      "name": "GENERAL TRIAS CITY",
+      "zip": "4107"
+    },
+    {
+      "name": "IMUS CITY",
+      "zip": "4103"
+    },
+    {
+      "name": "INDANG",
+      "zip": "4122"
+    },
+    {
+      "name": "KAWIT",
+      "zip": "4104"
+    },
+    {
+      "name": "MAGALLANES",
+      "zip": "4113"
+    },
+    {
+      "name": "MARAGONDON",
+      "zip": "4112"
+    },
+    {
+      "name": "MENDEZ (MENDEZ-NUÑEZ)",
+      "zip": "4121"
+    },
+    {
+      "name": "NAIC",
+      "zip": "4110"
+    },
+    {
+      "name": "NOVELETA",
+      "zip": "4105"
+    },
+    {
+      "name": "ROSARIO",
+      "zip": "4106"
+    },
+    {
+      "name": "SILANG",
+      "zip": "4118"
+    },
+    {
+      "name": "TAGAYTAY CITY",
+      "zip": "4120"
+    },
+    {
+      "name": "TANZA",
+      "zip": "4108"
+    },
+    {
+      "name": "TERNATE",
+      "zip": ""
+    },
+    {
+      "name": "TRECE MARTIRES CITY",
+      "zip": "4109"
+    }
+  ],
+  "CEBU": [
+    {
+      "name": "ALCANTARA",
+      "zip": "6033"
+    },
+    {
+      "name": "ALCOY",
+      "zip": "6066"
+    },
+    {
+      "name": "ALEGRIA",
+      "zip": "6030"
+    },
+    {
+      "name": "ALOGUINSAN",
+      "zip": "6088"
+    },
+    {
+      "name": "ARGAO",
+      "zip": "6021"
+    },
+    {
+      "name": "ASTURIAS",
+      "zip": "6010"
+    },
+    {
+      "name": "BADIAN",
+      "zip": "6031"
+    },
+    {
+      "name": "BALAMBAN",
+      "zip": "6041"
+    },
+    {
+      "name": "BANTAYAN",
+      "zip": "6052"
+    },
+    {
+      "name": "BARILI",
+      "zip": "6036"
+    },
+    {
+      "name": "BOGO CITY",
+      "zip": "6010"
+    },
+    {
+      "name": "BOLJOON",
+      "zip": "6024"
+    },
+    {
+      "name": "BORBON",
+      "zip": "6008"
+    },
+    {
+      "name": "CARCAR CITY",
+      "zip": "6019"
+    },
+    {
+      "name": "CARMEN",
+      "zip": "6005"
+    },
+    {
+      "name": "CATMON",
+      "zip": "6006"
+    },
+    {
+      "name": "CEBU CITY",
+      "zip": "6000"
+    },
+    {
+      "name": "COMPOSTELA",
+      "zip": "6003"
+    },
+    {
+      "name": "CONSOLACION",
+      "zip": "6001"
+    },
+    {
+      "name": "CORDOBA",
+      "zip": ""
+    },
+    {
+      "name": "DAANBANTAYAN",
+      "zip": "6013"
+    },
+    {
+      "name": "DALAGUETE",
+      "zip": "6022"
+    },
+    {
+      "name": "DANAO CITY",
+      "zip": "6004"
+    },
+    {
+      "name": "DUMANJUG",
+      "zip": "6035"
+    },
+    {
+      "name": "GINATILAN",
+      "zip": "6028"
+    },
+    {
+      "name": "LAPU-LAPU CITY (OPON)",
+      "zip": "6015"
+    },
+    {
+      "name": "LILOAN",
+      "zip": "6002"
+    },
+    {
+      "name": "MADRIDEJOS",
+      "zip": "6053"
+    },
+    {
+      "name": "MALABUYOC",
+      "zip": "6029"
+    },
+    {
+      "name": "MANDAUE CITY",
+      "zip": "6014"
+    },
+    {
+      "name": "MEDELLIN",
+      "zip": "6012"
+    },
+    {
+      "name": "MINGLANILLA",
+      "zip": "6046"
+    },
+    {
+      "name": "MOALBOAL",
+      "zip": "6032"
+    },
+    {
+      "name": "NAGA CITY",
+      "zip": "6037"
+    },
+    {
+      "name": "OSLOB",
+      "zip": "6025"
+    },
+    {
+      "name": "PILAR",
+      "zip": "6048"
+    },
+    {
+      "name": "PINAMUNGAHAN",
+      "zip": "6039"
+    },
+    {
+      "name": "PORO",
+      "zip": "6049"
+    },
+    {
+      "name": "RONDA",
+      "zip": "6034"
+    },
+    {
+      "name": "SAMBOAN",
+      "zip": "6027"
+    },
+    {
+      "name": "SAN FERNANDO",
+      "zip": "6018"
+    },
+    {
+      "name": "SAN FRANCISCO",
+      "zip": "6050"
+    },
+    {
+      "name": "SAN REMIGIO",
+      "zip": "6011"
+    },
+    {
+      "name": "SANTA FE",
+      "zip": "6047"
+    },
+    {
+      "name": "SANTANDER",
+      "zip": "6026"
+    },
+    {
+      "name": "SIBONGA",
+      "zip": "6020"
+    },
+    {
+      "name": "SOGOD",
+      "zip": "6007"
+    },
+    {
+      "name": "TABOGON",
+      "zip": "6009"
+    },
+    {
+      "name": "TABUELAN",
+      "zip": "6044"
+    },
+    {
+      "name": "TALISAY CITY",
+      "zip": "6045"
+    },
+    {
+      "name": "TOLEDO CITY",
+      "zip": "6038"
+    },
+    {
+      "name": "TUBURAN",
+      "zip": "6043"
+    },
+    {
+      "name": "TUDELA",
+      "zip": "6051"
+    }
+  ],
+  "COMPOSTELA VALLEY": [
+    {
+      "name": "COMPOSTELA",
+      "zip": "8109"
+    },
+    {
+      "name": "LAAK (SAN VICENTE)",
+      "zip": "8810"
+    },
+    {
+      "name": "MABINI (DOÑA ALICIA)",
+      "zip": "8115"
+    },
+    {
+      "name": "MACO",
+      "zip": "8114"
+    },
+    {
+      "name": "MARAGUSAN (SAN MARIANO)",
+      "zip": "8808"
+    },
+    {
+      "name": "MAWAB",
+      "zip": "8108"
+    },
+    {
+      "name": "MONKAYO",
+      "zip": "8805"
+    },
+    {
+      "name": "MONTEVISTA",
+      "zip": "8107"
+    },
+    {
+      "name": "NABUNTURAN",
+      "zip": "8800"
+    },
+    {
+      "name": "NEW BATAAN",
+      "zip": "8110"
+    },
+    {
+      "name": "PANTUKAN",
+      "zip": "8809"
+    }
+  ],
+  "COTABATO (NORTH COT.)": [
+    {
+      "name": "ALAMADA",
+      "zip": ""
+    },
+    {
+      "name": "ALEOSAN",
+      "zip": ""
+    },
+    {
+      "name": "ANTIPAS",
+      "zip": ""
+    },
+    {
+      "name": "ARAKAN",
+      "zip": ""
+    },
+    {
+      "name": "BANISILAN",
+      "zip": ""
+    },
+    {
+      "name": "CARMEN",
+      "zip": ""
+    },
+    {
+      "name": "CITY OF KIDAPAWAN",
+      "zip": ""
+    },
+    {
+      "name": "KABACAN",
+      "zip": ""
+    },
+    {
+      "name": "LIBUNGAN",
+      "zip": ""
+    },
+    {
+      "name": "M'LANG",
+      "zip": ""
+    },
+    {
+      "name": "MAGPET",
+      "zip": ""
+    },
+    {
+      "name": "MAKILALA",
+      "zip": ""
+    },
+    {
+      "name": "MATALAM",
+      "zip": ""
+    },
+    {
+      "name": "MIDSAYAP",
+      "zip": ""
+    },
+    {
+      "name": "PIGKAWAYAN",
+      "zip": ""
+    },
+    {
+      "name": "PIKIT",
+      "zip": ""
+    },
+    {
+      "name": "PRESIDENT ROXAS",
+      "zip": ""
+    },
+    {
+      "name": "TULUNAN",
+      "zip": ""
+    }
+  ],
+  "DAVAO (DAVAO DEL NORTE)": [
+    {
+      "name": "ASUNCION (SAUG)",
+      "zip": ""
+    },
+    {
+      "name": "BRAULIO E. DUJALI",
+      "zip": ""
+    },
+    {
+      "name": "CARMEN",
+      "zip": ""
+    },
+    {
+      "name": "CITY OF TAGUM",
+      "zip": ""
+    },
+    {
+      "name": "ISLAND GARDEN CITY OF SAMAL",
+      "zip": ""
+    },
+    {
+      "name": "KAPALONG",
+      "zip": ""
+    },
+    {
+      "name": "NEW CORELLA",
+      "zip": ""
+    },
+    {
+      "name": "PANABO CITY",
+      "zip": ""
+    },
+    {
+      "name": "SAN ISIDRO",
+      "zip": ""
+    },
+    {
+      "name": "SANTO TOMAS",
+      "zip": ""
+    },
+    {
+      "name": "TALAINGOD",
+      "zip": ""
+    }
+  ],
+  "DAVAO DEL SUR": [
+    {
+      "name": "BANSALAN",
+      "zip": "8005"
+    },
+    {
+      "name": "DAVAO CITY",
+      "zip": "8000"
+    },
+    {
+      "name": "DIGOS CITY",
+      "zip": "8002"
+    },
+    {
+      "name": "HAGONOY",
+      "zip": "8006"
+    },
+    {
+      "name": "KIBLAWAN",
+      "zip": "8008"
+    },
+    {
+      "name": "MAGSAYSAY",
+      "zip": "8004"
+    },
+    {
+      "name": "MALALAG",
+      "zip": "8010"
+    },
+    {
+      "name": "MATANAO",
+      "zip": "8003"
+    },
+    {
+      "name": "PADADA",
+      "zip": "8007"
+    },
+    {
+      "name": "SANTA CRUZ",
+      "zip": "8001"
+    },
+    {
+      "name": "SULOP",
+      "zip": "8009"
+    }
+  ],
+  "DAVAO OCCIDENTAL": [
+    {
+      "name": "DON MARCELINO",
+      "zip": ""
+    },
+    {
+      "name": "JOSE ABAD SANTOS (TRINIDAD)",
+      "zip": ""
+    },
+    {
+      "name": "MALITA",
+      "zip": ""
+    },
+    {
+      "name": "SANTA MARIA",
+      "zip": ""
+    },
+    {
+      "name": "SARANGANI",
+      "zip": ""
+    }
+  ],
+  "DAVAO ORIENTAL": [
+    {
+      "name": "BAGANGA",
+      "zip": ""
+    },
+    {
+      "name": "BANAYBANAY",
+      "zip": "8208"
+    },
+    {
+      "name": "BOSTON",
+      "zip": "8206"
+    },
+    {
+      "name": "CARAGA",
+      "zip": "8203"
+    },
+    {
+      "name": "CATEEL",
+      "zip": "8205"
+    },
+    {
+      "name": "GOVERNOR GENEROSO",
+      "zip": ""
+    },
+    {
+      "name": "LUPON",
+      "zip": ""
+    },
+    {
+      "name": "MANAY",
+      "zip": "8202"
+    },
+    {
+      "name": "MATI CITY",
+      "zip": "8200"
+    },
+    {
+      "name": "SAN ISIDRO",
+      "zip": "8209"
+    },
+    {
+      "name": "TARRAGONA",
+      "zip": "8201"
+    }
+  ],
+  "DINAGAT ISLANDS": [
+    {
+      "name": "BASILISA (RIZAL)",
+      "zip": "8413"
+    },
+    {
+      "name": "CAGDIANAO",
+      "zip": "8411"
+    },
+    {
+      "name": "DINAGAT",
+      "zip": "8412"
+    },
+    {
+      "name": "LIBJO (ALBOR)",
+      "zip": "8414"
+    },
+    {
+      "name": "LORETO",
+      "zip": "8415"
+    },
+    {
+      "name": "SAN JOSE",
+      "zip": "8427"
+    },
+    {
+      "name": "TUBAJON",
+      "zip": "8426"
+    }
+  ],
+  "EASTERN SAMAR": [
+    {
+      "name": "ARTECHE",
+      "zip": "6822"
+    },
+    {
+      "name": "BALANGIGA",
+      "zip": "6812"
+    },
+    {
+      "name": "BALANGKAYAN",
+      "zip": "6801"
+    },
+    {
+      "name": "BORONGAN CITY",
+      "zip": "6800"
+    },
+    {
+      "name": "CAN-AVID",
+      "zip": "6806"
+    },
+    {
+      "name": "DOLORES",
+      "zip": "6817"
+    },
+    {
+      "name": "GENERAL MACARTHUR",
+      "zip": "6805"
+    },
+    {
+      "name": "GIPORLOS",
+      "zip": "6811"
+    },
+    {
+      "name": "GUIUAN",
+      "zip": "6809"
+    },
+    {
+      "name": "HERNANI",
+      "zip": "6804"
+    },
+    {
+      "name": "JIPAPAD",
+      "zip": "6819"
+    },
+    {
+      "name": "LAWAAN",
+      "zip": "6813"
+    },
+    {
+      "name": "LLORENTE",
+      "zip": "6803"
+    },
+    {
+      "name": "MASLOG",
+      "zip": "6820"
+    },
+    {
+      "name": "MAYDOLONG",
+      "zip": "6802"
+    },
+    {
+      "name": "MERCEDES",
+      "zip": "6808"
+    },
+    {
+      "name": "ORAS",
+      "zip": "6818"
+    },
+    {
+      "name": "QUINAPONDAN",
+      "zip": "6810"
+    },
+    {
+      "name": "SALCEDO",
+      "zip": "6807"
+    },
+    {
+      "name": "SAN JULIAN",
+      "zip": "6814"
+    },
+    {
+      "name": "SAN POLICARPO",
+      "zip": "6821"
+    },
+    {
+      "name": "SULAT",
+      "zip": "6815"
+    },
+    {
+      "name": "TAFT",
+      "zip": "6816"
+    }
+  ],
+  "GUIMARAS": [
+    {
+      "name": "BUENAVISTA",
+      "zip": "5044"
+    },
+    {
+      "name": "JORDAN",
+      "zip": "5045"
+    },
+    {
+      "name": "NUEVA VALENCIA",
+      "zip": "5046"
+    },
+    {
+      "name": "SAN LORENZO",
+      "zip": "5047"
+    },
+    {
+      "name": "SIBUNAG",
+      "zip": "5048"
+    }
+  ],
+  "IFUGAO": [
+    {
+      "name": "AGUINALDO",
+      "zip": "3606"
+    },
+    {
+      "name": "ALFONSO LISTA (POTIA)",
+      "zip": "3608"
+    },
+    {
+      "name": "ASIPULO",
+      "zip": "3610"
+    },
+    {
+      "name": "BANAUE",
+      "zip": "3601"
+    },
+    {
+      "name": "HINGYON",
+      "zip": "3607"
+    },
+    {
+      "name": "HUNGDUAN",
+      "zip": "3603"
+    },
+    {
+      "name": "KIANGAN",
+      "zip": "3604"
+    },
+    {
+      "name": "LAGAWE",
+      "zip": "3600"
+    },
+    {
+      "name": "LAMUT",
+      "zip": "3605"
+    },
+    {
+      "name": "MAYOYAO",
+      "zip": ""
+    },
+    {
+      "name": "TINOC",
+      "zip": "3609"
+    }
+  ],
+  "ILOCOS NORTE": [
+    {
+      "name": "ADAMS",
+      "zip": "2922"
+    },
+    {
+      "name": "BACARRA",
+      "zip": "2916"
+    },
+    {
+      "name": "BADOC",
+      "zip": "2904"
+    },
+    {
+      "name": "BANGUI",
+      "zip": "2920"
+    },
+    {
+      "name": "BANNA (ESPIRITU)",
+      "zip": "2908"
+    },
+    {
+      "name": "BATAC CITY",
+      "zip": "2906"
+    },
+    {
+      "name": "BURGOS",
+      "zip": "2918"
+    },
+    {
+      "name": "CARASI",
+      "zip": "2911"
+    },
+    {
+      "name": "CURRIMAO",
+      "zip": "2903"
+    },
+    {
+      "name": "DINGRAS",
+      "zip": "2913"
+    },
+    {
+      "name": "DUMALNEG",
+      "zip": "2921"
+    },
+    {
+      "name": "LAOAG CITY",
+      "zip": "2900"
+    },
+    {
+      "name": "MARCOS",
+      "zip": "2907"
+    },
+    {
+      "name": "NUEVA ERA",
+      "zip": "2909"
+    },
+    {
+      "name": "PAGUDPUD",
+      "zip": "2919"
+    },
+    {
+      "name": "PAOAY",
+      "zip": "2902"
+    },
+    {
+      "name": "PASUQUIN",
+      "zip": "2917"
+    },
+    {
+      "name": "PIDDIG",
+      "zip": "2912"
+    },
+    {
+      "name": "PINILI",
+      "zip": "2905"
+    },
+    {
+      "name": "SAN NICOLAS",
+      "zip": "2901"
+    },
+    {
+      "name": "SARRAT",
+      "zip": "2914"
+    },
+    {
+      "name": "SOLSONA",
+      "zip": "2910"
+    },
+    {
+      "name": "VINTAR",
+      "zip": "2915"
+    }
+  ],
+  "ILOCOS SUR": [
+    {
+      "name": "ALILEM",
+      "zip": "2716"
+    },
+    {
+      "name": "BANAYOYO",
+      "zip": "2708"
+    },
+    {
+      "name": "BANTAY",
+      "zip": "2727"
+    },
+    {
+      "name": "BURGOS",
+      "zip": "2724"
+    },
+    {
+      "name": "CABUGAO",
+      "zip": "2732"
+    },
+    {
+      "name": "CANDON CITY",
+      "zip": "2710"
+    },
+    {
+      "name": "CAOAYAN",
+      "zip": "2702"
+    },
+    {
+      "name": "CERVANTES",
+      "zip": "2718"
+    },
+    {
+      "name": "GALIMUYOD",
+      "zip": "2709"
+    },
+    {
+      "name": "GREGORIO DEL PILAR (CONCEPCION)",
+      "zip": ""
+    },
+    {
+      "name": "LIDLIDDA",
+      "zip": "2723"
+    },
+    {
+      "name": "MAGSINGAL",
+      "zip": "2730"
+    },
+    {
+      "name": "NAGBUKEL",
+      "zip": "2725"
+    },
+    {
+      "name": "NARVACAN",
+      "zip": "2704"
+    },
+    {
+      "name": "QUIRINO (ANGKAKI)",
+      "zip": "2721"
+    },
+    {
+      "name": "SALCEDO (BAUGEN)",
+      "zip": "2711"
+    },
+    {
+      "name": "SAN EMILIO",
+      "zip": "2722"
+    },
+    {
+      "name": "SAN ESTEBAN",
+      "zip": "2706"
+    },
+    {
+      "name": "SAN ILDEFONSO",
+      "zip": "2728"
+    },
+    {
+      "name": "SAN JUAN (LAPOG)",
+      "zip": "2731"
+    },
+    {
+      "name": "SAN VICENTE",
+      "zip": "2726"
+    },
+    {
+      "name": "SANTA",
+      "zip": "2703"
+    },
+    {
+      "name": "SANTA CATALINA",
+      "zip": "2701"
+    },
+    {
+      "name": "SANTA CRUZ",
+      "zip": "2713"
+    },
+    {
+      "name": "SANTA LUCIA",
+      "zip": "2712"
+    },
+    {
+      "name": "SANTA MARIA",
+      "zip": "2705"
+    },
+    {
+      "name": "SANTIAGO",
+      "zip": "2707"
+    },
+    {
+      "name": "SANTO DOMINGO",
+      "zip": "2729"
+    },
+    {
+      "name": "SIGAY",
+      "zip": "2719"
+    },
+    {
+      "name": "SINAIT",
+      "zip": "2733"
+    },
+    {
+      "name": "SUGPON",
+      "zip": "2717"
+    },
+    {
+      "name": "SUYO",
+      "zip": "2715"
+    },
+    {
+      "name": "TAGUDIN",
+      "zip": "2714"
+    },
+    {
+      "name": "VIGAN CITY",
+      "zip": "2700"
+    }
+  ],
+  "ILOILO": [
+    {
+      "name": "AJUY",
+      "zip": "5012"
+    },
+    {
+      "name": "ALIMODIAN",
+      "zip": "5028"
+    },
+    {
+      "name": "ANILAO",
+      "zip": "5009"
+    },
+    {
+      "name": "BADIANGAN",
+      "zip": "5033"
+    },
+    {
+      "name": "BALASAN",
+      "zip": "5018"
+    },
+    {
+      "name": "BANATE",
+      "zip": "5010"
+    },
+    {
+      "name": "BAROTAC NUEVO",
+      "zip": ""
+    },
+    {
+      "name": "BAROTAC VIEJO",
+      "zip": ""
+    },
+    {
+      "name": "BATAD",
+      "zip": "5016"
+    },
+    {
+      "name": "BINGAWAN",
+      "zip": "5041"
+    },
+    {
+      "name": "CABATUAN",
+      "zip": "5031"
+    },
+    {
+      "name": "CALINOG",
+      "zip": "5040"
+    },
+    {
+      "name": "CARLES",
+      "zip": "5019"
+    },
+    {
+      "name": "CITY OF PASSI",
+      "zip": ""
+    },
+    {
+      "name": "CONCEPCION",
+      "zip": "5013"
+    },
+    {
+      "name": "DINGLE",
+      "zip": "5035"
+    },
+    {
+      "name": "DUEÑAS",
+      "zip": ""
+    },
+    {
+      "name": "DUMANGAS",
+      "zip": "5006"
+    },
+    {
+      "name": "ESTANCIA",
+      "zip": "5017"
+    },
+    {
+      "name": "GUIMBAL",
+      "zip": "5022"
+    },
+    {
+      "name": "IGBARAS",
+      "zip": "5029"
+    },
+    {
+      "name": "ILOILO CITY",
+      "zip": "5000"
+    },
+    {
+      "name": "JANIUAY",
+      "zip": "5034"
+    },
+    {
+      "name": "LAMBUNAO",
+      "zip": "5042"
+    },
+    {
+      "name": "LEGANES",
+      "zip": "5003"
+    },
+    {
+      "name": "LEMERY",
+      "zip": "5043"
+    },
+    {
+      "name": "LEON",
+      "zip": "5026"
+    },
+    {
+      "name": "MAASIN",
+      "zip": "5030"
+    },
+    {
+      "name": "MIAGAO",
+      "zip": "5023"
+    },
+    {
+      "name": "MINA",
+      "zip": "5032"
+    },
+    {
+      "name": "NEW LUCENA",
+      "zip": "5005"
+    },
+    {
+      "name": "OTON",
+      "zip": "5020"
+    },
+    {
+      "name": "PAVIA",
+      "zip": "5001"
+    },
+    {
+      "name": "POTOTAN",
+      "zip": "5008"
+    },
+    {
+      "name": "SAN DIONISIO",
+      "zip": "5015"
+    },
+    {
+      "name": "SAN ENRIQUE",
+      "zip": "5036"
+    },
+    {
+      "name": "SAN JOAQUIN",
+      "zip": "5024"
+    },
+    {
+      "name": "SAN MIGUEL",
+      "zip": "5025"
+    },
+    {
+      "name": "SAN RAFAEL",
+      "zip": "5039"
+    },
+    {
+      "name": "SANTA BARBARA",
+      "zip": "5002"
+    },
+    {
+      "name": "SARA",
+      "zip": "5014"
+    },
+    {
+      "name": "TIGBAUAN",
+      "zip": "5021"
+    },
+    {
+      "name": "TUBUNGAN",
+      "zip": "5027"
+    },
+    {
+      "name": "ZARRAGA",
+      "zip": "5004"
+    }
+  ],
+  "ISABELA": [
+    {
+      "name": "ALICIA",
+      "zip": "3306"
+    },
+    {
+      "name": "ANGADANAN",
+      "zip": "3307"
+    },
+    {
+      "name": "AURORA",
+      "zip": "3316"
+    },
+    {
+      "name": "BENITO SOLIVEN",
+      "zip": "3331"
+    },
+    {
+      "name": "BURGOS",
+      "zip": "3322"
+    },
+    {
+      "name": "CABAGAN",
+      "zip": "3328"
+    },
+    {
+      "name": "CABATUAN",
+      "zip": "3315"
+    },
+    {
+      "name": "CAUAYAN CITY",
+      "zip": "3305"
+    },
+    {
+      "name": "CITY OF SANTIAGO",
+      "zip": ""
+    },
+    {
+      "name": "CORDON",
+      "zip": "3312"
+    },
+    {
+      "name": "DELFIN ALBANO (MAGSAYSAY)",
+      "zip": ""
+    },
+    {
+      "name": "DINAPIGUE",
+      "zip": ""
+    },
+    {
+      "name": "DIVILACAN",
+      "zip": "3335"
+    },
+    {
+      "name": "ECHAGUE",
+      "zip": "3309"
+    },
+    {
+      "name": "GAMU",
+      "zip": "3301"
+    },
+    {
+      "name": "ILAGAN CITY",
+      "zip": "3300"
+    },
+    {
+      "name": "JONES",
+      "zip": "3313"
+    },
+    {
+      "name": "LUNA",
+      "zip": "3304"
+    },
+    {
+      "name": "MACONACON",
+      "zip": "3333"
+    },
+    {
+      "name": "MALLIG",
+      "zip": "3323"
+    },
+    {
+      "name": "NAGUILIAN",
+      "zip": ""
+    },
+    {
+      "name": "PALANAN",
+      "zip": "3334"
+    },
+    {
+      "name": "QUEZON",
+      "zip": "3324"
+    },
+    {
+      "name": "QUIRINO",
+      "zip": "3321"
+    },
+    {
+      "name": "RAMON",
+      "zip": "3319"
+    },
+    {
+      "name": "REINA MERCEDES",
+      "zip": "3303"
+    },
+    {
+      "name": "ROXAS",
+      "zip": "3320"
+    },
+    {
+      "name": "SAN AGUSTIN",
+      "zip": "3314"
+    },
+    {
+      "name": "SAN GUILLERMO",
+      "zip": "3308"
+    },
+    {
+      "name": "SAN ISIDRO",
+      "zip": "3310"
+    },
+    {
+      "name": "SAN MANUEL",
+      "zip": ""
+    },
+    {
+      "name": "SAN MARIANO",
+      "zip": "3332"
+    },
+    {
+      "name": "SAN MATEO",
+      "zip": "3318"
+    },
+    {
+      "name": "SAN PABLO",
+      "zip": "3329"
+    },
+    {
+      "name": "SANTA MARIA",
+      "zip": "3330"
+    },
+    {
+      "name": "SANTO TOMAS",
+      "zip": "3327"
+    },
+    {
+      "name": "TUMAUINI",
+      "zip": "3325"
+    }
+  ],
+  "KALINGA": [
+    {
+      "name": "BALBALAN",
+      "zip": "3801"
+    },
+    {
+      "name": "LUBUAGAN",
+      "zip": "3802"
+    },
+    {
+      "name": "PASIL",
+      "zip": "3803"
+    },
+    {
+      "name": "PINUKPUK",
+      "zip": "3806"
+    },
+    {
+      "name": "RIZAL (LIWAN)",
+      "zip": ""
+    },
+    {
+      "name": "TABUK CITY",
+      "zip": "3800"
+    },
+    {
+      "name": "TANUDAN",
+      "zip": "3805"
+    },
+    {
+      "name": "TINGLAYAN",
+      "zip": "3804"
+    }
+  ],
+  "LA UNION": [
+    {
+      "name": "AGOO",
+      "zip": "2504"
+    },
+    {
+      "name": "ARINGAY",
+      "zip": "2503"
+    },
+    {
+      "name": "BACNOTAN",
+      "zip": "2515"
+    },
+    {
+      "name": "BAGULIN",
+      "zip": "2512"
+    },
+    {
+      "name": "BALAOAN",
+      "zip": "2517"
+    },
+    {
+      "name": "BANGAR",
+      "zip": "2519"
+    },
+    {
+      "name": "BAUANG",
+      "zip": "2501"
+    },
+    {
+      "name": "BURGOS",
+      "zip": "2510"
+    },
+    {
+      "name": "CABA",
+      "zip": "2502"
+    },
+    {
+      "name": "CITY OF SAN FERNANDO",
+      "zip": ""
+    },
+    {
+      "name": "LUNA",
+      "zip": "2518"
+    },
+    {
+      "name": "NAGUILIAN",
+      "zip": ""
+    },
+    {
+      "name": "PUGO",
+      "zip": "2508"
+    },
+    {
+      "name": "ROSARIO",
+      "zip": "2506"
+    },
+    {
+      "name": "SAN GABRIEL",
+      "zip": "2513"
+    },
+    {
+      "name": "SAN JUAN",
+      "zip": "2514"
+    },
+    {
+      "name": "SANTO TOMAS",
+      "zip": "2505"
+    },
+    {
+      "name": "SANTOL",
+      "zip": "2516"
+    },
+    {
+      "name": "SUDIPEN",
+      "zip": ""
+    },
+    {
+      "name": "TUBAO",
+      "zip": "2509"
+    }
+  ],
+  "LAGUNA": [
+    {
+      "name": "ALAMINOS",
+      "zip": "4001"
+    },
+    {
+      "name": "BAY",
+      "zip": "4033"
+    },
+    {
+      "name": "CABUYAO CITY",
+      "zip": "4025"
+    },
+    {
+      "name": "CALAMBA CITY",
+      "zip": "4027"
+    },
+    {
+      "name": "CALAUAN",
+      "zip": "4012"
+    },
+    {
+      "name": "CAVINTI",
+      "zip": "4013"
+    },
+    {
+      "name": "CITY OF BIÑAN",
+      "zip": "4024"
+    },
+    {
+      "name": "FAMY",
+      "zip": "4021"
+    },
+    {
+      "name": "KALAYAAN",
+      "zip": "4015"
+    },
+    {
+      "name": "LILIW",
+      "zip": "4004"
+    },
+    {
+      "name": "LOS BAÑOS",
+      "zip": "4030"
+    },
+    {
+      "name": "LUISIANA",
+      "zip": "4032"
+    },
+    {
+      "name": "LUMBAN",
+      "zip": "4014"
+    },
+    {
+      "name": "MABITAC",
+      "zip": "4020"
+    },
+    {
+      "name": "MAGDALENA",
+      "zip": "4007"
+    },
+    {
+      "name": "MAJAYJAY",
+      "zip": "4005"
+    },
+    {
+      "name": "NAGCARLAN",
+      "zip": "4002"
+    },
+    {
+      "name": "PAETE",
+      "zip": "4016"
+    },
+    {
+      "name": "PAGSANJAN",
+      "zip": "4008"
+    },
+    {
+      "name": "PAKIL",
+      "zip": "4017"
+    },
+    {
+      "name": "PANGIL",
+      "zip": "4018"
+    },
+    {
+      "name": "PILA",
+      "zip": "4010"
+    },
+    {
+      "name": "RIZAL",
+      "zip": "4003"
+    },
+    {
+      "name": "SAN PABLO CITY",
+      "zip": "4000"
+    },
+    {
+      "name": "SAN PEDRO CITY",
+      "zip": "4023"
+    },
+    {
+      "name": "SANTA CRUZ",
+      "zip": "4009"
+    },
+    {
+      "name": "SANTA MARIA",
+      "zip": "4022"
+    },
+    {
+      "name": "SANTA ROSA CITY",
+      "zip": "4026"
+    },
+    {
+      "name": "SINILOAN",
+      "zip": "4019"
+    },
+    {
+      "name": "VICTORIA",
+      "zip": "4011"
+    }
+  ],
+  "LANAO DEL NORTE": [
+    {
+      "name": "BACOLOD",
+      "zip": "9205"
+    },
+    {
+      "name": "BALOI",
+      "zip": "9217"
+    },
+    {
+      "name": "BAROY",
+      "zip": "9210"
+    },
+    {
+      "name": "ILIGAN CITY",
+      "zip": "9200"
+    },
+    {
+      "name": "KAPATAGAN",
+      "zip": "9214"
+    },
+    {
+      "name": "KAUSWAGAN",
+      "zip": "9202"
+    },
+    {
+      "name": "KOLAMBUGAN",
+      "zip": ""
+    },
+    {
+      "name": "LALA",
+      "zip": "9211"
+    },
+    {
+      "name": "LINAMON",
+      "zip": "9201"
+    },
+    {
+      "name": "MAGSAYSAY",
+      "zip": "9221"
+    },
+    {
+      "name": "MAIGO",
+      "zip": "9206"
+    },
+    {
+      "name": "MATUNGAO",
+      "zip": "9203"
+    },
+    {
+      "name": "MUNAI",
+      "zip": "9219"
+    },
+    {
+      "name": "NUNUNGAN",
+      "zip": "9216"
+    },
+    {
+      "name": "PANTAO RAGAT",
+      "zip": "9208"
+    },
+    {
+      "name": "PANTAR",
+      "zip": "9218"
+    },
+    {
+      "name": "POONA PIAGAPO",
+      "zip": "9204"
+    },
+    {
+      "name": "SALVADOR",
+      "zip": "9212"
+    },
+    {
+      "name": "SAPAD",
+      "zip": "9213"
+    },
+    {
+      "name": "SULTAN NAGA DIMAPORO (KAROMATAN)",
+      "zip": ""
+    },
+    {
+      "name": "TAGOLOAN",
+      "zip": "9222"
+    },
+    {
+      "name": "TANGCAL",
+      "zip": ""
+    },
+    {
+      "name": "TUBOD",
+      "zip": "9209"
+    }
+  ],
+  "LANAO DEL SUR": [
+    {
+      "name": "AMAI MANABILANG (BUMBARAN)",
+      "zip": ""
+    },
+    {
+      "name": "BACOLOD-KALAWI (BACOLOD GRANDE)",
+      "zip": ""
+    },
+    {
+      "name": "BALABAGAN",
+      "zip": "9302"
+    },
+    {
+      "name": "BALINDONG (WATU)",
+      "zip": ""
+    },
+    {
+      "name": "BAYANG",
+      "zip": "9309"
+    },
+    {
+      "name": "BINIDAYAN",
+      "zip": "9310"
+    },
+    {
+      "name": "BUADIPOSO-BUNTONG",
+      "zip": "9714"
+    },
+    {
+      "name": "BUBONG",
+      "zip": "9708"
+    },
+    {
+      "name": "BUTIG",
+      "zip": "9305"
+    },
+    {
+      "name": "CALANOGAS",
+      "zip": "9319"
+    },
+    {
+      "name": "DITSAAN-RAMAIN",
+      "zip": ""
+    },
+    {
+      "name": "GANASSI",
+      "zip": "9311"
+    },
+    {
+      "name": "KAPAI",
+      "zip": "9709"
+    },
+    {
+      "name": "KAPATAGAN",
+      "zip": ""
+    },
+    {
+      "name": "LUMBA-BAYABAO (MAGUING)",
+      "zip": ""
+    },
+    {
+      "name": "LUMBACA-UNAYAN",
+      "zip": ""
+    },
+    {
+      "name": "LUMBATAN",
+      "zip": "9307"
+    },
+    {
+      "name": "LUMBAYANAGUE",
+      "zip": "9306"
+    },
+    {
+      "name": "MADALUM",
+      "zip": "9315"
+    },
+    {
+      "name": "MADAMBA",
+      "zip": "9314"
+    },
+    {
+      "name": "MAGUING",
+      "zip": "9715"
+    },
+    {
+      "name": "MALABANG",
+      "zip": "9300"
+    },
+    {
+      "name": "MARANTAO",
+      "zip": "9711"
+    },
+    {
+      "name": "MARAWI CITY",
+      "zip": "9700"
+    },
+    {
+      "name": "MAROGONG",
+      "zip": "9303"
+    },
+    {
+      "name": "MASIU",
+      "zip": ""
+    },
+    {
+      "name": "MULONDO",
+      "zip": "9702"
+    },
+    {
+      "name": "PAGAYAWAN (TATARIKAN)",
+      "zip": ""
+    },
+    {
+      "name": "PIAGAPO",
+      "zip": "9710"
+    },
+    {
+      "name": "PICONG (SULTAN GUMANDER)",
+      "zip": "9301"
+    },
+    {
+      "name": "POONA BAYABAO (GATA)",
+      "zip": ""
+    },
+    {
+      "name": "PUALAS",
+      "zip": "9313"
+    },
+    {
+      "name": "SAGUIARAN",
+      "zip": "9701"
+    },
+    {
+      "name": "SULTAN DUMALONDONG",
+      "zip": ""
+    },
+    {
+      "name": "TAGOLOAN",
+      "zip": ""
+    },
+    {
+      "name": "TAMPARAN",
+      "zip": "9704"
+    },
+    {
+      "name": "TARAKA",
+      "zip": "9712"
+    },
+    {
+      "name": "TUBARAN",
+      "zip": "9304"
+    },
+    {
+      "name": "TUGAYA",
+      "zip": "9317"
+    },
+    {
+      "name": "WAO",
+      "zip": "9716"
+    }
+  ],
+  "LEYTE": [
+    {
+      "name": "ABUYOG",
+      "zip": "6510"
+    },
+    {
+      "name": "ALANGALANG",
+      "zip": "6517"
+    },
+    {
+      "name": "ALBUERA",
+      "zip": "6542"
+    },
+    {
+      "name": "BABATNGON",
+      "zip": "6520"
+    },
+    {
+      "name": "BARUGO",
+      "zip": "6519"
+    },
+    {
+      "name": "BATO",
+      "zip": "6525"
+    },
+    {
+      "name": "BAYBAY CITY",
+      "zip": "6521"
+    },
+    {
+      "name": "BURAUEN",
+      "zip": "6516"
+    },
+    {
+      "name": "CALUBIAN",
+      "zip": "6534"
+    },
+    {
+      "name": "CAPOOCAN",
+      "zip": "6530"
+    },
+    {
+      "name": "CARIGARA",
+      "zip": "6529"
+    },
+    {
+      "name": "DAGAMI",
+      "zip": "6515"
+    },
+    {
+      "name": "DULAG",
+      "zip": "6505"
+    },
+    {
+      "name": "HILONGOS",
+      "zip": "6524"
+    },
+    {
+      "name": "HINDANG",
+      "zip": "6523"
+    },
+    {
+      "name": "INOPACAN",
+      "zip": "6522"
+    },
+    {
+      "name": "ISABEL",
+      "zip": "6539"
+    },
+    {
+      "name": "JARO",
+      "zip": "6527"
+    },
+    {
+      "name": "JAVIER (BUGHO)",
+      "zip": ""
+    },
+    {
+      "name": "JULITA",
+      "zip": "6506"
+    },
+    {
+      "name": "KANANGA",
+      "zip": "6531"
+    },
+    {
+      "name": "LA PAZ",
+      "zip": "6508"
+    },
+    {
+      "name": "LEYTE",
+      "zip": "6533"
+    },
+    {
+      "name": "MACARTHUR",
+      "zip": "6509"
+    },
+    {
+      "name": "MAHAPLAG",
+      "zip": "6512"
+    },
+    {
+      "name": "MATAG-OB",
+      "zip": "6532"
+    },
+    {
+      "name": "MATALOM",
+      "zip": "6526"
+    },
+    {
+      "name": "MAYORGA",
+      "zip": "6507"
+    },
+    {
+      "name": "MERIDA",
+      "zip": "6540"
+    },
+    {
+      "name": "ORMOC CITY",
+      "zip": "6541"
+    },
+    {
+      "name": "PALO",
+      "zip": "6501"
+    },
+    {
+      "name": "PALOMPON",
+      "zip": "6538"
+    },
+    {
+      "name": "PASTRANA",
+      "zip": "6514"
+    },
+    {
+      "name": "SAN ISIDRO",
+      "zip": "6535"
+    },
+    {
+      "name": "SAN MIGUEL",
+      "zip": "6518"
+    },
+    {
+      "name": "SANTA FE",
+      "zip": "6513"
+    },
+    {
+      "name": "TABANGO",
+      "zip": "6536"
+    },
+    {
+      "name": "TABONTABON",
+      "zip": "6504"
+    },
+    {
+      "name": "TACLOBAN CITY",
+      "zip": "6500"
+    },
+    {
+      "name": "TANAUAN",
+      "zip": ""
+    },
+    {
+      "name": "TOLOSA",
+      "zip": "6503"
+    },
+    {
+      "name": "TUNGA",
+      "zip": "6528"
+    },
+    {
+      "name": "VILLABA",
+      "zip": "6537"
+    }
+  ],
+  "MAGUINDANAO": [
+    {
+      "name": "AMPATUAN",
+      "zip": "9609"
+    },
+    {
+      "name": "BARIRA",
+      "zip": ""
+    },
+    {
+      "name": "BULDON",
+      "zip": ""
+    },
+    {
+      "name": "BULUAN",
+      "zip": "9616"
+    },
+    {
+      "name": "COTABATO CITY",
+      "zip": "9600"
+    },
+    {
+      "name": "DATU ABDULLAH SANGKI",
+      "zip": "9621"
+    },
+    {
+      "name": "DATU ANGGAL MIDTIMBANG",
+      "zip": "9622"
+    },
+    {
+      "name": "DATU BLAH T. SINSUAT",
+      "zip": "9623"
+    },
+    {
+      "name": "DATU HOFFER AMPATUAN",
+      "zip": "9624"
+    },
+    {
+      "name": "DATU ODIN SINSUAT (DINAIG)",
+      "zip": ""
+    },
+    {
+      "name": "DATU PAGLAS",
+      "zip": "9617"
+    },
+    {
+      "name": "DATU PIANG",
+      "zip": "9607"
+    },
+    {
+      "name": "DATU SALIBO",
+      "zip": "9625"
+    },
+    {
+      "name": "DATU SAUDI AMPATUAN",
+      "zip": "9626"
+    },
+    {
+      "name": "DATU UNSAY",
+      "zip": "9627"
+    },
+    {
+      "name": "GEN. S. K. PENDATUN",
+      "zip": "9618"
+    },
+    {
+      "name": "GUINDULUNGAN",
+      "zip": "9628"
+    },
+    {
+      "name": "KABUNTALAN (TUMBAO)",
+      "zip": ""
+    },
+    {
+      "name": "MAMASAPANO",
+      "zip": "9629"
+    },
+    {
+      "name": "MANGUDADATU",
+      "zip": "9620"
+    },
+    {
+      "name": "MATANOG",
+      "zip": ""
+    },
+    {
+      "name": "NORTHERN KABUNTALAN",
+      "zip": "9630"
+    },
+    {
+      "name": "PAGAGAWAN",
+      "zip": "9631"
+    },
+    {
+      "name": "PAGALUNGAN",
+      "zip": "9610"
+    },
+    {
+      "name": "PAGLAT",
+      "zip": "9632"
+    },
+    {
+      "name": "PANDAG",
+      "zip": "9633"
+    },
+    {
+      "name": "PARANG",
+      "zip": ""
+    },
+    {
+      "name": "RAJAH BUAYAN",
+      "zip": "9634"
+    },
+    {
+      "name": "SHARIFF AGUAK (MAGANOY)",
+      "zip": ""
+    },
+    {
+      "name": "SHARIFF SAYDONA MUSTAPHA",
+      "zip": "9635"
+    },
+    {
+      "name": "SOUTH UPI",
+      "zip": "9603"
+    },
+    {
+      "name": "SULTAN KUDARAT (NULING)",
+      "zip": ""
+    },
+    {
+      "name": "SULTAN MASTURA",
+      "zip": "9636"
+    },
+    {
+      "name": "SULTAN SA BARONGIS (LAMBAYONG)",
+      "zip": ""
+    },
+    {
+      "name": "TALAYAN",
+      "zip": "9612"
+    },
+    {
+      "name": "TALITAY",
+      "zip": ""
+    },
+    {
+      "name": "UPI",
+      "zip": ""
+    }
+  ],
+  "MARINDUQUE": [
+    {
+      "name": "BOAC",
+      "zip": "4900"
+    },
+    {
+      "name": "BUENAVISTA",
+      "zip": "4904"
+    },
+    {
+      "name": "GASAN",
+      "zip": "4905"
+    },
+    {
+      "name": "MOGPOG",
+      "zip": "4901"
+    },
+    {
+      "name": "SANTA CRUZ",
+      "zip": "4902"
+    },
+    {
+      "name": "TORRIJOS",
+      "zip": "4903"
+    }
+  ],
+  "MASBATE": [
+    {
+      "name": "AROROY",
+      "zip": "5414"
+    },
+    {
+      "name": "BALENO",
+      "zip": "5413"
+    },
+    {
+      "name": "BALUD",
+      "zip": "5412"
+    },
+    {
+      "name": "BATUAN",
+      "zip": "5415"
+    },
+    {
+      "name": "CATAINGAN",
+      "zip": "5405"
+    },
+    {
+      "name": "CAWAYAN",
+      "zip": "5409"
+    },
+    {
+      "name": "CLAVERIA",
+      "zip": "5419"
+    },
+    {
+      "name": "DIMASALANG",
+      "zip": "5403"
+    },
+    {
+      "name": "ESPERANZA",
+      "zip": "5407"
+    },
+    {
+      "name": "MANDAON",
+      "zip": "5411"
+    },
+    {
+      "name": "MASBATE CITY",
+      "zip": "5400"
+    },
+    {
+      "name": "MILAGROS",
+      "zip": "5410"
+    },
+    {
+      "name": "MOBO",
+      "zip": "5401"
+    },
+    {
+      "name": "MONREAL",
+      "zip": "5418"
+    },
+    {
+      "name": "PALANAS",
+      "zip": "5404"
+    },
+    {
+      "name": "PIO V. CORPUZ (LIMBUHAN)",
+      "zip": ""
+    },
+    {
+      "name": "PLACER",
+      "zip": "5408"
+    },
+    {
+      "name": "SAN FERNANDO",
+      "zip": "5416"
+    },
+    {
+      "name": "SAN JACINTO",
+      "zip": "5417"
+    },
+    {
+      "name": "SAN PASCUAL",
+      "zip": "5420"
+    },
+    {
+      "name": "USON",
+      "zip": "5402"
+    }
+  ],
+  "MISAMIS OCCIDENTAL": [
+    {
+      "name": "ALORAN",
+      "zip": "7206"
+    },
+    {
+      "name": "BALIANGAO",
+      "zip": "7211"
+    },
+    {
+      "name": "BONIFACIO",
+      "zip": "7215"
+    },
+    {
+      "name": "CALAMBA",
+      "zip": "7210"
+    },
+    {
+      "name": "CLARIN",
+      "zip": "7201"
+    },
+    {
+      "name": "CONCEPCION",
+      "zip": "7213"
+    },
+    {
+      "name": "DON VICTORIANO CHIONGBIAN (DON MARIANO MARCOS)",
+      "zip": ""
+    },
+    {
+      "name": "JIMENEZ",
+      "zip": "7204"
+    },
+    {
+      "name": "LOPEZ JAENA",
+      "zip": "7208"
+    },
+    {
+      "name": "OROQUIETA CITY",
+      "zip": "7207"
+    },
+    {
+      "name": "OZAMIS CITY",
+      "zip": "7200"
+    },
+    {
+      "name": "PANAON",
+      "zip": "7205"
+    },
+    {
+      "name": "PLARIDEL",
+      "zip": "7209"
+    },
+    {
+      "name": "SAPANG DALAGA",
+      "zip": "7212"
+    },
+    {
+      "name": "SINACABAN",
+      "zip": "7203"
+    },
+    {
+      "name": "TANGUB CITY",
+      "zip": "7214"
+    },
+    {
+      "name": "TUDELA",
+      "zip": "7202"
+    }
+  ],
+  "MISAMIS ORIENTAL": [
+    {
+      "name": "ALUBIJID",
+      "zip": "9018"
+    },
+    {
+      "name": "BALINGASAG",
+      "zip": "9005"
+    },
+    {
+      "name": "BALINGOAN",
+      "zip": ""
+    },
+    {
+      "name": "BINUANGAN",
+      "zip": "9008"
+    },
+    {
+      "name": "CAGAYAN DE ORO CITY",
+      "zip": "9000"
+    },
+    {
+      "name": "CLAVERIA",
+      "zip": "9004"
+    },
+    {
+      "name": "EL SALVADOR CITY",
+      "zip": "9017"
+    },
+    {
+      "name": "GINGOOG CITY",
+      "zip": "9014"
+    },
+    {
+      "name": "GITAGUM",
+      "zip": "9020"
+    },
+    {
+      "name": "INITAO",
+      "zip": "9022"
+    },
+    {
+      "name": "JASAAN",
+      "zip": "9003"
+    },
+    {
+      "name": "KINOGUITAN",
+      "zip": ""
+    },
+    {
+      "name": "LAGONGLONG",
+      "zip": "9006"
+    },
+    {
+      "name": "LAGUINDINGAN",
+      "zip": "9019"
+    },
+    {
+      "name": "LIBERTAD",
+      "zip": "9021"
+    },
+    {
+      "name": "LUGAIT",
+      "zip": "9025"
+    },
+    {
+      "name": "MAGSAYSAY (LINUGOS)",
+      "zip": ""
+    },
+    {
+      "name": "MANTICAO",
+      "zip": "9024"
+    },
+    {
+      "name": "MEDINA",
+      "zip": "9013"
+    },
+    {
+      "name": "NAAWAN",
+      "zip": "9023"
+    },
+    {
+      "name": "OPOL",
+      "zip": "9016"
+    },
+    {
+      "name": "SALAY",
+      "zip": "9007"
+    },
+    {
+      "name": "SUGBONGCOGON",
+      "zip": ""
+    },
+    {
+      "name": "TAGOLOAN",
+      "zip": "9001"
+    },
+    {
+      "name": "TALISAYAN",
+      "zip": "9012"
+    },
+    {
+      "name": "VILLANUEVA",
+      "zip": "9002"
+    }
+  ],
+  "MOUNTAIN PROVINCE": [
+    {
+      "name": "BARLIG",
+      "zip": "2623"
+    },
+    {
+      "name": "BAUKO",
+      "zip": "2621"
+    },
+    {
+      "name": "BESAO",
+      "zip": "2618"
+    },
+    {
+      "name": "BONTOC",
+      "zip": "2616"
+    },
+    {
+      "name": "NATONIN",
+      "zip": "2624"
+    },
+    {
+      "name": "PARACELIS",
+      "zip": "2625"
+    },
+    {
+      "name": "SABANGAN",
+      "zip": "2622"
+    },
+    {
+      "name": "SADANGA",
+      "zip": "2617"
+    },
+    {
+      "name": "SAGADA",
+      "zip": "2619"
+    },
+    {
+      "name": "TADIAN",
+      "zip": "2620"
+    }
+  ],
+  "NATIONAL CAPITAL REGION - FOURTH DISTRICT": [
+    {
+      "name": "CITY OF LAS PIÑAS",
+      "zip": ""
+    },
+    {
+      "name": "CITY OF MAKATI",
+      "zip": ""
+    },
+    {
+      "name": "CITY OF MUNTINLUPA",
+      "zip": ""
+    },
+    {
+      "name": "CITY OF PARAÑAQUE",
+      "zip": ""
+    },
+    {
+      "name": "PASAY CITY",
+      "zip": ""
+    }
+  ],
+  "NATIONAL CAPITAL REGION - MANILA": [
+    {
+      "name": "BINONDO",
+      "zip": ""
+    },
+    {
+      "name": "ERMITA",
+      "zip": ""
+    },
+    {
+      "name": "INTRAMUROS",
+      "zip": ""
+    },
+    {
+      "name": "MALATE",
+      "zip": ""
+    },
+    {
+      "name": "PACO",
+      "zip": ""
+    },
+    {
+      "name": "PANDACAN",
+      "zip": ""
+    },
+    {
+      "name": "PORT AREA",
+      "zip": ""
+    },
+    {
+      "name": "QUIAPO",
+      "zip": ""
+    },
+    {
+      "name": "SAMPALOC",
+      "zip": ""
+    },
+    {
+      "name": "SAN MIGUEL",
+      "zip": ""
+    },
+    {
+      "name": "SAN NICOLAS",
+      "zip": ""
+    },
+    {
+      "name": "SANTA ANA",
+      "zip": ""
+    },
+    {
+      "name": "SANTA CRUZ",
+      "zip": ""
+    },
+    {
+      "name": "TONDO",
+      "zip": ""
+    }
+  ],
+  "NATIONAL CAPITAL REGION - SECOND DISTRICT": [
+    {
+      "name": "CITY OF MANDALUYONG",
+      "zip": ""
+    },
+    {
+      "name": "CITY OF MARIKINA",
+      "zip": ""
+    },
+    {
+      "name": "CITY OF PASIG",
+      "zip": ""
+    },
+    {
+      "name": "QUEZON CITY",
+      "zip": ""
+    },
+    {
+      "name": "SAN JUAN CITY",
+      "zip": ""
+    }
+  ],
+  "NATIONAL CAPITAL REGION - THIRD DISTRICT": [
+    {
+      "name": "CALOOCAN CITY",
+      "zip": ""
+    },
+    {
+      "name": "CITY OF VALENZUELA",
+      "zip": ""
+    },
+    {
+      "name": "MALABON CITY",
+      "zip": ""
+    },
+    {
+      "name": "NAVOTAS CITY",
+      "zip": ""
+    }
+  ],
+  "NEGROS OCCIDENTAL": [
+    {
+      "name": "BACOLOD CITY",
+      "zip": "6100"
+    },
+    {
+      "name": "BAGO CITY",
+      "zip": "6101"
+    },
+    {
+      "name": "BINALBAGAN",
+      "zip": ""
+    },
+    {
+      "name": "CADIZ CITY",
+      "zip": "6121"
+    },
+    {
+      "name": "CALATRAVA",
+      "zip": "6126"
+    },
+    {
+      "name": "CANDONI",
+      "zip": "6110"
+    },
+    {
+      "name": "CAUAYAN",
+      "zip": "6112"
+    },
+    {
+      "name": "ENRIQUE B. MAGALONA (SARAVIA)",
+      "zip": ""
+    },
+    {
+      "name": "ESCALANTE CITY",
+      "zip": "6124"
+    },
+    {
+      "name": "HIMAMAYLAN CITY",
+      "zip": "6108"
+    },
+    {
+      "name": "HINIGARAN",
+      "zip": ""
+    },
+    {
+      "name": "HINOBA-AN (ASIA)",
+      "zip": ""
+    },
+    {
+      "name": "ILOG",
+      "zip": "6109"
+    },
+    {
+      "name": "ISABELA",
+      "zip": "6128"
+    },
+    {
+      "name": "KABANKALAN CITY",
+      "zip": "6111"
+    },
+    {
+      "name": "LA CARLOTA CITY",
+      "zip": "6130"
+    },
+    {
+      "name": "LA CASTELLANA",
+      "zip": ""
+    },
+    {
+      "name": "MANAPLA",
+      "zip": "6120"
+    },
+    {
+      "name": "MOISES PADILLA (MAGALLON)",
+      "zip": ""
+    },
+    {
+      "name": "MURCIA",
+      "zip": "6129"
+    },
+    {
+      "name": "PONTEVEDRA",
+      "zip": "6105"
+    },
+    {
+      "name": "PULUPANDAN",
+      "zip": "6102"
+    },
+    {
+      "name": "SAGAY CITY",
+      "zip": "6122"
+    },
+    {
+      "name": "SALVADOR BENEDICTO",
+      "zip": ""
+    },
+    {
+      "name": "SAN CARLOS CITY",
+      "zip": "6127"
+    },
+    {
+      "name": "SAN ENRIQUE",
+      "zip": "6104"
+    },
+    {
+      "name": "SILAY CITY",
+      "zip": "6116"
+    },
+    {
+      "name": "SIPALAY CITY",
+      "zip": "6113"
+    },
+    {
+      "name": "TALISAY CITY",
+      "zip": "6115"
+    },
+    {
+      "name": "TOBOSO",
+      "zip": "6125"
+    },
+    {
+      "name": "VALLADOLID",
+      "zip": "6103"
+    },
+    {
+      "name": "VICTORIAS CITY",
+      "zip": "6119"
+    }
+  ],
+  "NEGROS ORIENTAL": [
+    {
+      "name": "AMLAN (AYUQUITAN)",
+      "zip": ""
+    },
+    {
+      "name": "AYUNGON",
+      "zip": "6210"
+    },
+    {
+      "name": "BACONG",
+      "zip": "6216"
+    },
+    {
+      "name": "BAIS CITY",
+      "zip": "6206"
+    },
+    {
+      "name": "BASAY",
+      "zip": "6222"
+    },
+    {
+      "name": "BAYAWAN CITY (TULONG)",
+      "zip": ""
+    },
+    {
+      "name": "BINDOY (PAYABON)",
+      "zip": ""
+    },
+    {
+      "name": "CANLAON CITY",
+      "zip": "6223"
+    },
+    {
+      "name": "DAUIN",
+      "zip": "6217"
+    },
+    {
+      "name": "DUMAGUETE CITY",
+      "zip": "6200"
+    },
+    {
+      "name": "GUIHULNGAN CITY",
+      "zip": "6214"
+    },
+    {
+      "name": "JIMALALUD",
+      "zip": "6212"
+    },
+    {
+      "name": "LA LIBERTAD",
+      "zip": "6213"
+    },
+    {
+      "name": "MABINAY",
+      "zip": "6207"
+    },
+    {
+      "name": "MANJUYOD",
+      "zip": "6208"
+    },
+    {
+      "name": "PAMPLONA",
+      "zip": "6205"
+    },
+    {
+      "name": "SAN JOSE",
+      "zip": "6202"
+    },
+    {
+      "name": "SANTA CATALINA",
+      "zip": ""
+    },
+    {
+      "name": "SIATON",
+      "zip": "6219"
+    },
+    {
+      "name": "SIBULAN",
+      "zip": "6201"
+    },
+    {
+      "name": "TANJAY CITY",
+      "zip": "6204"
+    },
+    {
+      "name": "TAYASAN",
+      "zip": "6211"
+    },
+    {
+      "name": "VALENCIA (LUZURRIAGA)",
+      "zip": ""
+    },
+    {
+      "name": "VALLEHERMOSO",
+      "zip": "6224"
+    },
+    {
+      "name": "ZAMBOANGUITA",
+      "zip": "6218"
+    }
+  ],
+  "NORTHERN SAMAR": [
+    {
+      "name": "ALLEN",
+      "zip": "6405"
+    },
+    {
+      "name": "BIRI",
+      "zip": "6410"
+    },
+    {
+      "name": "BOBON",
+      "zip": "6401"
+    },
+    {
+      "name": "CAPUL",
+      "zip": "6408"
+    },
+    {
+      "name": "CATARMAN",
+      "zip": "6400"
+    },
+    {
+      "name": "CATUBIG",
+      "zip": "6418"
+    },
+    {
+      "name": "GAMAY",
+      "zip": "6422"
+    },
+    {
+      "name": "LAOANG",
+      "zip": "6411"
+    },
+    {
+      "name": "LAPINIG",
+      "zip": "6423"
+    },
+    {
+      "name": "LAS NAVAS",
+      "zip": "6420"
+    },
+    {
+      "name": "LAVEZARES",
+      "zip": "6404"
+    },
+    {
+      "name": "LOPE DE VEGA",
+      "zip": "6403"
+    },
+    {
+      "name": "MAPANAS",
+      "zip": "6412"
+    },
+    {
+      "name": "MONDRAGON",
+      "zip": "6417"
+    },
+    {
+      "name": "PALAPAG",
+      "zip": "6421"
+    },
+    {
+      "name": "PAMBUJAN",
+      "zip": "6413"
+    },
+    {
+      "name": "ROSARIO",
+      "zip": "6416"
+    },
+    {
+      "name": "SAN ANTONIO",
+      "zip": "6407"
+    },
+    {
+      "name": "SAN ISIDRO",
+      "zip": "6409"
+    },
+    {
+      "name": "SAN JOSE",
+      "zip": "6402"
+    },
+    {
+      "name": "SAN ROQUE",
+      "zip": "6415"
+    },
+    {
+      "name": "SAN VICENTE",
+      "zip": "6419"
+    },
+    {
+      "name": "SILVINO LOBOS",
+      "zip": "6414"
+    },
+    {
+      "name": "VICTORIA",
+      "zip": "6406"
+    }
+  ],
+  "NUEVA ECIJA": [
+    {
+      "name": "ALIAGA",
+      "zip": "3111"
+    },
+    {
+      "name": "BONGABON",
+      "zip": "3128"
+    },
+    {
+      "name": "CABANATUAN CITY",
+      "zip": "3100"
+    },
+    {
+      "name": "CABIAO",
+      "zip": "3107"
+    },
+    {
+      "name": "CARRANGLAN",
+      "zip": "3123"
+    },
+    {
+      "name": "CUYAPO",
+      "zip": "3117"
+    },
+    {
+      "name": "GABALDON (BITULOK AND SABANI)",
+      "zip": ""
+    },
+    {
+      "name": "GAPAN CITY",
+      "zip": "3105"
+    },
+    {
+      "name": "GENERAL MAMERTO NATIVIDAD",
+      "zip": ""
+    },
+    {
+      "name": "GENERAL TINIO (PAPAYA)",
+      "zip": ""
+    },
+    {
+      "name": "GUIMBA",
+      "zip": "3115"
+    },
+    {
+      "name": "JAEN",
+      "zip": "3109"
+    },
+    {
+      "name": "LAUR",
+      "zip": "3129"
+    },
+    {
+      "name": "LICAB",
+      "zip": "3112"
+    },
+    {
+      "name": "LLANERA",
+      "zip": "3126"
+    },
+    {
+      "name": "LUPAO",
+      "zip": "3122"
+    },
+    {
+      "name": "NAMPICUAN",
+      "zip": "3116"
+    },
+    {
+      "name": "PALAYAN CITY",
+      "zip": "3132"
+    },
+    {
+      "name": "PANTABANGAN",
+      "zip": "3124"
+    },
+    {
+      "name": "PEÑARANDA",
+      "zip": "3103"
+    },
+    {
+      "name": "QUEZON",
+      "zip": "3113"
+    },
+    {
+      "name": "RIZAL",
+      "zip": "3127"
+    },
+    {
+      "name": "SAN ANTONIO",
+      "zip": "3108"
+    },
+    {
+      "name": "SAN ISIDRO",
+      "zip": "3106"
+    },
+    {
+      "name": "SAN JOSE CITY",
+      "zip": "3121"
+    },
+    {
+      "name": "SAN LEONARDO",
+      "zip": "3102"
+    },
+    {
+      "name": "SANTA ROSA",
+      "zip": "3101"
+    },
+    {
+      "name": "SANTO DOMINGO",
+      "zip": "3133"
+    },
+    {
+      "name": "SCIENCE CITY OF MUÑOZ",
+      "zip": "3119"
+    },
+    {
+      "name": "TALAVERA",
+      "zip": "3114"
+    },
+    {
+      "name": "TALUGTUG",
+      "zip": ""
+    },
+    {
+      "name": "ZARAGOZA",
+      "zip": "3110"
+    }
+  ],
+  "NUEVA VIZCAYA": [
+    {
+      "name": "ALFONSO CASTANEDA",
+      "zip": "3714"
+    },
+    {
+      "name": "AMBAGUIO",
+      "zip": "3701"
+    },
+    {
+      "name": "ARITAO",
+      "zip": "3704"
+    },
+    {
+      "name": "BAGABAG",
+      "zip": "3711"
+    },
+    {
+      "name": "BAMBANG",
+      "zip": "3702"
+    },
+    {
+      "name": "BAYOMBONG",
+      "zip": "3700"
+    },
+    {
+      "name": "DIADI",
+      "zip": "3712"
+    },
+    {
+      "name": "DUPAX DEL NORTE",
+      "zip": "3706"
+    },
+    {
+      "name": "DUPAX DEL SUR",
+      "zip": "3707"
+    },
+    {
+      "name": "KASIBU",
+      "zip": "3703"
+    },
+    {
+      "name": "KAYAPA",
+      "zip": "3708"
+    },
+    {
+      "name": "QUEZON",
+      "zip": "3714"
+    },
+    {
+      "name": "SANTA FE",
+      "zip": ""
+    },
+    {
+      "name": "SOLANO",
+      "zip": "3709"
+    },
+    {
+      "name": "VILLAVERDE",
+      "zip": ""
+    }
+  ],
+  "OCCIDENTAL MINDORO": [
+    {
+      "name": "ABRA DE ILOG",
+      "zip": "5108"
+    },
+    {
+      "name": "CALINTAAN",
+      "zip": "5102"
+    },
+    {
+      "name": "LOOC",
+      "zip": "5111"
+    },
+    {
+      "name": "LUBANG",
+      "zip": "5109"
+    },
+    {
+      "name": "MAGSAYSAY",
+      "zip": "5101"
+    },
+    {
+      "name": "MAMBURAO",
+      "zip": "5106"
+    },
+    {
+      "name": "PALUAN",
+      "zip": "5107"
+    },
+    {
+      "name": "RIZAL",
+      "zip": "5103"
+    },
+    {
+      "name": "SABLAYAN",
+      "zip": "5104"
+    },
+    {
+      "name": "SAN JOSE",
+      "zip": "5100"
+    },
+    {
+      "name": "SANTA CRUZ",
+      "zip": "5105"
+    }
+  ],
+  "ORIENTAL MINDORO": [
+    {
+      "name": "BACO",
+      "zip": "5201"
+    },
+    {
+      "name": "BANSUD",
+      "zip": "5210"
+    },
+    {
+      "name": "BONGABONG",
+      "zip": ""
+    },
+    {
+      "name": "BULALACAO (SAN PEDRO)",
+      "zip": ""
+    },
+    {
+      "name": "CITY OF CALAPAN",
+      "zip": "5200"
+    },
+    {
+      "name": "GLORIA",
+      "zip": "5209"
+    },
+    {
+      "name": "MANSALAY",
+      "zip": "5213"
+    },
+    {
+      "name": "NAUJAN",
+      "zip": "5204"
+    },
+    {
+      "name": "PINAMALAYAN",
+      "zip": "5208"
+    },
+    {
+      "name": "POLA",
+      "zip": "5206"
+    },
+    {
+      "name": "PUERTO GALERA",
+      "zip": "5203"
+    },
+    {
+      "name": "ROXAS",
+      "zip": "5212"
+    },
+    {
+      "name": "SAN TEODORO",
+      "zip": "5202"
+    },
+    {
+      "name": "SOCORRO",
+      "zip": "5207"
+    },
+    {
+      "name": "VICTORIA",
+      "zip": "5205"
+    }
+  ],
+  "PALAWAN": [
+    {
+      "name": "ABORLAN",
+      "zip": "5302"
+    },
+    {
+      "name": "AGUTAYA",
+      "zip": "5320"
+    },
+    {
+      "name": "ARACELI",
+      "zip": "5311"
+    },
+    {
+      "name": "BALABAC",
+      "zip": "5307"
+    },
+    {
+      "name": "BATARAZA",
+      "zip": "5306"
+    },
+    {
+      "name": "BROOKE'S POINT",
+      "zip": "5305"
+    },
+    {
+      "name": "BUSUANGA",
+      "zip": "5317"
+    },
+    {
+      "name": "CAGAYANCILLO",
+      "zip": "5321"
+    },
+    {
+      "name": "CORON",
+      "zip": "5316"
+    },
+    {
+      "name": "CULION",
+      "zip": "5315"
+    },
+    {
+      "name": "CUYO",
+      "zip": "5318"
+    },
+    {
+      "name": "DUMARAN",
+      "zip": "5310"
+    },
+    {
+      "name": "EL NIDO (BACUIT)",
+      "zip": "5313"
+    },
+    {
+      "name": "KALAYAAN",
+      "zip": "5322"
+    },
+    {
+      "name": "LINAPACAN",
+      "zip": "5314"
+    },
+    {
+      "name": "MAGSAYSAY",
+      "zip": "5319"
+    },
+    {
+      "name": "NARRA",
+      "zip": ""
+    },
+    {
+      "name": "PUERTO PRINCESA CITY",
+      "zip": "5300"
+    },
+    {
+      "name": "QUEZON",
+      "zip": "5304"
+    },
+    {
+      "name": "RIZAL (MARCOS)",
+      "zip": "5323"
+    },
+    {
+      "name": "ROXAS",
+      "zip": "5308"
+    },
+    {
+      "name": "SAN VICENTE",
+      "zip": "5309"
+    },
+    {
+      "name": "SOFRONIO ESPAÑOLA",
+      "zip": ""
+    },
+    {
+      "name": "TAYTAY",
+      "zip": "5312"
+    }
+  ],
+  "PAMPANGA": [
+    {
+      "name": "ANGELES CITY",
+      "zip": ""
+    },
+    {
+      "name": "APALIT",
+      "zip": "2016"
+    },
+    {
+      "name": "ARAYAT",
+      "zip": "2012"
+    },
+    {
+      "name": "BACOLOR",
+      "zip": "2001"
+    },
+    {
+      "name": "CANDABA",
+      "zip": "2013"
+    },
+    {
+      "name": "FLORIDABLANCA",
+      "zip": "2006"
+    },
+    {
+      "name": "GUAGUA",
+      "zip": "2003"
+    },
+    {
+      "name": "LUBAO",
+      "zip": "2005"
+    },
+    {
+      "name": "MABALACAT CITY",
+      "zip": "2010"
+    },
+    {
+      "name": "MACABEBE",
+      "zip": "2018"
+    },
+    {
+      "name": "MAGALANG",
+      "zip": "2011"
+    },
+    {
+      "name": "MASANTOL",
+      "zip": "2017"
+    },
+    {
+      "name": "MEXICO",
+      "zip": "2021"
+    },
+    {
+      "name": "MINALIN",
+      "zip": "2019"
+    },
+    {
+      "name": "PORAC",
+      "zip": "2008"
+    },
+    {
+      "name": "SAN FERNANDO CITY",
+      "zip": ""
+    },
+    {
+      "name": "SAN LUIS",
+      "zip": "2014"
+    },
+    {
+      "name": "SAN SIMON",
+      "zip": "2015"
+    },
+    {
+      "name": "SANTA ANA",
+      "zip": "2022"
+    },
+    {
+      "name": "SANTA RITA",
+      "zip": "2002"
+    },
+    {
+      "name": "SANTO TOMAS",
+      "zip": "2020"
+    },
+    {
+      "name": "SASMUAN (SEXMOAN)",
+      "zip": "2004"
+    }
+  ],
+  "PANGASINAN": [
+    {
+      "name": "AGNO",
+      "zip": "2408"
+    },
+    {
+      "name": "AGUILAR",
+      "zip": "2415"
+    },
+    {
+      "name": "ALAMINOS CITY",
+      "zip": "2404"
+    },
+    {
+      "name": "ALCALA",
+      "zip": "2425"
+    },
+    {
+      "name": "ANDA",
+      "zip": "2405"
+    },
+    {
+      "name": "ASINGAN",
+      "zip": "2439"
+    },
+    {
+      "name": "BALUNGAO",
+      "zip": "2442"
+    },
+    {
+      "name": "BANI",
+      "zip": "2407"
+    },
+    {
+      "name": "BASISTA",
+      "zip": "2422"
+    },
+    {
+      "name": "BAUTISTA",
+      "zip": "2424"
+    },
+    {
+      "name": "BAYAMBANG",
+      "zip": "2423"
+    },
+    {
+      "name": "BINALONAN",
+      "zip": "2436"
+    },
+    {
+      "name": "BINMALEY",
+      "zip": "2417"
+    },
+    {
+      "name": "BOLINAO",
+      "zip": "2406"
+    },
+    {
+      "name": "BUGALLON",
+      "zip": "2416"
+    },
+    {
+      "name": "BURGOS",
+      "zip": "2410"
+    },
+    {
+      "name": "CALASIAO",
+      "zip": "2418"
+    },
+    {
+      "name": "DAGUPAN CITY",
+      "zip": "2400"
+    },
+    {
+      "name": "DASOL",
+      "zip": "2411"
+    },
+    {
+      "name": "INFANTA",
+      "zip": "2412"
+    },
+    {
+      "name": "LABRADOR",
+      "zip": "2402"
+    },
+    {
+      "name": "LAOAC",
+      "zip": "2437"
+    },
+    {
+      "name": "LINGAYEN",
+      "zip": "2401"
+    },
+    {
+      "name": "MABINI",
+      "zip": "2409"
+    },
+    {
+      "name": "MALASIQUI",
+      "zip": "2421"
+    },
+    {
+      "name": "MANAOAG",
+      "zip": "2430"
+    },
+    {
+      "name": "MANGALDAN",
+      "zip": "2432"
+    },
+    {
+      "name": "MANGATAREM",
+      "zip": "2413"
+    },
+    {
+      "name": "MAPANDAN",
+      "zip": "2429"
+    },
+    {
+      "name": "NATIVIDAD",
+      "zip": "2446"
+    },
+    {
+      "name": "POZORRUBIO",
+      "zip": "2435"
+    },
+    {
+      "name": "ROSALES",
+      "zip": "2441"
+    },
+    {
+      "name": "SAN CARLOS CITY",
+      "zip": "2420"
+    },
+    {
+      "name": "SAN FABIAN",
+      "zip": "2433"
+    },
+    {
+      "name": "SAN JACINTO",
+      "zip": "2431"
+    },
+    {
+      "name": "SAN MANUEL",
+      "zip": "2438"
+    },
+    {
+      "name": "SAN NICOLAS",
+      "zip": "2447"
+    },
+    {
+      "name": "SAN QUINTIN",
+      "zip": "2444"
+    },
+    {
+      "name": "SANTA BARBARA",
+      "zip": "2419"
+    },
+    {
+      "name": "SANTA MARIA",
+      "zip": "2440"
+    },
+    {
+      "name": "SANTO TOMAS",
+      "zip": "2426"
+    },
+    {
+      "name": "SISON",
+      "zip": "2434"
+    },
+    {
+      "name": "SUAL",
+      "zip": "2403"
+    },
+    {
+      "name": "TAYUG",
+      "zip": "2445"
+    },
+    {
+      "name": "UMINGAN",
+      "zip": "2443"
+    },
+    {
+      "name": "URBIZTONDO",
+      "zip": "2414"
+    },
+    {
+      "name": "URDANETA CITY",
+      "zip": "2428"
+    },
+    {
+      "name": "VILLASIS",
+      "zip": "2427"
+    }
+  ],
+  "QUEZON": [
+    {
+      "name": "AGDANGAN",
+      "zip": "4304"
+    },
+    {
+      "name": "ALABAT",
+      "zip": "4333"
+    },
+    {
+      "name": "ATIMONAN",
+      "zip": "4331"
+    },
+    {
+      "name": "BUENAVISTA",
+      "zip": "4320"
+    },
+    {
+      "name": "BURDEOS",
+      "zip": "4340"
+    },
+    {
+      "name": "CALAUAG",
+      "zip": "4318"
+    },
+    {
+      "name": "CANDELARIA",
+      "zip": "4323"
+    },
+    {
+      "name": "CATANAUAN",
+      "zip": "4311"
+    },
+    {
+      "name": "DOLORES",
+      "zip": "4326"
+    },
+    {
+      "name": "GENERAL LUNA",
+      "zip": ""
+    },
+    {
+      "name": "GENERAL NAKAR",
+      "zip": "4338"
+    },
+    {
+      "name": "GUINAYANGAN",
+      "zip": "4319"
+    },
+    {
+      "name": "GUMACA",
+      "zip": "4307"
+    },
+    {
+      "name": "INFANTA",
+      "zip": "4336"
+    },
+    {
+      "name": "JOMALIG",
+      "zip": "4342"
+    },
+    {
+      "name": "LOPEZ",
+      "zip": "4316"
+    },
+    {
+      "name": "LUCBAN",
+      "zip": "4328"
+    },
+    {
+      "name": "LUCENA CITY",
+      "zip": "4301"
+    },
+    {
+      "name": "MACALELON",
+      "zip": "4309"
+    },
+    {
+      "name": "MAUBAN",
+      "zip": "4330"
+    },
+    {
+      "name": "MULANAY",
+      "zip": "4312"
+    },
+    {
+      "name": "PADRE BURGOS",
+      "zip": "4303"
+    },
+    {
+      "name": "PAGBILAO",
+      "zip": "4302"
+    },
+    {
+      "name": "PANUKULAN",
+      "zip": "4337"
+    },
+    {
+      "name": "PATNANUNGAN",
+      "zip": "4341"
+    },
+    {
+      "name": "PEREZ",
+      "zip": "4334"
+    },
+    {
+      "name": "PITOGO",
+      "zip": "4308"
+    },
+    {
+      "name": "PLARIDEL",
+      "zip": "4306"
+    },
+    {
+      "name": "POLILLO",
+      "zip": ""
+    },
+    {
+      "name": "QUEZON",
+      "zip": "4332"
+    },
+    {
+      "name": "REAL",
+      "zip": "4335"
+    },
+    {
+      "name": "SAMPALOC",
+      "zip": "4329"
+    },
+    {
+      "name": "SAN ANDRES",
+      "zip": "4314"
+    },
+    {
+      "name": "SAN ANTONIO",
+      "zip": "4324"
+    },
+    {
+      "name": "SAN FRANCISCO (AURORA)",
+      "zip": "4315"
+    },
+    {
+      "name": "SAN NARCISO",
+      "zip": "4313"
+    },
+    {
+      "name": "SARIAYA",
+      "zip": "4322"
+    },
+    {
+      "name": "TAGKAWAYAN",
+      "zip": "4321"
+    },
+    {
+      "name": "TAYABAS CITY",
+      "zip": "4327"
+    },
+    {
+      "name": "TIAONG",
+      "zip": "4325"
+    },
+    {
+      "name": "UNISAN",
+      "zip": "4305"
+    }
+  ],
+  "QUIRINO": [
+    {
+      "name": "AGLIPAY",
+      "zip": "3403"
+    },
+    {
+      "name": "CABARROGUIS",
+      "zip": "3400"
+    },
+    {
+      "name": "DIFFUN",
+      "zip": "3401"
+    },
+    {
+      "name": "MADDELA",
+      "zip": "3404"
+    },
+    {
+      "name": "NAGTIPUNAN",
+      "zip": ""
+    },
+    {
+      "name": "SAGUDAY",
+      "zip": "3402"
+    }
+  ],
+  "RIZAL": [
+    {
+      "name": "ANGONO",
+      "zip": "1930"
+    },
+    {
+      "name": "BARAS",
+      "zip": "1970"
+    },
+    {
+      "name": "BINANGONAN",
+      "zip": "1940"
+    },
+    {
+      "name": "CAINTA",
+      "zip": "1900"
+    },
+    {
+      "name": "CARDONA",
+      "zip": "1950"
+    },
+    {
+      "name": "CITY OF ANTIPOLO",
+      "zip": ""
+    },
+    {
+      "name": "JALA-JALA",
+      "zip": "1900"
+    },
+    {
+      "name": "MORONG",
+      "zip": "1960"
+    },
+    {
+      "name": "PILILLA",
+      "zip": "1910"
+    },
+    {
+      "name": "RODRIGUEZ (MONTALBAN)",
+      "zip": ""
+    },
+    {
+      "name": "SAN MATEO",
+      "zip": "1850"
+    },
+    {
+      "name": "TANAY",
+      "zip": "1980"
+    },
+    {
+      "name": "TAYTAY",
+      "zip": "1920"
+    },
+    {
+      "name": "TERESA",
+      "zip": "1880"
+    }
+  ],
+  "ROMBLON": [
+    {
+      "name": "ALCANTARA",
+      "zip": "5509"
+    },
+    {
+      "name": "BANTON",
+      "zip": ""
+    },
+    {
+      "name": "CAJIDIOCAN",
+      "zip": "5512"
+    },
+    {
+      "name": "CALATRAVA",
+      "zip": "5503"
+    },
+    {
+      "name": "CONCEPCION",
+      "zip": "5516"
+    },
+    {
+      "name": "CORCUERA",
+      "zip": "5514"
+    },
+    {
+      "name": "FERROL",
+      "zip": "5506"
+    },
+    {
+      "name": "LOOC",
+      "zip": "5507"
+    },
+    {
+      "name": "MAGDIWANG",
+      "zip": "5511"
+    },
+    {
+      "name": "ODIONGAN",
+      "zip": "5505"
+    },
+    {
+      "name": "ROMBLON",
+      "zip": "5500"
+    },
+    {
+      "name": "SAN AGUSTIN",
+      "zip": "5501"
+    },
+    {
+      "name": "SAN ANDRES",
+      "zip": "5504"
+    },
+    {
+      "name": "SAN FERNANDO",
+      "zip": "5513"
+    },
+    {
+      "name": "SAN JOSE",
+      "zip": "5510"
+    },
+    {
+      "name": "SANTA FE",
+      "zip": "5508"
+    },
+    {
+      "name": "SANTA MARIA (IMELDA)",
+      "zip": ""
+    }
+  ],
+  "SAMAR (WESTERN SAMAR)": [
+    {
+      "name": "ALMAGRO",
+      "zip": ""
+    },
+    {
+      "name": "BASEY",
+      "zip": ""
+    },
+    {
+      "name": "CALBAYOG CITY",
+      "zip": ""
+    },
+    {
+      "name": "CALBIGA",
+      "zip": ""
+    },
+    {
+      "name": "CATBALOGAN CITY",
+      "zip": ""
+    },
+    {
+      "name": "DARAM",
+      "zip": ""
+    },
+    {
+      "name": "GANDARA",
+      "zip": ""
+    },
+    {
+      "name": "HINABANGAN",
+      "zip": ""
+    },
+    {
+      "name": "JIABONG",
+      "zip": ""
+    },
+    {
+      "name": "MARABUT",
+      "zip": ""
+    },
+    {
+      "name": "MATUGUINAO",
+      "zip": ""
+    },
+    {
+      "name": "MOTIONG",
+      "zip": ""
+    },
+    {
+      "name": "PAGSANGHAN",
+      "zip": ""
+    },
+    {
+      "name": "PARANAS (WRIGHT)",
+      "zip": ""
+    },
+    {
+      "name": "PINABACDAO",
+      "zip": ""
+    },
+    {
+      "name": "SAN JORGE",
+      "zip": ""
+    },
+    {
+      "name": "SAN JOSE DE BUAN",
+      "zip": ""
+    },
+    {
+      "name": "SAN SEBASTIAN",
+      "zip": ""
+    },
+    {
+      "name": "SANTA MARGARITA",
+      "zip": ""
+    },
+    {
+      "name": "SANTA RITA",
+      "zip": ""
+    },
+    {
+      "name": "SANTO NIÑO",
+      "zip": ""
+    },
+    {
+      "name": "TAGAPUL-AN",
+      "zip": ""
+    },
+    {
+      "name": "TALALORA",
+      "zip": ""
+    },
+    {
+      "name": "TARANGNAN",
+      "zip": ""
+    },
+    {
+      "name": "VILLAREAL",
+      "zip": ""
+    },
+    {
+      "name": "ZUMARRAGA",
+      "zip": ""
+    }
+  ],
+  "SARANGANI": [
+    {
+      "name": "ALABEL",
+      "zip": "9501"
+    },
+    {
+      "name": "GLAN",
+      "zip": "9517"
+    },
+    {
+      "name": "KIAMBA",
+      "zip": "9514"
+    },
+    {
+      "name": "MAASIM",
+      "zip": "9502"
+    },
+    {
+      "name": "MAITUM",
+      "zip": "9515"
+    },
+    {
+      "name": "MALAPATAN",
+      "zip": "9516"
+    },
+    {
+      "name": "MALUNGON",
+      "zip": "9503"
+    }
+  ],
+  "SIQUIJOR": [
+    {
+      "name": "ENRIQUE VILLANUEVA",
+      "zip": "6230"
+    },
+    {
+      "name": "LARENA",
+      "zip": "6226"
+    },
+    {
+      "name": "LAZI",
+      "zip": "6228"
+    },
+    {
+      "name": "MARIA",
+      "zip": "6229"
+    },
+    {
+      "name": "SAN JUAN",
+      "zip": "6227"
+    },
+    {
+      "name": "SIQUIJOR",
+      "zip": "6225"
+    }
+  ],
+  "SORSOGON": [
+    {
+      "name": "BARCELONA",
+      "zip": "4712"
+    },
+    {
+      "name": "BULAN",
+      "zip": "4706"
+    },
+    {
+      "name": "BULUSAN",
+      "zip": "4704"
+    },
+    {
+      "name": "CASIGURAN",
+      "zip": "4702"
+    },
+    {
+      "name": "CASTILLA",
+      "zip": "4713"
+    },
+    {
+      "name": "DONSOL",
+      "zip": "4715"
+    },
+    {
+      "name": "GUBAT",
+      "zip": "4710"
+    },
+    {
+      "name": "IROSIN",
+      "zip": "4707"
+    },
+    {
+      "name": "JUBAN",
+      "zip": "4703"
+    },
+    {
+      "name": "MAGALLANES",
+      "zip": "4705"
+    },
+    {
+      "name": "MATNOG",
+      "zip": "4708"
+    },
+    {
+      "name": "PILAR",
+      "zip": "4714"
+    },
+    {
+      "name": "PRIETO DIAZ",
+      "zip": "4711"
+    },
+    {
+      "name": "SANTA MAGDALENA",
+      "zip": "4709"
+    },
+    {
+      "name": "SORSOGON CITY",
+      "zip": "4700"
+    }
+  ],
+  "SOUTH COTABATO": [
+    {
+      "name": "BANGA",
+      "zip": "9511"
+    },
+    {
+      "name": "GENERAL SANTOS CITY (DADIANGAS)",
+      "zip": "9500"
+    },
+    {
+      "name": "KORONADAL CITY",
+      "zip": "9506"
+    },
+    {
+      "name": "LAKE SEBU",
+      "zip": ""
+    },
+    {
+      "name": "NORALA",
+      "zip": "9508"
+    },
+    {
+      "name": "POLOMOLOK",
+      "zip": "9504"
+    },
+    {
+      "name": "SANTO NIÑO",
+      "zip": ""
+    },
+    {
+      "name": "SURALLAH",
+      "zip": "9512"
+    },
+    {
+      "name": "T`BOLI",
+      "zip": "9513"
+    },
+    {
+      "name": "TAMPAKAN",
+      "zip": "9507"
+    },
+    {
+      "name": "TANTANGAN",
+      "zip": "9510"
+    },
+    {
+      "name": "TUPI",
+      "zip": "9505"
+    }
+  ],
+  "SOUTHERN LEYTE": [
+    {
+      "name": "ANAHAWAN",
+      "zip": "6610"
+    },
+    {
+      "name": "BONTOC",
+      "zip": "6604"
+    },
+    {
+      "name": "HINUNANGAN",
+      "zip": "6608"
+    },
+    {
+      "name": "HINUNDAYAN",
+      "zip": "6609"
+    },
+    {
+      "name": "LIBAGON",
+      "zip": "6615"
+    },
+    {
+      "name": "LILOAN",
+      "zip": "6612"
+    },
+    {
+      "name": "LIMASAWA",
+      "zip": ""
+    },
+    {
+      "name": "MAASIN CITY",
+      "zip": "6600"
+    },
+    {
+      "name": "MACROHON",
+      "zip": "6601"
+    },
+    {
+      "name": "MALITBOG",
+      "zip": "6603"
+    },
+    {
+      "name": "PADRE BURGOS",
+      "zip": "6602"
+    },
+    {
+      "name": "PINTUYAN",
+      "zip": "6614"
+    },
+    {
+      "name": "SAINT BERNARD",
+      "zip": ""
+    },
+    {
+      "name": "SAN FRANCISCO",
+      "zip": "6613"
+    },
+    {
+      "name": "SAN JUAN (CABALIAN)",
+      "zip": "6611"
+    },
+    {
+      "name": "SAN RICARDO",
+      "zip": "6617"
+    },
+    {
+      "name": "SILAGO",
+      "zip": "6607"
+    },
+    {
+      "name": "SOGOD",
+      "zip": "6606"
+    },
+    {
+      "name": "TOMAS OPPUS",
+      "zip": "6605"
+    }
+  ],
+  "SULTAN KUDARAT": [
+    {
+      "name": "BAGUMBAYAN",
+      "zip": "9810"
+    },
+    {
+      "name": "COLUMBIO",
+      "zip": "9801"
+    },
+    {
+      "name": "ESPERANZA",
+      "zip": ""
+    },
+    {
+      "name": "ISULAN",
+      "zip": "9805"
+    },
+    {
+      "name": "KALAMANSIG",
+      "zip": "9808"
+    },
+    {
+      "name": "LAMBAYONG (MARIANO MARCOS)",
+      "zip": ""
+    },
+    {
+      "name": "LEBAK",
+      "zip": ""
+    },
+    {
+      "name": "LUTAYAN",
+      "zip": "9803"
+    },
+    {
+      "name": "PALIMBANG",
+      "zip": "9809"
+    },
+    {
+      "name": "PRESIDENT QUIRINO",
+      "zip": ""
+    },
+    {
+      "name": "SEN. NINOY AQUINO",
+      "zip": "9811"
+    },
+    {
+      "name": "TACURONG CITY",
+      "zip": "9800"
+    }
+  ],
+  "SULU": [
+    {
+      "name": "HADJI PANGLIMA TAHIL (MARUNGGAS)",
+      "zip": ""
+    },
+    {
+      "name": "INDANAN",
+      "zip": "7407"
+    },
+    {
+      "name": "JOLO",
+      "zip": "7400"
+    },
+    {
+      "name": "KALINGALAN CALUANG",
+      "zip": ""
+    },
+    {
+      "name": "LUGUS",
+      "zip": "7411"
+    },
+    {
+      "name": "LUUK",
+      "zip": "7404"
+    },
+    {
+      "name": "MAIMBUNG",
+      "zip": "7409"
+    },
+    {
+      "name": "OLD PANAMAO",
+      "zip": ""
+    },
+    {
+      "name": "OMAR",
+      "zip": ""
+    },
+    {
+      "name": "PANDAMI",
+      "zip": ""
+    },
+    {
+      "name": "PANGLIMA ESTINO (NEW PANAMAO)",
+      "zip": ""
+    },
+    {
+      "name": "PANGUTARAN",
+      "zip": ""
+    },
+    {
+      "name": "PARANG",
+      "zip": "7408"
+    },
+    {
+      "name": "PATA",
+      "zip": "7405"
+    },
+    {
+      "name": "PATIKUL",
+      "zip": "7401"
+    },
+    {
+      "name": "SIASI",
+      "zip": "7412"
+    },
+    {
+      "name": "TALIPAO",
+      "zip": "7403"
+    },
+    {
+      "name": "TAPUL",
+      "zip": "7410"
+    },
+    {
+      "name": "TONGKIL",
+      "zip": "7406"
+    }
+  ],
+  "SURIGAO DEL NORTE": [
+    {
+      "name": "ALEGRIA",
+      "zip": "8425"
+    },
+    {
+      "name": "BACUAG",
+      "zip": "8408"
+    },
+    {
+      "name": "BURGOS",
+      "zip": "8424"
+    },
+    {
+      "name": "CLAVER",
+      "zip": "8410"
+    },
+    {
+      "name": "DAPA",
+      "zip": "8417"
+    },
+    {
+      "name": "DEL CARMEN",
+      "zip": "8418"
+    },
+    {
+      "name": "GENERAL LUNA",
+      "zip": ""
+    },
+    {
+      "name": "GIGAQUIT",
+      "zip": "8409"
+    },
+    {
+      "name": "MAINIT",
+      "zip": "8407"
+    },
+    {
+      "name": "MALIMONO",
+      "zip": ""
+    },
+    {
+      "name": "PILAR",
+      "zip": "8420"
+    },
+    {
+      "name": "PLACER",
+      "zip": "8405"
+    },
+    {
+      "name": "SAN BENITO",
+      "zip": "8423"
+    },
+    {
+      "name": "SAN FRANCISCO (ANAO-AON)",
+      "zip": ""
+    },
+    {
+      "name": "SAN ISIDRO",
+      "zip": "8421"
+    },
+    {
+      "name": "SANTA MONICA (SAPAO)",
+      "zip": ""
+    },
+    {
+      "name": "SISON",
+      "zip": "8404"
+    },
+    {
+      "name": "SOCORRO",
+      "zip": "8416"
+    },
+    {
+      "name": "SURIGAO CITY",
+      "zip": "8400"
+    },
+    {
+      "name": "TAGANA-AN",
+      "zip": "8403"
+    },
+    {
+      "name": "TUBOD",
+      "zip": "8406"
+    }
+  ],
+  "SURIGAO DEL SUR": [
+    {
+      "name": "BAROBO",
+      "zip": "8309"
+    },
+    {
+      "name": "BAYABAS",
+      "zip": "8303"
+    },
+    {
+      "name": "BISLIG CITY",
+      "zip": "8311"
+    },
+    {
+      "name": "CAGWAIT",
+      "zip": "8304"
+    },
+    {
+      "name": "CANTILAN",
+      "zip": ""
+    },
+    {
+      "name": "CARMEN",
+      "zip": "8315"
+    },
+    {
+      "name": "CARRASCAL",
+      "zip": "8318"
+    },
+    {
+      "name": "CORTES",
+      "zip": ""
+    },
+    {
+      "name": "HINATUAN",
+      "zip": "8310"
+    },
+    {
+      "name": "LANUZA",
+      "zip": "8314"
+    },
+    {
+      "name": "LIANGA",
+      "zip": "8307"
+    },
+    {
+      "name": "LINGIG",
+      "zip": "8312"
+    },
+    {
+      "name": "MADRID",
+      "zip": "8316"
+    },
+    {
+      "name": "MARIHATAG",
+      "zip": "8306"
+    },
+    {
+      "name": "SAN AGUSTIN",
+      "zip": "8305"
+    },
+    {
+      "name": "SAN MIGUEL",
+      "zip": "8301"
+    },
+    {
+      "name": "TAGBINA",
+      "zip": "8308"
+    },
+    {
+      "name": "TAGO",
+      "zip": "8302"
+    },
+    {
+      "name": "TANDAG CITY",
+      "zip": "8300"
+    }
+  ],
+  "TAGUIG - PATEROS": [
+    {
+      "name": "PATEROS",
+      "zip": ""
+    },
+    {
+      "name": "TAGUIG",
+      "zip": ""
+    }
+  ],
+  "TARLAC": [
+    {
+      "name": "ANAO",
+      "zip": "2310"
+    },
+    {
+      "name": "BAMBAN",
+      "zip": "2317"
+    },
+    {
+      "name": "CAMILING",
+      "zip": "2306"
+    },
+    {
+      "name": "CAPAS",
+      "zip": "2333"
+    },
+    {
+      "name": "CITY OF TARLAC",
+      "zip": ""
+    },
+    {
+      "name": "CONCEPCION",
+      "zip": "2316"
+    },
+    {
+      "name": "GERONA",
+      "zip": "2302"
+    },
+    {
+      "name": "LA PAZ",
+      "zip": "2314"
+    },
+    {
+      "name": "MAYANTOC",
+      "zip": "2304"
+    },
+    {
+      "name": "MONCADA",
+      "zip": "2334"
+    },
+    {
+      "name": "PANIQUI",
+      "zip": "2307"
+    },
+    {
+      "name": "PURA",
+      "zip": "2312"
+    },
+    {
+      "name": "RAMOS",
+      "zip": "2311"
+    },
+    {
+      "name": "SAN CLEMENTE",
+      "zip": "2305"
+    },
+    {
+      "name": "SAN JOSE",
+      "zip": "2301"
+    },
+    {
+      "name": "SAN MANUEL",
+      "zip": "2309"
+    },
+    {
+      "name": "SANTA IGNACIA",
+      "zip": "2303"
+    },
+    {
+      "name": "VICTORIA",
+      "zip": "2313"
+    }
+  ],
+  "TAWI-TAWI": [
+    {
+      "name": "BONGAO",
+      "zip": "7500"
+    },
+    {
+      "name": "LANGUYAN",
+      "zip": "7509"
+    },
+    {
+      "name": "MAPUN (CAGAYAN DE TAWI-TAWI)",
+      "zip": ""
+    },
+    {
+      "name": "PANGLIMA SUGALA (BALIMBING)",
+      "zip": "7501"
+    },
+    {
+      "name": "SAPA-SAPA",
+      "zip": "7503"
+    },
+    {
+      "name": "SIBUTU",
+      "zip": ""
+    },
+    {
+      "name": "SIMUNUL",
+      "zip": "7505"
+    },
+    {
+      "name": "SITANGKAI",
+      "zip": "7506"
+    },
+    {
+      "name": "SOUTH UBIAN",
+      "zip": "7504"
+    },
+    {
+      "name": "TANDUBAS",
+      "zip": "7502"
+    },
+    {
+      "name": "TURTLE ISLANDS",
+      "zip": ""
+    }
+  ],
+  "ZAMBALES": [
+    {
+      "name": "BOTOLAN",
+      "zip": "2202"
+    },
+    {
+      "name": "CABANGAN",
+      "zip": "2203"
+    },
+    {
+      "name": "CANDELARIA",
+      "zip": "2212"
+    },
+    {
+      "name": "CASTILLEJOS",
+      "zip": "2208"
+    },
+    {
+      "name": "IBA",
+      "zip": "2201"
+    },
+    {
+      "name": "MASINLOC",
+      "zip": "2211"
+    },
+    {
+      "name": "OLONGAPO CITY",
+      "zip": "2200"
+    },
+    {
+      "name": "PALAUIG",
+      "zip": ""
+    },
+    {
+      "name": "SAN ANTONIO",
+      "zip": "2206"
+    },
+    {
+      "name": "SAN FELIPE",
+      "zip": "2204"
+    },
+    {
+      "name": "SAN MARCELINO",
+      "zip": "2207"
+    },
+    {
+      "name": "SAN NARCISO",
+      "zip": "2205"
+    },
+    {
+      "name": "SANTA CRUZ",
+      "zip": "2213"
+    },
+    {
+      "name": "SUBIC",
+      "zip": "2209"
+    }
+  ],
+  "ZAMBOANGA DEL NORTE": [
+    {
+      "name": "BACUNGAN (LEON T. POSTIGO)",
+      "zip": ""
+    },
+    {
+      "name": "BALIGUIAN",
+      "zip": "7123"
+    },
+    {
+      "name": "DAPITAN CITY",
+      "zip": "7101"
+    },
+    {
+      "name": "DIPOLOG CITY",
+      "zip": "7100"
+    },
+    {
+      "name": "GODOD",
+      "zip": "7126"
+    },
+    {
+      "name": "GUTALAC",
+      "zip": "7118"
+    },
+    {
+      "name": "JOSE DALMAN (PONOT)",
+      "zip": "7111"
+    },
+    {
+      "name": "KALAWIT",
+      "zip": "7124"
+    },
+    {
+      "name": "KATIPUNAN",
+      "zip": "7109"
+    },
+    {
+      "name": "LA LIBERTAD",
+      "zip": "7119"
+    },
+    {
+      "name": "LABASON",
+      "zip": "7117"
+    },
+    {
+      "name": "LILOY",
+      "zip": "7115"
+    },
+    {
+      "name": "MANUKAN",
+      "zip": "7110"
+    },
+    {
+      "name": "MUTIA",
+      "zip": "7107"
+    },
+    {
+      "name": "PIÑAN (NEW PIÑAN)",
+      "zip": ""
+    },
+    {
+      "name": "POLANCO",
+      "zip": "7106"
+    },
+    {
+      "name": "PRES. MANUEL A. ROXAS",
+      "zip": ""
+    },
+    {
+      "name": "RIZAL",
+      "zip": "7104"
+    },
+    {
+      "name": "SALUG",
+      "zip": "7114"
+    },
+    {
+      "name": "SERGIO OSMEÑA SR.",
+      "zip": ""
+    },
+    {
+      "name": "SIAYAN",
+      "zip": "7113"
+    },
+    {
+      "name": "SIBUCO",
+      "zip": "7122"
+    },
+    {
+      "name": "SIBUTAD",
+      "zip": "7103"
+    },
+    {
+      "name": "SINDANGAN",
+      "zip": ""
+    },
+    {
+      "name": "SIOCON",
+      "zip": "7120"
+    },
+    {
+      "name": "SIRAWAI",
+      "zip": ""
+    },
+    {
+      "name": "TAMPILISAN",
+      "zip": "7116"
+    }
+  ],
+  "ZAMBOANGA DEL SUR": [
+    {
+      "name": "AURORA",
+      "zip": "7020"
+    },
+    {
+      "name": "BAYOG",
+      "zip": "7011"
+    },
+    {
+      "name": "DIMATALING",
+      "zip": "7032"
+    },
+    {
+      "name": "DINAS",
+      "zip": "7030"
+    },
+    {
+      "name": "DUMALINAO",
+      "zip": "7015"
+    },
+    {
+      "name": "DUMINGAG",
+      "zip": "7028"
+    },
+    {
+      "name": "GUIPOS",
+      "zip": "7042"
+    },
+    {
+      "name": "JOSEFINA",
+      "zip": "7027"
+    },
+    {
+      "name": "KUMALARANG",
+      "zip": "7005"
+    },
+    {
+      "name": "LABANGAN",
+      "zip": "7017"
+    },
+    {
+      "name": "LAKEWOOD",
+      "zip": "7014"
+    },
+    {
+      "name": "LAPUYAN",
+      "zip": "7037"
+    },
+    {
+      "name": "MAHAYAG",
+      "zip": "7026"
+    },
+    {
+      "name": "MARGOSATUBIG",
+      "zip": "7035"
+    },
+    {
+      "name": "MIDSALIP",
+      "zip": "7021"
+    },
+    {
+      "name": "MOLAVE",
+      "zip": "7023"
+    },
+    {
+      "name": "PAGADIAN CITY",
+      "zip": "7016"
+    },
+    {
+      "name": "PITOGO",
+      "zip": "7033"
+    },
+    {
+      "name": "RAMON MAGSAYSAY (LIARGO)",
+      "zip": "7024"
+    },
+    {
+      "name": "SAN MIGUEL",
+      "zip": "7029"
+    },
+    {
+      "name": "SAN PABLO",
+      "zip": "7031"
+    },
+    {
+      "name": "SOMINOT (DON MARIANO MARCOS)",
+      "zip": "7022"
+    },
+    {
+      "name": "TABINA",
+      "zip": "7034"
+    },
+    {
+      "name": "TAMBULIG",
+      "zip": "7025"
+    },
+    {
+      "name": "TIGBAO",
+      "zip": "7043"
+    },
+    {
+      "name": "TUKURAN",
+      "zip": "7019"
+    },
+    {
+      "name": "VINCENZO A. SAGUN",
+      "zip": "7036"
+    },
+    {
+      "name": "ZAMBOANGA CITY",
+      "zip": "7000"
+    }
+  ],
+  "ZAMBOANGA SIBUGAY": [
+    {
+      "name": "ALICIA",
+      "zip": "7040"
+    },
+    {
+      "name": "BUUG",
+      "zip": "7009"
+    },
+    {
+      "name": "DIPLAHAN",
+      "zip": "7039"
+    },
+    {
+      "name": "IMELDA",
+      "zip": "7007"
+    },
+    {
+      "name": "IPIL",
+      "zip": "7001"
+    },
+    {
+      "name": "KABASALAN",
+      "zip": "7005"
+    },
+    {
+      "name": "MABUHAY",
+      "zip": "7010"
+    },
+    {
+      "name": "MALANGAS",
+      "zip": "7038"
+    },
+    {
+      "name": "NAGA",
+      "zip": "7004"
+    },
+    {
+      "name": "OLUTANGA",
+      "zip": "7041"
+    },
+    {
+      "name": "PAYAO",
+      "zip": "7008"
+    },
+    {
+      "name": "ROSELLER LIM",
+      "zip": ""
+    },
+    {
+      "name": "SIAY",
+      "zip": "7006"
+    },
+    {
+      "name": "TALUSAN",
+      "zip": "7012"
+    },
+    {
+      "name": "TITAY",
+      "zip": "7003"
+    },
+    {
+      "name": "TUNGAWAN",
+      "zip": "7018"
+    }
+  ]
+}

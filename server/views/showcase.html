@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{BUSINESS_NAME}}</title>
+  <meta name="description" content="{{TAGLINE}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="{{FONT_URL}}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: {{BRAND_COLOR}};
+      --accent-dim: color-mix(in srgb, {{BRAND_COLOR}} 12%, transparent);
+      --accent-mid: color-mix(in srgb, {{BRAND_COLOR}} 25%, transparent);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0a0a0a; color: #f5f5f5; min-height: 100vh; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    .hidden { display: none !important; }
+    .font-display { font-family: '{{FONT_FAMILY}}', 'Plus Jakarta Sans', system-ui, sans-serif; }
+
+    /* ── Scroll Reveal ── */
+    .reveal { opacity: 1; transform: none; }
+    .js .reveal { opacity: 0; transform: translateY(32px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .js .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+
+    /* ── Navbar ── */
+    .navbar { position: fixed; top: 0; width: 100%; z-index: 50; background: rgba(10,10,10,.85); backdrop-filter: blur(16px) saturate(1.4); border-bottom: 1px solid rgba(255,255,255,.06); }
+    .navbar-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-logo { width: 36px; height: 36px; border-radius: 10px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; color: #0a0a0a; overflow: hidden; flex-shrink: 0; }
+    .brand-name { font-family: '{{FONT_FAMILY}}', 'Plus Jakarta Sans', sans-serif; font-size: 17px; font-weight: 800; color: #fff; letter-spacing: -.3px; }
+    .nav-links { display: flex; align-items: center; gap: 8px; }
+    .nav-link { padding: 8px 14px; border-radius: 6px; color: #888; font-size: 13px; font-weight: 500; text-decoration: none; transition: color .15s, background .15s; }
+    .nav-link:hover { color: #fff; background: rgba(255,255,255,.06); }
+    .btn-nav-cta { padding: 8px 18px; border-radius: 8px; background: var(--accent); color: #0a0a0a; font-size: 13px; font-weight: 700; cursor: pointer; transition: all .2s; font-family: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; border: none; }
+    .btn-nav-cta:hover { opacity: .9; transform: translateY(-1px); box-shadow: 0 4px 16px var(--accent-mid); }
+
+    /* ── Hero ── */
+    .hero { padding: 140px 24px 80px; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,.02) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: center; }
+    .hero-content { min-width: 0; }
+    .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; min-height: 400px; }
+    .hero-visual-grid { position: relative; width: 100%; height: 380px; }
+    .hero-float-card { position: absolute; background: #111; border: 1px solid #1a1a1a; border-radius: 14px; padding: 22px 24px; backdrop-filter: blur(12px); animation: cardShuffle 10.5s cubic-bezier(.4,0,.2,1) infinite; }
+    .hero-float-card:hover { animation-play-state: paused; }
+    .hero-float-card.card-1 { animation-delay: 0s; }
+    .hero-float-card.card-2 { animation-delay: -3.5s; }
+    .hero-float-card.card-3 { animation-delay: -7s; }
+    @keyframes cardShuffle {
+      0%, 28%   { top: 0;     left: 0;   right: 40px; z-index: 3; opacity: 1;   box-shadow: 0 8px 32px rgba(0,0,0,.4); border-color: color-mix(in srgb, var(--accent) 20%, transparent); }
+      33%, 61%  { top: 140px; left: 30px; right: 10px; z-index: 2; opacity: .85; box-shadow: 0 4px 16px rgba(0,0,0,.3); border-color: #1a1a1a; }
+      66%, 94%  { top: 260px; left: 50px; right: 30px; z-index: 1; opacity: .6;  box-shadow: none; border-color: #151515; }
+      100%      { top: 0;     left: 0;   right: 40px; z-index: 3; opacity: 1;   box-shadow: 0 8px 32px rgba(0,0,0,.4); border-color: color-mix(in srgb, var(--accent) 20%, transparent); }
+    }
+    @media (prefers-reduced-motion: reduce) { .hero-float-card { animation: none; } .hero-float-card.card-1 { top: 0; left: 0; right: 40px; z-index: 3; } .hero-float-card.card-2 { top: 140px; left: 30px; right: 10px; z-index: 2; } .hero-float-card.card-3 { top: 260px; left: 50px; right: 30px; z-index: 1; } }
+    .hero-card-icon { width: 36px; height: 36px; border-radius: 9px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: 12px; }
+    .hero-card-icon .material-symbols-outlined { font-size: 20px; }
+    .hero-card-title { font-size: 12px; font-weight: 700; color: #e5e5e5; margin-bottom: 2px; }
+    .hero-card-value { font-family: '{{FONT_FAMILY}}', 'Plus Jakarta Sans', sans-serif; font-size: 28px; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+    .hero-card-value .accent { color: var(--accent); }
+    .hero-card-sub { font-size: 11px; color: #444; margin-top: 4px; font-weight: 500; }
+    .hero-card-bar { height: 4px; border-radius: 4px; background: #1a1a1a; margin-top: 14px; overflow: hidden; }
+    .hero-card-bar-fill { height: 100%; border-radius: 4px; background: var(--accent); }
+    .hero-card-row { display: flex; align-items: center; gap: 10px; }
+    .hero-card-row + .hero-card-row { margin-top: 8px; }
+    .hero-card-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .hero-card-row-label { font-size: 12px; color: #555; flex: 1; }
+    .hero-card-row-val { font-size: 12px; font-weight: 700; color: #999; }
+    .hero-glow { position: absolute; width: 240px; height: 240px; border-radius: 50%; background: radial-gradient(circle, var(--accent-mid) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; z-index: 0; filter: blur(40px); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 999px; background: var(--accent-dim); border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); margin-bottom: 24px; }
+    .hero-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); position: relative; }
+    .hero-dot::after { content: ''; position: absolute; inset: -3px; border-radius: 50%; background: var(--accent); opacity: .4; animation: ping 1.5s cubic-bezier(0,0,.2,1) infinite; }
+    @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+    .hero-title { font-family: '{{FONT_FAMILY}}', 'Plus Jakarta Sans', sans-serif; font-size: clamp(36px, 5vw, 64px); font-weight: 300; line-height: 1.08; letter-spacing: -.03em; margin-bottom: 20px; color: #fff; }
+    .hero-title strong { font-weight: 700; }
+    .hero-title .accent-underline { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 6px; text-decoration-thickness: 2px; }
+    .hero-tagline { font-size: 17px; color: #666; line-height: 1.7; max-width: 520px; margin-bottom: 36px; }
+    .hero-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--accent); color: #0a0a0a; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; text-decoration: none; transition: all .2s; }
+    .btn-primary:hover { opacity: .9; transform: translateY(-1px); box-shadow: 0 4px 24px var(--accent-mid); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 6px; padding: 13px 22px; border: 1px solid #222; background: rgba(255,255,255,.03); color: #888; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; text-decoration: none; transition: all .2s; }
+    .btn-secondary:hover { border-color: #444; color: #ccc; background: rgba(255,255,255,.06); }
+    .hero-modules { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 40px; padding-top: 32px; border-top: 1px solid #1a1a1a; }
+    .hero-modules-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: #444; margin-right: 4px; }
+    .module-pill { padding: 6px 14px; border-radius: 999px; border: 1px solid #222; font-size: 11px; font-weight: 600; color: #777; transition: all .2s; }
+    .module-pill:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Trust Strip ── */
+    .trust-strip { padding: 48px 24px; border-bottom: 1px solid #141414; }
+    .trust-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 8px; color: #333; font-size: 12px; font-weight: 600; }
+    .trust-item .material-symbols-outlined { font-size: 18px; color: var(--accent); }
+
+    /* ── Services ── */
+    .services { padding: 80px 24px; position: relative; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { display: inline-block; padding: 6px 16px; border-radius: 999px; background: #fff; color: #0a0a0a; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 16px; }
+    .section-heading { font-family: '{{FONT_FAMILY}}', 'Plus Jakarta Sans', sans-serif; font-size: clamp(24px, 3.5vw, 42px); font-weight: 300; color: #fff; margin-bottom: 8px; line-height: 1.2; letter-spacing: -.02em; max-width: 560px; }
+    .section-heading strong { font-weight: 700; }
+    .section-sub { font-size: 15px; color: #555; margin-bottom: 40px; max-width: 480px; line-height: 1.6; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .service-card { background: #111; border: 1px solid #1a1a1a; border-radius: 12px; padding: 28px; transition: all .3s; cursor: default; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--accent-dim) 0%, transparent 50%); opacity: 0; transition: opacity .3s; }
+    .service-card:hover { border-color: color-mix(in srgb, var(--accent) 30%, transparent); transform: translateY(-2px); }
+    .service-card:hover::before { opacity: 1; }
+    .service-card > * { position: relative; z-index: 1; }
+    .service-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--accent-dim); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: 20px; }
+    .service-icon .material-symbols-outlined { font-size: 22px; }
+    .service-name { font-size: 15px; font-weight: 700; color: #e5e5e5; margin-bottom: 6px; }
+    .service-desc { font-size: 13px; color: #555; line-height: 1.5; }
+
+    /* ── How It Works ── */
+    .how-it-works { padding: 80px 24px; background: #0d0d0d; border-top: 1px solid #141414; border-bottom: 1px solid #141414; }
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 48px; }
+    .step-card { padding: 32px; border-radius: 12px; background: #111; border: 1px solid #1a1a1a; position: relative; }
+    .step-number { width: 36px; height: 36px; border-radius: 10px; background: var(--accent); color: #0a0a0a; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; margin-bottom: 20px; }
+    .step-title { font-size: 16px; font-weight: 700; color: #e5e5e5; margin-bottom: 8px; }
+    .step-desc { font-size: 13px; color: #555; line-height: 1.6; }
+
+    /* ── Request Access ── */
+    .request-section { padding: 80px 24px; position: relative; }
+    .request-section::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%); pointer-events: none; opacity: .5; }
+    .request-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+    .request-content { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .request-content .section-label { margin-bottom: 16px; }
+    .request-content .section-heading { max-width: 560px; margin-bottom: 12px; }
+    .request-content p { font-size: 15px; color: #555; line-height: 1.7; max-width: 520px; margin-bottom: 32px; }
+    .request-features { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 32px; margin-bottom: 40px; }
+    .request-features li { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #777; }
+    .request-features .material-symbols-outlined { font-size: 18px; color: var(--accent); }
+    .form-field { margin-bottom: 16px; }
+    .form-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #555; display: block; margin-bottom: 6px; }
+    .form-input { width: 100%; background: #0a0a0a; border: 1px solid #1f1f1f; border-radius: 8px; padding: 12px 14px; color: #fff; font-size: 14px; font-family: inherit; outline: none; transition: border-color .2s, box-shadow .2s; }
+    .form-input::placeholder { color: #333; }
+    .form-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+    .btn-submit { width: 100%; padding: 14px; background: var(--accent); color: #0a0a0a; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; font-family: inherit; margin-top: 8px; transition: all .2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-submit:hover { opacity: .9; transform: translateY(-1px); }
+    .btn-submit:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+    .form-message { padding: 14px 16px; border-radius: 8px; font-size: 13px; margin-top: 14px; display: flex; align-items: center; gap: 8px; }
+    .form-message.success { background: rgba(163,230,53,.06); border: 1px solid rgba(163,230,53,.15); color: var(--accent); }
+    .form-message.error { background: rgba(239,68,68,.06); border: 1px solid rgba(239,68,68,.15); color: #ef4444; }
+
+    /* ── Footer ── */
+    .footer { padding: 40px 24px 24px; border-top: 1px solid #141414; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #141414; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-brand-logo { width: 28px; height: 28px; border-radius: 7px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; color: #0a0a0a; overflow: hidden; flex-shrink: 0; }
+    .footer-brand-name { font-family: '{{FONT_FAMILY}}', 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; color: #666; }
+    .footer-nav { display: flex; gap: 24px; }
+    .footer-nav a { font-size: 12px; color: #333; text-decoration: none; font-weight: 500; transition: color .15s; }
+    .footer-nav a:hover { color: #888; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .powered { font-size: 11px; color: #333; display: flex; align-items: center; gap: 4px; }
+    .powered a { color: #555; font-weight: 700; text-decoration: none; transition: color .15s; display: inline-flex; align-items: center; gap: 4px; }
+    .powered a:hover { color: var(--accent); }
+    .powered svg { width: 14px; height: 14px; fill: currentColor; }
+    .copyright { font-size: 11px; color: #222; }
+
+    /* ── Staff Login Modal ── */
+    .modal-overlay { display: none; position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.7); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 16px; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #141414; border: 1px solid #222; border-radius: 16px; padding: 32px; width: 100%; max-width: 380px; }
+    .modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+    .modal-title { font-size: 17px; font-weight: 800; color: #fff; }
+    .modal-close { background: none; border: none; color: #555; cursor: pointer; font-size: 20px; line-height: 1; padding: 4px; border-radius: 6px; transition: all .15s; }
+    .modal-close:hover { color: #fff; background: rgba(255,255,255,.06); }
+    .modal-sub { font-size: 12px; color: #444; margin-bottom: 24px; }
+    .modal-actions { margin-top: 20px; }
+    .modal-forgot { text-align: center; font-size: 12px; color: #444; margin-top: 14px; cursor: pointer; background: none; border: none; font-family: inherit; width: 100%; transition: color .15s; }
+    .modal-forgot:hover { color: #888; }
+    .modal-error { color: #ef4444; font-size: 12px; margin-top: 10px; text-align: center; }
+
+    /* ── Responsive ── */
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; gap: 0; }
+      .hero-visual { display: none; }
+      .hero-title { font-size: clamp(32px, 5.5vw, 56px); }
+      .steps-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .trust-inner { gap: 32px; }
+      .request-features { flex-direction: column; align-items: center; gap: 12px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .navbar-inner { padding: 0 16px; height: 56px; }
+      .brand-logo { width: 32px; height: 32px; font-size: 13px; }
+      .brand-name { font-size: 15px; }
+      .btn-nav-cta { padding: 6px 14px; font-size: 12px; }
+
+      .hero { padding: 100px 16px 48px; }
+      .hero-title { font-size: clamp(28px, 8vw, 40px); margin-bottom: 16px; }
+      .hero-tagline { font-size: 15px; margin-bottom: 28px; }
+      .hero-badge { font-size: 9px; padding: 5px 12px; margin-bottom: 20px; }
+      .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; }
+      .btn-primary, .btn-secondary { justify-content: center; width: 100%; padding: 14px 20px; font-size: 14px; }
+      .hero-modules { gap: 8px; margin-top: 32px; padding-top: 24px; }
+      .hero-modules-label { width: 100%; margin-bottom: 4px; }
+      .module-pill { padding: 5px 12px; font-size: 10px; }
+
+      .trust-strip { padding: 32px 16px; }
+      .trust-inner { gap: 16px; justify-content: flex-start; }
+      .trust-item { font-size: 11px; flex: 0 0 calc(50% - 8px); }
+
+      .services, .how-it-works, .request-section { padding: 48px 16px; }
+      .section-heading { font-size: clamp(22px, 5vw, 32px); }
+      .section-sub { font-size: 14px; margin-bottom: 28px; }
+      .services-grid { grid-template-columns: 1fr; gap: 12px; }
+      .service-card { padding: 20px; }
+
+      .steps-grid { gap: 16px; margin-top: 32px; }
+      .step-card { padding: 24px; }
+
+      .request-content p { font-size: 14px; }
+      .request-features { gap: 10px; }
+
+      .footer { padding: 32px 16px 20px; }
+      .footer-top { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .footer-nav { flex-wrap: wrap; gap: 16px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+      .modal { padding: 24px; border-radius: 12px; margin: 16px; }
+    }
+
+    /* Small mobile (360px and below) */
+    @media (max-width: 380px) {
+      .hero { padding: 90px 12px 40px; }
+      .hero-title { font-size: 26px; }
+      .hero-tagline { font-size: 14px; }
+      .btn-primary, .btn-secondary { padding: 12px 16px; font-size: 13px; }
+      .services, .how-it-works, .request-section { padding: 40px 12px; }
+      .section-heading { font-size: 20px; }
+      .request-content p { font-size: 13px; }
+      .form-input { padding: 10px 12px; font-size: 13px; }
+      .trust-item { flex: 0 0 100%; }
+    }
+  </style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">
+      <div class="brand-logo">{{LOGO_HTML}}</div>
+      <div class="brand-name">{{BUSINESS_NAME}}</div>
+    </a>
+    <div class="nav-links">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#request" class="nav-link">Request Access</a>
+    </div>
+    <a href="{{CLIENT_URL}}/request-access/{{TENANT_ID}}" class="btn-nav-cta">
+      <span class="material-symbols-outlined" style="font-size:16px">person_add</span>
+      Request Access
+    </a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="reveal">
+        <div class="hero-badge"><div class="hero-dot"></div> Licensed Pawnshop</div>
+      </div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        Your Trusted <br><strong class="accent-underline">{{BUSINESS_NAME}}</strong>
+      </h1>
+      <p class="hero-tagline reveal reveal-delay-2 {{TAGLINE_CLASS}}">{{TAGLINE}}</p>
+      <div class="hero-actions reveal reveal-delay-2">
+        <a href="#services" class="btn-primary">
+          View Services
+          <span class="material-symbols-outlined" style="font-size:16px">arrow_downward</span>
+        </a>
+        <a href="{{APK_URL}}" target="_blank" rel="noopener" class="btn-secondary {{DOWNLOAD_CLASS}}">
+          <span class="material-symbols-outlined" style="font-size:16px">download</span>
+          Download App
+        </a>
+      </div>
+      <div class="hero-modules reveal reveal-delay-3">
+        <span class="hero-modules-label">Key Services</span>
+        <span class="module-pill">Pawn Loans</span>
+        <span class="module-pill">Gold Appraisal</span>
+        <span class="module-pill">Renewals</span>
+        <span class="module-pill">Auctions</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="hero-glow"></div>
+      <div class="hero-visual-grid">
+        <div class="hero-float-card card-1">
+          <div class="hero-card-icon"><span class="material-symbols-outlined">payments</span></div>
+          <div class="hero-card-title">Today's Gold Rate</div>
+          <div class="hero-card-row"><div class="hero-card-dot" style="background:var(--accent)"></div><div class="hero-card-row-label">24K Pure Gold</div><div class="hero-card-row-val">&#8369;4,850/g</div></div>
+          <div class="hero-card-row"><div class="hero-card-dot" style="background:#b8860b"></div><div class="hero-card-row-label">21K Gold</div><div class="hero-card-row-val">&#8369;4,240/g</div></div>
+          <div class="hero-card-row"><div class="hero-card-dot" style="background:#cd7f32"></div><div class="hero-card-row-label">18K Gold</div><div class="hero-card-row-val">&#8369;3,640/g</div></div>
+          <div class="hero-card-sub" style="margin-top:10px">Updated daily &middot; Competitive rates</div>
+        </div>
+        <div class="hero-float-card card-2">
+          <div class="hero-card-icon"><span class="material-symbols-outlined">calculate</span></div>
+          <div class="hero-card-title">Quick Estimate</div>
+          <div class="hero-card-sub" style="margin-bottom:8px">18K Gold Necklace &middot; 15g</div>
+          <div class="hero-card-value"><span class="accent">&#8369;</span>38,200</div>
+          <div class="hero-card-sub">Estimated loan value</div>
+          <div class="hero-card-bar"><div class="hero-card-bar-fill" style="width:72%"></div></div>
+        </div>
+        <div class="hero-float-card card-3">
+          <div class="hero-card-icon"><span class="material-symbols-outlined">schedule</span></div>
+          <div class="hero-card-title">My Loan Tracker</div>
+          <div class="hero-card-row"><div class="hero-card-dot" style="background:var(--accent)"></div><div class="hero-card-row-label">Status</div><div class="hero-card-row-val" style="color:var(--accent)">Active</div></div>
+          <div class="hero-card-row"><div class="hero-card-dot" style="background:#555"></div><div class="hero-card-row-label">Next Due</div><div class="hero-card-row-val">May 15</div></div>
+          <div class="hero-card-row"><div class="hero-card-dot" style="background:#333"></div><div class="hero-card-row-label">Balance</div><div class="hero-card-row-val">&#8369;12,400</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Strip -->
+<div class="trust-strip">
+  <div class="trust-inner reveal">
+    <div class="trust-item">
+      <span class="material-symbols-outlined">verified_user</span>
+      BSP Registered
+    </div>
+    <div class="trust-item">
+      <span class="material-symbols-outlined">shield</span>
+      Secure Transactions
+    </div>
+    <div class="trust-item">
+      <span class="material-symbols-outlined">speed</span>
+      Fast Appraisals
+    </div>
+    <div class="trust-item">
+      <span class="material-symbols-outlined">support_agent</span>
+      Customer Support
+    </div>
+  </div>
+</div>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">Services</div>
+      <div class="section-heading">Items we <strong>accept</strong> for pawning and buying</div>
+      <div class="section-sub">We offer competitive rates across a wide range of valuable items.</div>
+    </div>
+    <div class="services-grid">
+      {{SERVICES_HTML}}
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works" id="how-it-works">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label">How It Works</div>
+      <div class="section-heading">Get started in <strong>3 easy steps</strong></div>
+      <div class="section-sub">Whether you're pawning, renewing, or redeeming — we make it simple.</div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal reveal-delay-1">
+        <div class="step-number">1</div>
+        <div class="step-title">Request Access</div>
+        <div class="step-desc">Submit your details through our portal. Our staff will review and verify your identity to set up your account.</div>
+      </div>
+      <div class="step-card reveal reveal-delay-2">
+        <div class="step-number">2</div>
+        <div class="step-title">Bring Your Items</div>
+        <div class="step-desc">Visit our branch with your items for professional appraisal. Our certified appraisers ensure fair market valuations.</div>
+      </div>
+      <div class="step-card reveal reveal-delay-3">
+        <div class="step-number">3</div>
+        <div class="step-title">Track Your Loans</div>
+        <div class="step-desc">Monitor your active loans, make payments, and manage renewals anytime through our customer portal or mobile app.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Request Access -->
+<section class="request-section" id="request">
+  <div class="request-inner">
+    <div class="request-content reveal">
+      <div class="section-label">Customer Portal</div>
+      <div class="section-heading">Request <strong>account access</strong></div>
+      <p>Submit your details and our staff will review your request. Once approved, you'll receive login credentials to track your loans and payments.</p>
+      <ul class="request-features">
+        <li><span class="material-symbols-outlined">check_circle</span> View loan status in real-time</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Receive payment reminders</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Track renewal and maturity dates</li>
+        <li><span class="material-symbols-outlined">check_circle</span> Browse upcoming auction items</li>
+      </ul>
+      <a href="{{CLIENT_URL}}/request-access/{{TENANT_ID}}" class="btn-primary" style="text-decoration:none">
+        <span class="material-symbols-outlined" style="font-size:18px">person_add</span>
+        Request Account Access
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">{{LOGO_HTML}}</div>
+        <div class="footer-brand-name">{{BUSINESS_NAME}}</div>
+      </div>
+      <div class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#request">Request Access</a>
+        <a href="#" onclick="event.preventDefault();openLoginModal()" style="color:#333">Staff Login</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="powered">Powered by <a href="https://obsidian-platform.tech" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1333.33 1333.33"><rect y="333.17" width="333.17" height="1000"/><rect x="666.67" y="666.67" width="332.49" height="666.5"/><rect x="666.42" y="1000.58" width="333.17" height="999" transform="translate(-1000.42 1999.75) rotate(-90)"/><rect x="500.5" y="500.5" width="333.5" height="665.51" transform="translate(-499.33 1167.17) rotate(-90)"/><rect x="1000" width="333.33" height="333.33"/></svg>Obsidian</a></div>
+      <div class="copyright">&copy; {{BUSINESS_NAME}}</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Staff Login Modal -->
+<div class="modal-overlay" id="loginModal" onclick="handleModalOverlayClick(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Staff Login</div>
+      <button class="modal-close" onclick="closeLoginModal()">&times;</button>
+    </div>
+    <div class="modal-sub">{{BUSINESS_NAME}} &middot; Employee access</div>
+    <div class="form-field">
+      <label class="form-label" for="login-email">Email</label>
+      <input class="form-input" id="login-email" type="email" placeholder="you@business.com" />
+    </div>
+    <div class="form-field">
+      <label class="form-label" for="login-password">Password</label>
+      <input class="form-input" id="login-password" type="password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" />
+    </div>
+    <div class="modal-actions">
+      <button class="btn-submit" id="loginBtn" onclick="handleLogin()">Sign In</button>
+      <div id="loginError" class="modal-error" style="display:none"></div>
+      <button class="modal-forgot" onclick="window.location='/recover'">Forgot password?</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const API_BASE = '/api';
+
+  // ── Scroll Reveal ──────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── Smooth scroll for anchor links ─────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  // ── Modal ──────────────────────────────────────────────
+  function openLoginModal()  { document.getElementById('loginModal').classList.add('open'); }
+  function closeLoginModal() { document.getElementById('loginModal').classList.remove('open'); document.getElementById('loginError').style.display='none'; }
+  function handleModalOverlayClick(e) { if (e.target === e.currentTarget) closeLoginModal(); }
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLoginModal(); });
+
+  // ── Staff login ────────────────────────────────────────
+  async function handleLogin() {
+    const email    = document.getElementById('login-email').value.trim();
+    const password = document.getElementById('login-password').value;
+    const errEl    = document.getElementById('loginError');
+    const btn      = document.getElementById('loginBtn');
+
+    if (!email || !password) { errEl.textContent = 'Please enter email and password.'; errEl.style.display='block'; return; }
+
+    btn.disabled = true; btn.textContent = 'Signing in...';
+    try {
+      const res  = await fetch(`${API_BASE}/auth/login`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email, password }) });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Login failed');
+      window.location.href = '/login?redirect=/admin';
+    } catch (err) {
+      errEl.textContent = err.message; errEl.style.display = 'block';
+    } finally {
+      btn.disabled = false; btn.textContent = 'Sign In';
+    }
+  }
+
+  // Access request form removed — now links to React multi-step form at /request-access/:tenantId
+
+  // Hero card shuffle is now pure CSS @keyframes — no JS needed
+</script>
+<style>@keyframes spin { to { transform: rotate(360deg); } }</style>
+</body>
+</html>

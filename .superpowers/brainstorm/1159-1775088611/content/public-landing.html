@@ -1,0 +1,439 @@
+<style>
+  .page-wrap { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+  /* ── Mockup frame ── */
+  .browser-frame {
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  .browser-bar {
+    background: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .browser-dots { display: flex; gap: 5px; }
+  .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .browser-url {
+    flex: 1;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 11px;
+    color: #666;
+    font-family: monospace;
+  }
+
+  /* ── Tenant page ── */
+  .t-nav {
+    background: rgba(10,10,10,0.95);
+    border-bottom: 1px solid #1f1f1f;
+    padding: 0 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .t-brand {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .t-logo {
+    width: 34px; height: 34px;
+    border-radius: 6px;
+    background: var(--accent, #a3e635);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 14px; color: #111;
+  }
+  .t-name {
+    font-size: 16px; font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.3px;
+  }
+  .t-nav-right { display: flex; align-items: center; gap: 10px; }
+  .btn-staff {
+    padding: 7px 16px;
+    border-radius: 5px;
+    font-size: 12px; font-weight: 600;
+    border: 1px solid #333;
+    background: transparent;
+    color: #aaa;
+    cursor: pointer;
+  }
+  .btn-staff:hover { border-color: #555; color: #fff; }
+
+  /* Hero */
+  .t-hero {
+    padding: 60px 40px 50px;
+    background: radial-gradient(ellipse at top right, rgba(163,230,53,0.06) 0%, transparent 60%);
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .t-hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgba(163,230,53,0.08);
+    border: 1px solid rgba(163,230,53,0.2);
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: #a3e635;
+    margin-bottom: 16px;
+  }
+  .t-hero-dot { width: 6px; height: 6px; border-radius: 50%; background: #a3e635; }
+  .t-hero-title {
+    font-size: 38px; font-weight: 800;
+    color: #fff; line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    max-width: 500px;
+  }
+  .t-hero-tagline {
+    font-size: 15px; color: #666; line-height: 1.6;
+    max-width: 420px; margin-bottom: 24px;
+  }
+  .t-hero-actions { display: flex; align-items: center; gap: 12px; }
+  .btn-primary-accent {
+    padding: 11px 24px;
+    background: #a3e635; color: #111;
+    border: none; border-radius: 6px;
+    font-weight: 700; font-size: 13px;
+    cursor: pointer;
+  }
+  .btn-outline-sm {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background: transparent; color: #888;
+    font-size: 13px; font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* Services */
+  .t-section {
+    padding: 40px;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .t-section-label {
+    font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: #a3e635; margin-bottom: 8px;
+  }
+  .t-section-title {
+    font-size: 22px; font-weight: 800; color: #fff;
+    margin-bottom: 6px;
+  }
+  .t-section-sub {
+    font-size: 13px; color: #555; margin-bottom: 24px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .service-card {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .service-icon {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: rgba(163,230,53,0.08);
+    display: flex; align-items: center; justify-content: center;
+    color: #a3e635; font-size: 18px;
+  }
+  .service-name { font-size: 13px; font-weight: 700; color: #e5e5e5; }
+  .service-desc { font-size: 11px; color: #555; line-height: 1.4; }
+
+  /* Customer request */
+  .t-request {
+    padding: 40px;
+    border-bottom: 1px solid #1a1a1a;
+    background: #0d0d0d;
+  }
+  .request-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+  }
+  .request-form-mock {
+    background: #141414;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 24px;
+  }
+  .form-field-mock {
+    background: #0a0a0a;
+    border: 1px solid #2a2a2a;
+    border-radius: 5px;
+    padding: 10px 14px;
+    font-size: 12px; color: #444;
+    margin-bottom: 10px;
+  }
+  .btn-request {
+    width: 100%; padding: 11px;
+    background: #a3e635; color: #111;
+    border: none; border-radius: 6px;
+    font-weight: 700; font-size: 13px;
+    cursor: pointer; margin-top: 4px;
+  }
+
+  /* Footer */
+  .t-footer {
+    padding: 20px 40px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .powered {
+    font-size: 11px; color: #333;
+  }
+  .powered span { color: #555; font-weight: 600; }
+
+  /* Staff login modal */
+  .modal-overlay {
+    background: rgba(0,0,0,0.8);
+    border-radius: 0 0 10px 10px;
+    padding: 40px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .modal-box {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 28px;
+    width: 320px;
+  }
+  .modal-title {
+    font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 4px;
+  }
+  .modal-sub {
+    font-size: 12px; color: #555; margin-bottom: 20px;
+  }
+  .modal-field { margin-bottom: 12px; }
+  .modal-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #666; margin-bottom: 6px; }
+  .modal-input {
+    width: 100%; background: #111; border: 1px solid #2a2a2a;
+    border-radius: 5px; padding: 10px 12px; color: #fff; font-size: 13px;
+    box-sizing: border-box;
+  }
+  .btn-modal-login {
+    width: 100%; padding: 11px;
+    background: #a3e635; color: #111;
+    border: none; border-radius: 6px;
+    font-weight: 700; font-size: 13px;
+    cursor: pointer; margin-top: 4px;
+  }
+  .modal-forgot { text-align: center; font-size: 11px; color: #444; margin-top: 12px; cursor: pointer; }
+  .modal-forgot:hover { color: #888; }
+  .modal-close {
+    float: right; color: #444; cursor: pointer; font-size: 18px; line-height: 1;
+  }
+  .modal-close:hover { color: #888; }
+</style>
+
+<h2>Public Landing Page — Section Layout</h2>
+<p class="subtitle">Choosing the layout for the tenant's public page at <code style="background:#1a1a1a;padding:2px 6px;border-radius:3px;font-size:11px">/s/your-business</code>. Pick the option that feels right.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Single page — Services as hero content, request form below</h3>
+      <p>Services grid is the main visual focus right after the hero. Customer request form is a full section below. Staff login is a navbar button → modal.</p>
+
+      <div class="browser-frame" style="margin-top:16px">
+        <div class="browser-bar">
+          <div class="browser-dots">
+            <div class="browser-dot" style="background:#ff5f57"></div>
+            <div class="browser-dot" style="background:#febc2e"></div>
+            <div class="browser-dot" style="background:#28c840"></div>
+          </div>
+          <div class="browser-url">obsidian-platform.tech/s/goldsmith-pawnshop</div>
+        </div>
+
+        <!-- Tenant page content -->
+        <div>
+          <!-- Navbar -->
+          <div class="t-nav">
+            <div class="t-brand">
+              <div class="t-logo">G</div>
+              <div class="t-name" style="font-family:Georgia">Goldsmith Pawnshop</div>
+            </div>
+            <div class="t-nav-right">
+              <button class="btn-staff">Staff Login</button>
+            </div>
+          </div>
+
+          <!-- Hero -->
+          <div class="t-hero">
+            <div class="t-hero-badge"><div class="t-hero-dot"></div> Licensed Pawnshop</div>
+            <div class="t-hero-title">Your trusted pawnshop since 1995</div>
+            <div class="t-hero-tagline">Fast, fair, and confidential pawning services. Get cash in minutes.</div>
+            <div class="t-hero-actions">
+              <button class="btn-primary-accent">Request Account Access</button>
+              <button class="btn-outline-sm">View Services ↓</button>
+            </div>
+          </div>
+
+          <!-- Services -->
+          <div class="t-section">
+            <div class="t-section-label">What we offer</div>
+            <div class="t-section-title">Our Services</div>
+            <div class="t-section-sub">We accept a wide range of items for pawning and buying.</div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-icon">💎</div>
+                <div class="service-name">Gold & Jewelry</div>
+                <div class="service-desc">Gold, silver, diamonds</div>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">📱</div>
+                <div class="service-name">Electronics</div>
+                <div class="service-desc">Phones, laptops, tablets</div>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">⌚</div>
+                <div class="service-name">Watches</div>
+                <div class="service-desc">Luxury & branded watches</div>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">👜</div>
+                <div class="service-name">Bags & Apparel</div>
+                <div class="service-desc">Designer bags & clothing</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer request -->
+          <div class="t-request">
+            <div class="request-inner">
+              <div>
+                <div class="t-section-label">Customer Portal</div>
+                <div class="t-section-title">Request Account Access</div>
+                <div style="font-size:13px;color:#555;line-height:1.6;margin-top:8px">
+                  Submit your details and our staff will review your request. Once approved, you'll receive login credentials to track your loans via our mobile app.
+                </div>
+              </div>
+              <div class="request-form-mock">
+                <div class="form-field-mock">Full Name</div>
+                <div class="form-field-mock">Email Address</div>
+                <div class="form-field-mock">Mobile Number</div>
+                <button class="btn-request">Submit Request</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="t-footer">
+            <div class="powered">Powered by <span>OBSIDIAN</span></div>
+            <div style="font-size:11px;color:#333">© 2026 Goldsmith Pawnshop</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Two-column hero — Services left, request form right</h3>
+      <p>Hero section splits into two: left side has the tagline + services grid, right side has the request access form. More compact, everything above the fold.</p>
+
+      <div class="browser-frame" style="margin-top:16px">
+        <div class="browser-bar">
+          <div class="browser-dots">
+            <div class="browser-dot" style="background:#ff5f57"></div>
+            <div class="browser-dot" style="background:#febc2e"></div>
+            <div class="browser-dot" style="background:#28c840"></div>
+          </div>
+          <div class="browser-url">obsidian-platform.tech/s/goldsmith-pawnshop</div>
+        </div>
+
+        <div>
+          <!-- Navbar -->
+          <div class="t-nav">
+            <div class="t-brand">
+              <div class="t-logo">G</div>
+              <div class="t-name" style="font-family:Georgia">Goldsmith Pawnshop</div>
+            </div>
+            <div class="t-nav-right">
+              <button class="btn-staff">Staff Login</button>
+            </div>
+          </div>
+
+          <!-- Two-col hero -->
+          <div style="display:grid;grid-template-columns:1fr 380px;gap:0;border-bottom:1px solid #1a1a1a">
+            <!-- Left -->
+            <div style="padding:40px;border-right:1px solid #1a1a1a">
+              <div class="t-hero-badge"><div class="t-hero-dot"></div> Licensed Pawnshop</div>
+              <div class="t-hero-title" style="font-size:28px;margin-bottom:8px">Your trusted pawnshop since 1995</div>
+              <div class="t-hero-tagline" style="font-size:13px;margin-bottom:20px">Fast, fair, and confidential pawning services.</div>
+              <div class="t-section-label" style="margin-bottom:12px">Our Services</div>
+              <div class="services-grid" style="grid-template-columns:1fr 1fr;gap:8px">
+                <div class="service-card" style="padding:12px">
+                  <div class="service-icon" style="width:28px;height:28px;font-size:14px">💎</div>
+                  <div class="service-name" style="font-size:12px">Gold & Jewelry</div>
+                </div>
+                <div class="service-card" style="padding:12px">
+                  <div class="service-icon" style="width:28px;height:28px;font-size:14px">📱</div>
+                  <div class="service-name" style="font-size:12px">Electronics</div>
+                </div>
+                <div class="service-card" style="padding:12px">
+                  <div class="service-icon" style="width:28px;height:28px;font-size:14px">⌚</div>
+                  <div class="service-name" style="font-size:12px">Watches</div>
+                </div>
+                <div class="service-card" style="padding:12px">
+                  <div class="service-icon" style="width:28px;height:28px;font-size:14px">👜</div>
+                  <div class="service-name" style="font-size:12px">Bags & Apparel</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: request form -->
+            <div style="padding:40px;background:#0d0d0d">
+              <div class="t-section-label">Customer Portal</div>
+              <div style="font-size:18px;font-weight:800;color:#fff;margin-bottom:6px">Request Access</div>
+              <div style="font-size:12px;color:#555;margin-bottom:20px;line-height:1.5">Once approved, you'll receive credentials for our mobile app.</div>
+              <div class="form-field-mock">Full Name</div>
+              <div class="form-field-mock">Email Address</div>
+              <div class="form-field-mock">Mobile Number</div>
+              <button class="btn-request">Submit Request</button>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="t-footer">
+            <div class="powered">Powered by <span>OBSIDIAN</span></div>
+            <div style="font-size:11px;color:#333">© 2026 Goldsmith Pawnshop</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal preview below -->
+      <div style="margin-top:16px;font-size:12px;color:#666;margin-bottom:8px">Staff Login modal (opens on "Staff Login" button click):</div>
+      <div style="background:#111;border:1px solid #222;border-radius:8px;padding:20px;display:flex;justify-content:center">
+        <div class="modal-box">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+            <div class="modal-title">Staff Login</div>
+            <span class="modal-close">✕</span>
+          </div>
+          <div class="modal-sub">Goldsmith Pawnshop · Employee access</div>
+          <div class="modal-field">
+            <div class="modal-label">Email</div>
+            <input class="modal-input" placeholder="you@business.com" />
+          </div>
+          <div class="modal-field">
+            <div class="modal-label">Password</div>
+            <input class="modal-input" type="password" placeholder="••••••••" />
+          </div>
+          <button class="btn-modal-login">Sign In</button>
+          <div class="modal-forgot">Forgot password?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,158 @@
+<h2>Terms Page Layout Options</h2>
+<p class="subtitle">Pick the layout that feels right — inspired by Laravel Cloud's legal page</p>
+
+<div class="cards">
+
+  <!-- Option A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f0f;padding:16px;min-height:260px;position:relative;overflow:hidden;border-bottom:1px solid #222;">
+      <!-- Navbar -->
+      <div style="height:10px;background:#1a1a1a;border-radius:3px;margin-bottom:12px;display:flex;align-items:center;padding:0 6px;gap:4px;">
+        <div style="width:20px;height:4px;background:#a3e635;border-radius:2px;"></div>
+        <div style="flex:1;"></div>
+        <div style="width:10px;height:4px;background:#333;border-radius:2px;"></div>
+        <div style="width:10px;height:4px;background:#333;border-radius:2px;"></div>
+      </div>
+      <!-- Hero -->
+      <div style="text-align:center;margin-bottom:12px;">
+        <div style="width:30px;height:4px;background:#333;border-radius:2px;margin:0 auto 4px;"></div>
+        <div style="width:80px;height:8px;background:#555;border-radius:3px;margin:0 auto 4px;"></div>
+        <div style="width:50px;height:4px;background:#333;border-radius:2px;margin:0 auto;"></div>
+      </div>
+      <!-- Two-column: sidebar left + content right -->
+      <div style="display:flex;gap:10px;height:160px;">
+        <!-- Left sidebar -->
+        <div style="width:90px;background:#1a1a1a;border-radius:4px;padding:8px;flex-shrink:0;border:1px solid #222;">
+          <div style="width:40px;height:3px;background:#a3e635;border-radius:2px;margin-bottom:6px;"></div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="height:3px;background:#a3e635;border-radius:2px;width:70%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:90%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:80%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:85%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:70%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:90%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:75%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:85%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:80%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:60%;"></div>
+          </div>
+        </div>
+        <!-- Main content -->
+        <div style="flex:1;display:flex;flex-direction:column;gap:6px;overflow:hidden;">
+          <div style="height:6px;background:#555;border-radius:2px;width:60%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:100%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:90%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:95%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:80%;"></div>
+          <div style="margin-top:4px;height:6px;background:#555;border-radius:2px;width:50%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:100%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:85%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:92%;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Left Sticky Sidebar</h3>
+      <p>Section nav anchored to the left. Content fills the right. Active section highlights as you scroll. Mirrors the Laravel Cloud layout exactly. Most space-efficient for long documents.</p>
+    </div>
+  </div>
+
+  <!-- Option B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f0f;padding:16px;min-height:260px;position:relative;overflow:hidden;border-bottom:1px solid #222;">
+      <!-- Navbar -->
+      <div style="height:10px;background:#1a1a1a;border-radius:3px;margin-bottom:12px;display:flex;align-items:center;padding:0 6px;gap:4px;">
+        <div style="width:20px;height:4px;background:#a3e635;border-radius:2px;"></div>
+        <div style="flex:1;"></div>
+        <div style="width:10px;height:4px;background:#333;border-radius:2px;"></div>
+        <div style="width:10px;height:4px;background:#333;border-radius:2px;"></div>
+      </div>
+      <!-- Hero -->
+      <div style="text-align:center;margin-bottom:12px;">
+        <div style="width:30px;height:4px;background:#333;border-radius:2px;margin:0 auto 4px;"></div>
+        <div style="width:80px;height:8px;background:#555;border-radius:3px;margin:0 auto 4px;"></div>
+        <div style="width:50px;height:4px;background:#333;border-radius:2px;margin:0 auto;"></div>
+      </div>
+      <!-- Two-column: content left + sidebar right -->
+      <div style="display:flex;gap:10px;height:160px;">
+        <!-- Main content -->
+        <div style="flex:1;display:flex;flex-direction:column;gap:6px;overflow:hidden;">
+          <div style="height:6px;background:#555;border-radius:2px;width:60%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:100%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:90%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:95%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:80%;"></div>
+          <div style="margin-top:4px;height:6px;background:#555;border-radius:2px;width:50%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:100%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:85%;"></div>
+          <div style="height:3px;background:#333;border-radius:2px;width:92%;"></div>
+        </div>
+        <!-- Right sidebar -->
+        <div style="width:90px;background:#1a1a1a;border-radius:4px;padding:8px;flex-shrink:0;border:1px solid #222;">
+          <div style="width:40px;height:3px;background:#555;border-radius:2px;margin-bottom:6px;"></div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="height:3px;background:#a3e635;border-radius:2px;width:70%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:90%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:80%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:85%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:70%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:90%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:75%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:85%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:80%;"></div>
+            <div style="height:3px;background:#333;border-radius:2px;width:60%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Right Sticky Sidebar</h3>
+      <p>Same sticky nav but on the right. Content reads naturally left-to-right first. Common in documentation sites. Good for users who want to read without the nav catching their eye.</p>
+    </div>
+  </div>
+
+  <!-- Option C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f0f;padding:16px;min-height:260px;position:relative;overflow:hidden;border-bottom:1px solid #222;">
+      <!-- Navbar -->
+      <div style="height:10px;background:#1a1a1a;border-radius:3px;margin-bottom:12px;display:flex;align-items:center;padding:0 6px;gap:4px;">
+        <div style="width:20px;height:4px;background:#a3e635;border-radius:2px;"></div>
+        <div style="flex:1;"></div>
+        <div style="width:10px;height:4px;background:#333;border-radius:2px;"></div>
+        <div style="width:10px;height:4px;background:#333;border-radius:2px;"></div>
+      </div>
+      <!-- Hero -->
+      <div style="text-align:center;margin-bottom:8px;">
+        <div style="width:30px;height:4px;background:#333;border-radius:2px;margin:0 auto 4px;"></div>
+        <div style="width:80px;height:8px;background:#555;border-radius:3px;margin:0 auto 4px;"></div>
+        <div style="width:50px;height:4px;background:#333;border-radius:2px;margin:0 auto;"></div>
+      </div>
+      <!-- Sticky top nav strip -->
+      <div style="background:#1a1a1a;border-radius:3px;padding:5px 8px;margin-bottom:8px;display:flex;gap:5px;flex-wrap:wrap;border:1px solid #222;">
+        <div style="height:3px;background:#a3e635;border-radius:2px;width:30px;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:25px;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:35px;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:28px;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:22px;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:30px;"></div>
+      </div>
+      <!-- Main content single column -->
+      <div style="display:flex;flex-direction:column;gap:5px;">
+        <div style="height:6px;background:#555;border-radius:2px;width:50%;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:100%;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:90%;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:95%;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:85%;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:100%;"></div>
+        <div style="height:3px;background:#333;border-radius:2px;width:78%;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Sticky Top Nav Strip</h3>
+      <p>Horizontal nav strip that sticks below the navbar as you scroll. Keeps the single-column reading experience. Scrolls horizontally on mobile. Simpler to implement.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:16px;">💡 My recommendation: <strong>Option A</strong> — it matches the Laravel Cloud reference, makes the 13 sections very accessible, and your existing design system handles the wider layout well.</p>
