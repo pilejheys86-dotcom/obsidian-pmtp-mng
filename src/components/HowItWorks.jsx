@@ -73,7 +73,7 @@ const HowItWorks = () => {
           </div>
           <div ref={stepsRef} className="order-1 lg:order-2 space-y-10 reveal-slide-right">
             <div>
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-light text-neutral-900 dark:text-white leading-tight mb-6">
+              <h2 className="landing-h2 font-display font-light text-neutral-900 dark:text-white mb-6">
                 Start Managing Your Shop in 3 Easy Steps
               </h2>
             </div>

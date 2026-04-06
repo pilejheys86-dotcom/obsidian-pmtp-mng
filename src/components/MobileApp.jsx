@@ -147,7 +147,7 @@ const MobileApp = () => {
               <div className="inline-block px-4 py-1.5 rounded-full bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white text-xs font-bold">
                 Mobile App
               </div>
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-display font-light text-white dark:text-neutral-900 leading-tight">
+              <h2 className="landing-h2 font-display font-light text-white dark:text-neutral-900">
                 Your pawnshop, <br />
                 <span className="underline decoration-2 underline-offset-4 decoration-neutral-600 dark:decoration-neutral-300">right in your pocket.</span>
               </h2>

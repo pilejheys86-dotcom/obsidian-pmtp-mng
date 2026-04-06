@@ -189,15 +189,15 @@
 
   /* Landing Page */
   .landing-card {
-    @apply rounded-[2rem];
+    @apply rounded-[1.25rem] sm:rounded-[2rem];
   }
 
   .landing-card-lg {
-    @apply rounded-[2.5rem];
+    @apply rounded-[1.5rem] sm:rounded-[2.5rem];
   }
 
   .landing-card-inner {
-    @apply rounded-[1.5rem];
+    @apply rounded-[1rem] sm:rounded-[1.5rem];
   }
 
   .landing-label {
@@ -206,6 +206,24 @@
 
   .landing-caption {
     @apply text-[9px];
+  }
+
+  /* Landing Responsive Typography — mobile-first with clamp() */
+  .landing-h1 {
+    font-size: clamp(1.875rem, 4vw + 1rem, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  .landing-h2 {
+    font-size: clamp(1.5rem, 3vw + 0.75rem, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  /* Prevent horizontal overflow on the landing page */
+  .landing-wrapper {
+    @apply overflow-x-hidden;
   }
 
   .landing-item-title {

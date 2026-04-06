@@ -31,7 +31,7 @@ const Hero = () => {
             </span>
             The Next-Gen MIS is Here
           </div>
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-display font-light leading-[1.1] tracking-tight">
+          <h1 className="landing-h1 font-display font-light">
             <span className="inline-block overflow-hidden align-bottom" style={{ minWidth: '1ch' }}>
               <span key={verbIdx} className={exiting ? 'hero-verb-exit' : 'hero-verb-enter'}>
                 {VERBS[verbIdx]}
@@ -49,7 +49,7 @@ const Hero = () => {
               Get Started <span className="material-symbols-outlined">arrow_forward</span>
             </a>
           </div>
-          <div className="flex flex-wrap gap-4 pt-8 border-t border-neutral-200 dark:border-neutral-800">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-neutral-200 dark:border-neutral-800">
             <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">Key Modules</span>
             <div className="flex flex-wrap gap-2">
               <span className="px-3 py-1 rounded-full border border-neutral-300 dark:border-neutral-700 text-xs font-semibold">Asset Valuation</span>
@@ -79,7 +79,7 @@ const Hero = () => {
 
               <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
                 {/* KPI Cards */}
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-2 sm:gap-4">
                   {/* Loans card — animated glow */}
                   <div className="hero-demo-loans p-4 rounded-sm bg-neutral-100 dark:bg-neutral-900/50 border border-neutral-200 dark:border-white/5 transition-shadow">
                     <p className="landing-label text-neutral-400 dark:text-neutral-500">Total Active Loans</p>

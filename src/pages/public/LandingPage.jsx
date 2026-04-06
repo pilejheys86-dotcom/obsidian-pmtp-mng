@@ -2,7 +2,7 @@ import { Navbar, Hero, TrustedBy, Features, HowItWorks, MobileApp, Footer } from
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-300">
+    <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-300 landing-wrapper">
       <Navbar />
       <Hero />
       <TrustedBy />

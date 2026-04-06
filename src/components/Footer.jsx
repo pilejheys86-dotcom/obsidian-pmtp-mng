@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="inline-block px-4 py-1.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold">
               Pricing
             </div>
-            <h2 className="text-2xl sm:text-4xl font-display font-light">
+            <h2 className="landing-h2 font-display font-light">
               The future of pawnshop management starts here.
             </h2>
             <p className="text-neutral-500 dark:text-neutral-400">
@@ -29,7 +29,7 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="bg-neutral-100 dark:bg-neutral-900 p-6 sm:p-8 landing-card border border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-8">
+          <div className="bg-neutral-100 dark:bg-neutral-900 p-5 sm:p-8 landing-card border border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5 sm:gap-8">
             <div>
               <p className="text-neutral-500 dark:text-neutral-400 font-bold mb-2">Professional Plan</p>
               <div className="flex items-baseline gap-1">
@@ -44,8 +44,8 @@ const Footer = () => {
         </div>
 
         {/* Footer Links */}
-        <div ref={linksRef} className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 pt-12 sm:pt-16 border-t border-neutral-200 dark:border-neutral-800 reveal-fade-up">
-          <div className="col-span-2 md:col-span-1">
+        <div ref={linksRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 pt-12 sm:pt-16 border-t border-neutral-200 dark:border-neutral-800 reveal-fade-up">
+          <div className="sm:col-span-2 md:col-span-1">
             <div className="mb-6">
               <Logo size="sm" />
             </div>
@@ -89,9 +89,9 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-neutral-400">
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-neutral-400 text-center md:text-left">
           <p>&copy; 2026 Obsidian MIS Platform. All rights reserved.</p>
-          <div className="flex gap-8">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
             <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/terms">Terms and Conditions</a>
             <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Cookie Policy</a>
           </div>

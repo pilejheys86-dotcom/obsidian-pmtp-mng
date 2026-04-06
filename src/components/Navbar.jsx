@@ -14,9 +14,9 @@ const Navbar = () => {
           <a className="text-sm font-semibold hover:text-neutral-900 dark:hover:text-white transition-colors" href="/pricing">Pricing</a>
           <a className="text-sm font-semibold hover:text-neutral-900 dark:hover:text-white transition-colors" href="/about">About</a>
         </div>
-        <div className="flex items-center gap-3 sm:gap-4">
-          <a className="hidden sm:inline-flex text-sm font-semibold min-h-[44px] items-center" href="/login">Log In</a>
-          <a className="hidden sm:inline-flex bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-5 sm:px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 min-h-[44px] items-center text-sm" href="/register">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <a className="hidden md:inline-flex text-sm font-semibold min-h-[44px] items-center px-2" href="/login">Log In</a>
+          <a className="hidden md:inline-flex bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-5 sm:px-6 py-2.5 rounded-full font-bold transition-all transform hover:scale-105 min-h-[44px] items-center text-sm" href="/register">
             Sign Up
           </a>
           {/* Mobile hamburger */}
