@@ -6,8 +6,8 @@ const Footer = () => {
   const linksRef = useScrollReveal()
 
   return (
-    <footer className="pt-16 sm:pt-24 pb-12 px-4 sm:px-6" id="pricing">
-      <div className="max-w-7xl mx-auto">
+    <footer className="px-4 sm:px-6" id="pricing">
+      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 pt-16 sm:pt-24 pb-12">
         {/* Pricing Section */}
         <div ref={pricingRef} className="grid lg:grid-cols-2 gap-16 mb-24 reveal-fade-up">
           <div className="space-y-6">
@@ -44,7 +44,11 @@ const Footer = () => {
         </div>
 
         {/* Footer Links */}
-        <div ref={linksRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 pt-12 sm:pt-16 border-t border-neutral-200 dark:border-neutral-800 reveal-fade-up">
+        <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+          <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+        </div>
+        <div ref={linksRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 pt-12 sm:pt-16 reveal-fade-up">
           <div className="sm:col-span-2 md:col-span-1">
             <div className="mb-6">
               <Logo size="sm" />
@@ -89,7 +93,11 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-neutral-400 text-center md:text-left">
+        <div className="relative mt-12 sm:mt-16 border-t border-neutral-200 dark:border-neutral-800">
+          <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+        </div>
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-neutral-400 text-center md:text-left">
           <p>&copy; 2026 Obsidian MIS Platform. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
             <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/terms">Terms and Conditions</a>

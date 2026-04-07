@@ -23,8 +23,8 @@ const HowItWorks = () => {
   const stepsRef = useStaggerReveal({ stagger: 200 })
 
   return (
-    <section className="py-16 sm:py-24 px-4 sm:px-6 bg-stone-100 dark:bg-neutral-900" id="how-it-works">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-4 sm:px-6 bg-white dark:bg-neutral-950" id="how-it-works">
+      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-16 sm:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div ref={mockupRef} className="relative order-2 lg:order-1 reveal-slide-left">
             <div className="bg-neutral-900 dark:bg-neutral-800 landing-card-lg p-5 sm:p-8 shadow-2xl">
@@ -69,7 +69,7 @@ const HowItWorks = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute -z-10 top-6 left-6 sm:top-12 sm:left-12 w-full h-full border-4 border-neutral-300 dark:border-neutral-700 landing-card-lg"></div>
+            <div className="absolute -z-10 top-4 left-4 sm:top-8 sm:left-8 w-full h-full border-2 border-neutral-300 dark:border-neutral-700 landing-card-lg"></div>
           </div>
           <div ref={stepsRef} className="order-1 lg:order-2 space-y-10 reveal-slide-right">
             <div>

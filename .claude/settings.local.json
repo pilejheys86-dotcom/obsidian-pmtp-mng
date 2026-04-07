@@ -6,7 +6,8 @@
       "Bash(grep -o 'background-light[^;]*' dist/assets/*.css)",
       "Bash(python3 .agent/skills/ui-ux-pro-max/scripts/search.py \"pawnshop management dashboard employee profile suspend\" --stack react)",
       "mcp__supabase__apply_migration",
-      "Bash(claude mcp:*)"
+      "Bash(claude mcp:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate"
     ]
   }
 }

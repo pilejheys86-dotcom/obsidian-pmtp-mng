@@ -4,8 +4,8 @@ const TrustedBy = () => {
   const ref = useStaggerReveal({ stagger: 120 })
 
   return (
-    <section className="py-10 sm:py-16 border-y border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <section className="px-4 sm:px-6 bg-white dark:bg-neutral-950">
+      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-10 sm:py-16">
         <p className="text-center text-xs font-bold text-neutral-500 uppercase tracking-widest mb-8 sm:mb-10">
           Trusted by modern lending institutions
         </p>

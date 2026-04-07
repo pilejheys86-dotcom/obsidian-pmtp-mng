@@ -189,15 +189,29 @@
 
   /* Landing Page */
   .landing-card {
-    @apply rounded-[1.25rem] sm:rounded-[2rem];
+    @apply rounded-[0.75rem];
   }
 
   .landing-card-lg {
-    @apply rounded-[1.5rem] sm:rounded-[2.5rem];
+    @apply rounded-[1rem];
   }
 
   .landing-card-inner {
-    @apply rounded-[1rem] sm:rounded-[1.5rem];
+    @apply rounded-[0.5rem];
+  }
+
+  /* Subtle line grid background — Vercel/Laravel style */
+  .grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  :is(.dark) .grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   }
 
   .landing-label {
@@ -210,7 +224,7 @@
 
   /* Landing Responsive Typography — mobile-first with clamp() */
   .landing-h1 {
-    font-size: clamp(1.875rem, 4vw + 1rem, 4.5rem);
+    font-size: clamp(2.25rem, 5vw + 1.25rem, 4.5rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
   }
