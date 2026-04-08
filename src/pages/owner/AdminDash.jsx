@@ -203,7 +203,7 @@ const RecentActivities = ({ activities = [] }) => {
                 <td className="py-3.5 pr-4 font-medium text-neutral-800 dark:text-neutral-200 whitespace-nowrap">{row.item}</td>
                 <td className="py-3.5 pr-4 text-neutral-500 dark:text-neutral-400">{row.category}</td>
                 <td className="py-3.5 pr-4">
-                  <span className={`text-[11px] font-bold uppercase px-2.5 py-1 rounded-full ${statusClasses[row.statusType]}`}>
+                  <span className={`text-[11px] font-bold uppercase px-2.5 py-1 rounded-sm ${statusClasses[row.statusType]}`}>
                     {formatStatus(row.status)}
                   </span>
                 </td>

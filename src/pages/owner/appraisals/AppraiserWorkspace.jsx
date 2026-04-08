@@ -404,8 +404,8 @@ export default function AppraiserWorkspace() {
                   </div>
                   <div className="p-6 space-y-5">
                     {selectedCustomer ? (
-                      <div className="p-4 bg-primary/5 border border-primary/20 rounded-lg flex items-center gap-3">
-                        <div className="h-10 w-10 rounded-full bg-primary/15 flex items-center justify-center text-sm font-bold text-primary flex-shrink-0">
+                      <div className="p-4 bg-primary/5 border border-primary/20 rounded-sm flex items-center gap-3">
+                        <div className="h-10 w-10 rounded-sm bg-primary/15 flex items-center justify-center text-sm font-bold text-primary flex-shrink-0">
                           {`${selectedCustomer.first_name?.[0] || ''}${selectedCustomer.last_name?.[0] || ''}`.toUpperCase()}
                         </div>
                         <div className="flex-1 min-w-0">
@@ -433,10 +433,10 @@ export default function AppraiserWorkspace() {
                           </div>
                         )}
                         {!customerLoading && customerResults.length > 0 && (
-                          <div className="border border-neutral-200/60 dark:border-neutral-700/50 rounded-lg divide-y divide-neutral-100 dark:divide-neutral-700/50 max-h-72 overflow-y-auto custom-scrollbar">
+                          <div className="border border-neutral-200/60 dark:border-neutral-700/50 rounded-sm divide-y divide-neutral-100 dark:divide-neutral-700/50 max-h-72 overflow-y-auto custom-scrollbar">
                             {customerResults.map((c) => (
                               <button key={c.id} type="button" onClick={() => { setSelectedCustomer(c); setCustomerResults([]) }} className="w-full flex items-center gap-3 px-4 py-3 text-left transition-colors hover:bg-neutral-50 dark:hover:bg-neutral-700/40">
-                                <div className="h-9 w-9 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold text-neutral-700 dark:text-white flex-shrink-0">
+                                <div className="h-9 w-9 rounded-sm bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold text-neutral-700 dark:text-white flex-shrink-0">
                                   {`${c.first_name?.[0] || ''}${c.last_name?.[0] || ''}`.toUpperCase()}
                                 </div>
                                 <div className="flex-1 min-w-0">
@@ -494,8 +494,8 @@ export default function AppraiserWorkspace() {
                               const isActive = formData.metal_type === metal.value
                               return (
                                 <button key={metal.value} type="button" onClick={() => handleFormChange('metal_type', isActive ? '' : metal.value)}
-                                  className={`group relative flex items-center gap-4 px-5 py-4 rounded-xl border-2 transition-all duration-200 cursor-pointer ${isActive ? 'border-primary bg-gradient-to-br from-primary/8 to-primary/3 dark:from-primary/12 dark:to-primary/5 shadow-md shadow-primary/10 ring-1 ring-primary/20' : `${metal.borderIdle} bg-gradient-to-br ${metal.bgIdle} hover:shadow-sm hover:scale-[1.01]`}`}>
-                                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center font-bold text-xl tracking-tight transition-all duration-200 ${isActive ? 'bg-primary/15 text-primary shadow-sm shadow-primary/10' : `bg-white/80 dark:bg-neutral-800/60 ${metal.symbolIdle} group-hover:shadow-sm`}`}>{metal.symbol}</div>
+                                  className={`group relative flex items-center gap-4 px-5 py-4 rounded-sm border-2 transition-all duration-200 cursor-pointer ${isActive ? 'border-primary bg-gradient-to-br from-primary/8 to-primary/3 dark:from-primary/12 dark:to-primary/5 shadow-md shadow-primary/10 ring-1 ring-primary/20' : `${metal.borderIdle} bg-gradient-to-br ${metal.bgIdle} hover:shadow-sm hover:scale-[1.01]`}`}>
+                                  <div className={`w-12 h-12 rounded-sm flex items-center justify-center font-bold text-xl tracking-tight transition-all duration-200 ${isActive ? 'bg-primary/15 text-primary shadow-sm shadow-primary/10' : `bg-white/80 dark:bg-neutral-800/60 ${metal.symbolIdle} group-hover:shadow-sm`}`}>{metal.symbol}</div>
                                   <div className="flex flex-col items-start min-w-0">
                                     <span className={`text-[13px] font-semibold tracking-wide transition-colors ${isActive ? 'text-primary' : 'text-neutral-800 dark:text-neutral-200'}`}>{metal.label}</span>
                                     <span className={`text-[11px] mt-0.5 transition-colors ${isActive ? 'text-primary/60' : 'text-neutral-400 dark:text-neutral-500'}`}>{metal.desc}</span>
@@ -506,7 +506,7 @@ export default function AppraiserWorkspace() {
                             })}
                           </div>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 bg-neutral-50 dark:bg-neutral-700/30 rounded-lg border border-neutral-200/60 dark:border-neutral-700/50">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 bg-neutral-50 dark:bg-neutral-700/30 rounded-sm border border-neutral-200/60 dark:border-neutral-700/50">
                           <div>
                             <label className="form-label">Weight (grams)</label>
                             <input type="number" value={formData.weight_grams} onChange={(e) => handleFormChange('weight_grams', e.target.value)} className="form-input w-full" placeholder="e.g. 15.5" min="0" step="0.01" />
@@ -523,7 +523,7 @@ export default function AppraiserWorkspace() {
 
                       {/* Gadget fields */}
                       {formData.category === 'GADGET' && (
-                        <div className="space-y-4 p-4 bg-neutral-50 dark:bg-neutral-700/30 rounded-lg border border-neutral-200/60 dark:border-neutral-700/50">
+                        <div className="space-y-4 p-4 bg-neutral-50 dark:bg-neutral-700/30 rounded-sm border border-neutral-200/60 dark:border-neutral-700/50">
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                             <div><label className="form-label">Brand</label><input type="text" value={formData.brand} onChange={(e) => handleFormChange('brand', e.target.value)} className="form-input w-full" placeholder="e.g. Apple" /></div>
                             <div><label className="form-label">Model</label><input type="text" value={formData.model} onChange={(e) => handleFormChange('model', e.target.value)} className="form-input w-full" placeholder="e.g. iPhone 15 Pro" /></div>
@@ -538,7 +538,7 @@ export default function AppraiserWorkspace() {
 
                       {/* Appliance fields */}
                       {formData.category === 'APPLIANCE' && (
-                        <div className="space-y-4 p-4 bg-neutral-50 dark:bg-neutral-700/30 rounded-lg border border-neutral-200/60 dark:border-neutral-700/50">
+                        <div className="space-y-4 p-4 bg-neutral-50 dark:bg-neutral-700/30 rounded-sm border border-neutral-200/60 dark:border-neutral-700/50">
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                             <div><label className="form-label">Brand</label><input type="text" value={formData.appliance_brand} onChange={(e) => handleFormChange('appliance_brand', e.target.value)} className="form-input w-full" placeholder="e.g. Samsung" /></div>
                             <div><label className="form-label">Model</label><input type="text" value={formData.appliance_model} onChange={(e) => handleFormChange('appliance_model', e.target.value)} className="form-input w-full" placeholder="e.g. RT-43K6231BS" /></div>
@@ -554,7 +554,7 @@ export default function AppraiserWorkspace() {
 
                       {/* Vehicle fields */}
                       {formData.category === 'VEHICLE' && (
-                        <div className="space-y-4 p-4 bg-neutral-50 dark:bg-neutral-700/30 rounded-lg border border-neutral-200/60 dark:border-neutral-700/50">
+                        <div className="space-y-4 p-4 bg-neutral-50 dark:bg-neutral-700/30 rounded-sm border border-neutral-200/60 dark:border-neutral-700/50">
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                             <div><label className="form-label">Make</label><input type="text" value={formData.vehicle_make} onChange={(e) => handleFormChange('vehicle_make', e.target.value)} className="form-input w-full" placeholder="e.g. Toyota" /></div>
                             <div><label className="form-label">Model</label><input type="text" value={formData.vehicle_model} onChange={(e) => handleFormChange('vehicle_model', e.target.value)} className="form-input w-full" placeholder="e.g. Vios" /></div>
@@ -616,12 +616,12 @@ export default function AppraiserWorkspace() {
                           <div className="space-y-3 mt-2">
                             <div className="flex gap-2">
                               <input type="text" value={customAccessory} onChange={(e) => setCustomAccessory(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); const val = customAccessory.trim(); if (val && !formData.accessories.includes(val)) { setFormData((prev) => ({ ...prev, accessories: [...prev.accessories, val] })) } setCustomAccessory('') } }} className="form-input w-full" placeholder="Type an accessory and press Enter..." />
-                              <button type="button" onClick={() => { const val = customAccessory.trim(); if (val && !formData.accessories.includes(val)) { setFormData((prev) => ({ ...prev, accessories: [...prev.accessories, val] })) } setCustomAccessory('') }} className="px-4 rounded-lg text-sm font-medium bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 transition-colors whitespace-nowrap">Add</button>
+                              <button type="button" onClick={() => { const val = customAccessory.trim(); if (val && !formData.accessories.includes(val)) { setFormData((prev) => ({ ...prev, accessories: [...prev.accessories, val] })) } setCustomAccessory('') }} className="px-4 rounded-sm text-sm font-medium bg-primary/10 text-primary border border-primary/30 hover:bg-primary/20 transition-colors whitespace-nowrap">Add</button>
                             </div>
                             {formData.accessories.length > 0 && (
                               <div className="flex flex-wrap gap-2">
                                 {formData.accessories.map((acc) => (
-                                  <span key={acc} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-primary/10 border border-primary/30 text-primary">
+                                  <span key={acc} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm text-sm font-medium bg-primary/10 border border-primary/30 text-primary">
                                     {acc}
                                     <button type="button" onClick={() => setFormData((prev) => ({ ...prev, accessories: prev.accessories.filter((a) => a !== acc) }))} className="text-primary/60 hover:text-red-500 transition-colors"><span className="material-symbols-rounded text-[14px]">close</span></button>
                                   </span>
@@ -633,7 +633,7 @@ export default function AppraiserWorkspace() {
                           <div className="flex flex-wrap gap-3 mt-2">
                             {(ACCESSORIES_BY_CATEGORY[formData.category] || []).map((acc) => (
                               <button key={acc} type="button" onClick={() => handleAccessoryToggle(acc)}
-                                className={`inline-flex items-center px-3 py-2 rounded-lg border cursor-pointer text-sm font-medium transition-colors ${formData.accessories.includes(acc) ? 'bg-primary/10 border-primary/30 text-primary' : 'bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600'}`}>
+                                className={`inline-flex items-center px-3 py-2 rounded-sm border cursor-pointer text-sm font-medium transition-colors ${formData.accessories.includes(acc) ? 'bg-primary/10 border-primary/30 text-primary' : 'bg-white dark:bg-neutral-800 border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-300 hover:border-neutral-300 dark:hover:border-neutral-600'}`}>
                                 {acc}
                               </button>
                             ))}
@@ -661,21 +661,21 @@ export default function AppraiserWorkspace() {
                     {formData.category === 'JEWELRY' && (
                       <div className="space-y-4">
                         <button type="button" onClick={handleCalculate} disabled={!formData.weight_grams || !formData.karat || !formData.item_condition || calcLoading}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 shadow-sm transition-all active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed">
+                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-sm text-sm font-bold bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 shadow-sm transition-all active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed">
                           {calcLoading ? (<><span className="material-symbols-rounded animate-spin text-lg">progress_activity</span>Calculating...</>) : (<><span className="material-symbols-rounded text-lg">calculate</span>Auto-Calculate Value</>)}
                         </button>
                         {calcResult && (
                           <div className="space-y-3">
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                              <div className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-700/30 border border-neutral-200/60 dark:border-neutral-700/50 text-center">
+                              <div className="p-4 rounded-sm bg-neutral-50 dark:bg-neutral-700/30 border border-neutral-200/60 dark:border-neutral-700/50 text-center">
                                 <p className="text-[11px] font-medium text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-1.5">Melt Value</p>
                                 <p className="text-lg font-bold text-neutral-800 dark:text-white">{formatCurrency(calcResult.melt_value)}</p>
                               </div>
-                              <div className="p-4 rounded-xl bg-primary/5 dark:bg-primary/10 border border-primary/15 dark:border-primary/20 text-center">
+                              <div className="p-4 rounded-sm bg-primary/5 dark:bg-primary/10 border border-primary/15 dark:border-primary/20 text-center">
                                 <p className="text-[11px] font-medium text-primary/70 uppercase tracking-wider mb-1.5">Fair Market Value</p>
                                 <p className="text-lg font-bold text-primary">{formatCurrency(calcResult.fair_market_value || calcResult.appraised_value)}</p>
                               </div>
-                              <div className="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-700/30 border border-neutral-200/60 dark:border-neutral-700/50 text-center">
+                              <div className="p-4 rounded-sm bg-neutral-50 dark:bg-neutral-700/30 border border-neutral-200/60 dark:border-neutral-700/50 text-center">
                                 <p className="text-[11px] font-medium text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-1.5">Max Loan (LTV {((calcResult.ltv_ratio || 0.70) * 100).toFixed(0)}%)</p>
                                 <p className="text-lg font-bold text-neutral-800 dark:text-white">{formatCurrency(calcResult.max_loan || calcResult.loan_amount)}</p>
                               </div>
@@ -712,14 +712,14 @@ export default function AppraiserWorkspace() {
                   </div>
                   <div className="p-6 space-y-6">
                     {/* Customer review */}
-                    <div className="rounded-xl border border-neutral-200/80 dark:border-neutral-700/60 overflow-hidden">
+                    <div className="rounded-sm border border-neutral-200/80 dark:border-neutral-700/60 overflow-hidden">
                       <div className="px-4 py-2.5 bg-neutral-50 dark:bg-neutral-700/20 border-b border-neutral-200/80 dark:border-neutral-700/60">
                         <h3 className="text-[11px] font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider flex items-center gap-1.5">
                           <span className="material-symbols-rounded text-[13px] text-primary">person</span>Customer
                         </h3>
                       </div>
                       <div className="px-4 py-3.5 flex items-center gap-3">
-                        <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                        <div className="w-9 h-9 rounded-sm bg-primary/10 flex items-center justify-center shrink-0">
                           <span className="text-primary font-bold text-xs">{(selectedCustomer?.first_name?.[0] || '').toUpperCase()}{(selectedCustomer?.last_name?.[0] || '').toUpperCase()}</span>
                         </div>
                         <div className="min-w-0">
@@ -730,7 +730,7 @@ export default function AppraiserWorkspace() {
                     </div>
 
                     {/* Item review */}
-                    <div className="rounded-xl border border-neutral-200/80 dark:border-neutral-700/60 overflow-hidden">
+                    <div className="rounded-sm border border-neutral-200/80 dark:border-neutral-700/60 overflow-hidden">
                       <div className="px-4 py-2.5 bg-neutral-50 dark:bg-neutral-700/20 border-b border-neutral-200/80 dark:border-neutral-700/60">
                         <h3 className="text-[11px] font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider flex items-center gap-1.5">
                           <span className="material-symbols-rounded text-[13px] text-primary">inventory_2</span>Item Details
@@ -780,7 +780,7 @@ export default function AppraiserWorkspace() {
                             <p className="text-[11px] text-neutral-400 dark:text-neutral-500 mb-1.5">Accessories</p>
                             <div className="flex flex-wrap gap-1.5">
                               {formData.accessories.map((acc) => (
-                                <span key={acc} className="inline-flex px-2.5 py-1 rounded-md text-[11px] font-medium bg-neutral-100 dark:bg-neutral-700/40 text-neutral-600 dark:text-neutral-300 border border-neutral-200/60 dark:border-neutral-600/30">{acc}</span>
+                                <span key={acc} className="inline-flex px-2.5 py-1 rounded-sm text-[11px] font-medium bg-neutral-100 dark:bg-neutral-700/40 text-neutral-600 dark:text-neutral-300 border border-neutral-200/60 dark:border-neutral-600/30">{acc}</span>
                               ))}
                             </div>
                           </div>
@@ -789,7 +789,7 @@ export default function AppraiserWorkspace() {
                     </div>
 
                     {/* Valuation review */}
-                    <div className="rounded-xl border border-primary/15 dark:border-primary/20 bg-gradient-to-r from-primary/5 to-primary/[0.02] dark:from-primary/10 dark:to-primary/[0.03] overflow-hidden">
+                    <div className="rounded-sm border border-primary/15 dark:border-primary/20 bg-gradient-to-r from-primary/5 to-primary/[0.02] dark:from-primary/10 dark:to-primary/[0.03] overflow-hidden">
                       <div className="px-4 py-2.5 border-b border-primary/10 dark:border-primary/15">
                         <h3 className="text-[11px] font-semibold text-primary/70 uppercase tracking-wider flex items-center gap-1.5">
                           <span className="material-symbols-rounded text-[13px] text-primary">payments</span>Appraised Value

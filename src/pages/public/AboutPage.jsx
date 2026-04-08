@@ -39,7 +39,7 @@ const AboutPage = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 px-6">
         <div ref={heroRef} className="max-w-3xl mx-auto text-center reveal-fade-up">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
+          <div className="inline-block px-4 py-1.5 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
             About
           </div>
           <h1 className="text-4xl md:text-6xl font-display font-light leading-tight mb-6">

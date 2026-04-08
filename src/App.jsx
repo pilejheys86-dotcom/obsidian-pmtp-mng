@@ -31,7 +31,7 @@ const IdleWarningModal = ({ onStay, onLogout }) => {
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm">
-      <div className="bg-white dark:bg-neutral-900 rounded-xl shadow-2xl border border-neutral-200 dark:border-neutral-700 w-full max-w-sm mx-4 p-8 flex flex-col items-center text-center">
+      <div className="bg-white dark:bg-neutral-900 rounded-sm shadow-2xl border border-neutral-200 dark:border-neutral-700 w-full max-w-sm mx-4 p-8 flex flex-col items-center text-center">
         {/* Countdown ring */}
         <div className="relative w-20 h-20 mb-6">
           <svg className="w-20 h-20 -rotate-90" viewBox="0 0 64 64">
@@ -147,7 +147,7 @@ function App() {
     return (
       <div className="flex items-center justify-center min-h-screen bg-neutral-100 dark:bg-neutral-900">
         <div className="max-w-md w-full mx-4 bg-white dark:bg-neutral-800 rounded-sm border border-neutral-200 dark:border-neutral-700 shadow-sm p-8 text-center">
-          <div className="w-16 h-16 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-5">
+          <div className="w-16 h-16 rounded-sm bg-red-500/10 flex items-center justify-center mx-auto mb-5">
             <span className="material-symbols-outlined text-red-500 text-3xl">block</span>
           </div>
           <h1 className="text-xl font-display font-bold text-neutral-900 dark:text-white mb-2">Access Denied</h1>
@@ -199,7 +199,7 @@ function App() {
     return (
       <div className="flex items-center justify-center min-h-screen bg-neutral-100 dark:bg-neutral-900">
         <div className="max-w-md w-full mx-4 bg-white dark:bg-neutral-800 rounded-sm border border-neutral-200 dark:border-neutral-700 shadow-sm p-8 text-center">
-          <div className="w-16 h-16 rounded-full bg-amber-500/10 flex items-center justify-center mx-auto mb-5">
+          <div className="w-16 h-16 rounded-sm bg-amber-500/10 flex items-center justify-center mx-auto mb-5">
             <span className="material-symbols-outlined text-amber-500 text-3xl">hourglass_top</span>
           </div>
           <h1 className="text-xl font-display font-bold text-neutral-900 dark:text-white mb-2">Account Pending Verification</h1>

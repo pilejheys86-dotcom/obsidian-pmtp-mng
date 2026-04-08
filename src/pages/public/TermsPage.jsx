@@ -76,7 +76,7 @@ const TermsContent = () => {
       {/* Hero */}
       <section className="pt-32 pb-12 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
+          <div className="inline-block px-4 py-1.5 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
             Legal
           </div>
           <h1 className="text-4xl md:text-6xl font-display font-light leading-tight mb-4">
@@ -339,7 +339,7 @@ const TermsContent = () => {
         {/* Floating pill button */}
         <button
           onClick={() => setDrawerOpen(true)}
-          className="fixed bottom-6 right-5 z-40 flex items-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold px-4 py-2.5 rounded-full shadow-lg"
+          className="fixed bottom-6 right-5 z-40 flex items-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold px-4 py-2.5 rounded-sm shadow-lg"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
           Sections

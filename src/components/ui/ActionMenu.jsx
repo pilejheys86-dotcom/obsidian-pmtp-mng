@@ -19,13 +19,13 @@ const ActionMenu = ({ actions = [] }) => {
         <div className="relative" ref={ref}>
             <button
                 onClick={() => setOpen((p) => !p)}
-                className="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700/50 transition-colors"
+                className="p-1.5 rounded-sm text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700/50 transition-colors"
             >
                 <span className="material-symbols-outlined text-xl">more_horiz</span>
             </button>
 
             {open && (
-                <div className="absolute right-0 top-full mt-1 w-48 bg-white dark:bg-neutral-800 rounded-lg shadow-lg border border-neutral-200/60 dark:border-neutral-700/50 py-1 z-30">
+                <div className="absolute right-0 top-full mt-1 w-48 bg-white dark:bg-neutral-800 rounded-sm shadow-lg border border-neutral-200/60 dark:border-neutral-700/50 py-1 z-30">
                     {visible.map((action, i) => (
                         <button
                             key={i}

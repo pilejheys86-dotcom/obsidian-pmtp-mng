@@ -24,7 +24,7 @@ const Hero = () => {
     <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 hero-gradient overflow-hidden">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div ref={textRef} className="space-y-8 reveal-fade-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900/10 dark:bg-white/10 border border-neutral-900/20 dark:border-white/20 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-neutral-900/10 dark:bg-white/10 border border-neutral-900/20 dark:border-white/20 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-widest">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-neutral-900 dark:bg-white opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-neutral-900 dark:bg-white"></span>
@@ -38,7 +38,7 @@ const Hero = () => {
               </span>
             </span>
             <br />
-            Your <span className="underline decoration-2 underline-offset-4 decoration-neutral-300 dark:decoration-neutral-600">Pawnshop</span> <br />
+            Your Pawnshop <br />
             Management
           </h1>
           <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-lg leading-relaxed">
@@ -49,15 +49,6 @@ const Hero = () => {
               Get Started <span className="material-symbols-outlined">arrow_forward</span>
             </a>
           </div>
-          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 pt-6 sm:pt-8 border-t border-neutral-200 dark:border-neutral-800">
-            <span className="text-xs font-bold text-neutral-400 uppercase tracking-widest">Key Modules</span>
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 rounded-full border border-neutral-300 dark:border-neutral-700 text-xs font-semibold">Asset Valuation</span>
-              <span className="px-3 py-1 rounded-full border border-neutral-300 dark:border-neutral-700 text-xs font-semibold">Inventory</span>
-              <span className="px-3 py-1 rounded-full border border-neutral-300 dark:border-neutral-700 text-xs font-semibold">CRM</span>
-              <span className="px-3 py-1 rounded-full border border-neutral-300 dark:border-neutral-700 text-xs font-semibold">Reporting</span>
-            </div>
-          </div>
         </div>
         <div ref={mockupRef} className="relative hero-demo reveal-scale">
           <div className="relative z-10 bg-white dark:bg-neutral-900 landing-card p-3 sm:p-4 shadow-2xl border border-neutral-200 dark:border-white/10">
@@ -65,7 +56,7 @@ const Hero = () => {
               {/* Title bar */}
               <div className="p-4 sm:p-6 border-b border-neutral-200 dark:border-white/5 flex justify-between items-center bg-neutral-100 dark:bg-neutral-900">
                 <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-sm bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center">
                     <span className="material-symbols-outlined text-neutral-600 dark:text-neutral-300 text-sm">dashboard</span>
                   </div>
                   <span className="font-bold text-sm text-neutral-900 dark:text-white">Dashboard Overview</span>
@@ -106,7 +97,7 @@ const Hero = () => {
                 <div className="p-4 rounded-sm bg-neutral-100 dark:bg-neutral-900/50 border border-neutral-200 dark:border-white/5 space-y-3">
                   <p className="text-xs font-bold text-neutral-900 dark:text-white flex items-center justify-between">
                     Recent Appraisal Activity
-                    <span className="hero-demo-viewall landing-label text-neutral-900 dark:text-white underline inline-block">View All</span>
+                    <span className="hero-demo-viewall landing-label text-neutral-900 dark:text-white inline-block">View All</span>
                   </p>
                   <div className="space-y-2">
                     {/* Diamond Ring row — animated highlight + approved badge */}
@@ -122,7 +113,7 @@ const Hero = () => {
                       </div>
                       <div className="flex items-center gap-2">
                         {/* Approved badge — fades in on cursor click */}
-                        <span className="hero-demo-approved landing-label text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full">Approved</span>
+                        <span className="hero-demo-approved landing-label text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-sm">Approved</span>
                         <p className="text-xs font-bold text-neutral-900 dark:text-white">₱4,500</p>
                       </div>
                     </div>

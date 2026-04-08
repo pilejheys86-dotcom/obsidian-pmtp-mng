@@ -238,7 +238,7 @@ const SalesReport = () => {
                     {topTenants.map((tenant, idx) => (
                       <tr key={tenant.tenant_name} className="loan-row">
                         <td className="px-5 py-3.5 text-center">
-                          <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-[11px] font-bold
+                          <span className={`inline-flex items-center justify-center w-6 h-6 rounded-sm text-[11px] font-bold
                             ${idx === 0 ? 'bg-amber-400/20 text-amber-600 dark:text-amber-400' : ''}
                             ${idx === 1 ? 'bg-neutral-200/60 dark:bg-neutral-700 text-neutral-500 dark:text-neutral-400' : ''}
                             ${idx === 2 ? 'bg-orange-400/10 text-orange-500' : ''}

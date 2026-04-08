@@ -191,7 +191,7 @@ const FileUpload = ({ value, onChange, folder = 'employees' }) => {
                     <button
                         type="button"
                         onClick={handleRemove}
-                        className="absolute top-2 right-2 p-1 rounded-full bg-red-500 text-white opacity-0 group-hover:opacity-100 transition-opacity"
+                        className="absolute top-2 right-2 p-1 rounded-sm bg-red-500 text-white opacity-0 group-hover:opacity-100 transition-opacity"
                     >
                         <span className="material-symbols-outlined text-sm">close</span>
                     </button>

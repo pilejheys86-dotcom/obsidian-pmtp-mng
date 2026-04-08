@@ -26,7 +26,7 @@ const SettingsNav = ({ items, activeId, onSelect, title, badge = {} }) => {
               key={id}
               onClick={() => onSelect(id)}
               title={collapsed ? label : undefined}
-              className={`flex items-center gap-2.5 rounded-md text-[13px] font-medium transition-all duration-150
+              className={`flex items-center gap-2.5 rounded-sm text-[13px] font-medium transition-all duration-150
                 ${collapsed ? 'justify-center px-0 py-2 w-full' : 'px-2.5 py-2 w-full'}
                 ${isActive
                   ? 'bg-neutral-100 dark:bg-neutral-800/80 text-neutral-900 dark:text-white shadow-sm'
@@ -38,7 +38,7 @@ const SettingsNav = ({ items, activeId, onSelect, title, badge = {} }) => {
               </span>
               {!collapsed && <span className="truncate">{label}</span>}
               {!collapsed && count > 0 && (
-                <span className="ml-auto px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-primary text-neutral-900 leading-none">
+                <span className="ml-auto px-1.5 py-0.5 text-[10px] font-bold rounded-sm bg-primary text-neutral-900 leading-none">
                   {count}
                 </span>
               )}

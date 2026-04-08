@@ -74,7 +74,7 @@ const SectionCard = ({ id, icon, title, description, accent, badge, children }) 
                     <h2 className="text-[15px] font-bold text-neutral-800 dark:text-neutral-100">{title}</h2>
                 </div>
                 {badge && (
-                    <span className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-100 dark:bg-amber-900/30 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase">
+                    <span className="flex items-center gap-1 px-2.5 py-1 rounded-sm bg-amber-100 dark:bg-amber-900/30 text-xs font-bold text-amber-700 dark:text-amber-400 uppercase">
                         <span className="material-symbols-outlined text-sm">shield</span>
                         {badge}
                     </span>
@@ -205,7 +205,7 @@ const FileUpload = ({ label, value, onChange, required, error, folder = 'kyc' })
                     <button
                         type="button"
                         onClick={handleRemove}
-                        className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center hover:bg-red-600 transition-colors shadow-sm"
+                        className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-sm flex items-center justify-center hover:bg-red-600 transition-colors shadow-sm"
                     >
                         <span className="material-symbols-outlined text-sm">close</span>
                     </button>

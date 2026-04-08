@@ -101,8 +101,8 @@ export default function RequestAccessPage({ tenantId }) {
   if (error && !tenant) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#0a0a0a] px-4">
-        <div className="max-w-sm w-full bg-[#111] rounded-2xl border border-[#1a1a1a] shadow-sm p-8 text-center">
-          <div className="w-14 h-14 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-4">
+        <div className="max-w-sm w-full bg-[#111] rounded-sm border border-[#1a1a1a] shadow-sm p-8 text-center">
+          <div className="w-14 h-14 rounded-sm bg-red-500/10 flex items-center justify-center mx-auto mb-4">
             <span className="material-symbols-outlined text-red-500 text-2xl">error</span>
           </div>
           <h1 className="text-lg font-display font-bold text-white mb-2">Page Not Found</h1>
@@ -116,8 +116,8 @@ export default function RequestAccessPage({ tenantId }) {
   if (submitted) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-[#0a0a0a] px-4">
-        <div className="max-w-md w-full bg-[#111] rounded-2xl border border-[#1a1a1a] shadow-sm p-8 text-center">
-          <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5" style={{ background: `color-mix(in srgb, ${brandColor} 12%, transparent)` }}>
+        <div className="max-w-md w-full bg-[#111] rounded-sm border border-[#1a1a1a] shadow-sm p-8 text-center">
+          <div className="w-16 h-16 rounded-sm flex items-center justify-center mx-auto mb-5" style={{ background: `color-mix(in srgb, ${brandColor} 12%, transparent)` }}>
             <span className="material-symbols-outlined text-3xl" style={{ color: brandColor }}>check_circle</span>
           </div>
           <h1 className="text-xl font-display font-bold text-white mb-2">Request Submitted</h1>
@@ -127,7 +127,7 @@ export default function RequestAccessPage({ tenantId }) {
           {showcaseUrl && (
             <a
               href={showcaseUrl}
-              className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-sm text-sm font-semibold transition-all hover:opacity-90"
               style={{ background: brandColor, color: '#0a0a0a' }}
             >
               <span className="material-symbols-outlined text-base">home</span>
@@ -147,10 +147,10 @@ export default function RequestAccessPage({ tenantId }) {
         <div className="max-w-3xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {tenant.logo_url ? (
-              <img src={tenant.logo_url} alt="" className="w-8 h-8 rounded-lg object-cover" />
+              <img src={tenant.logo_url} alt="" className="w-8 h-8 rounded-sm object-cover" />
             ) : (
               <div
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold"
+                className="w-8 h-8 rounded-sm flex items-center justify-center text-sm font-bold"
                 style={{ background: brandColor, color: '#0a0a0a' }}
               >
                 {tenant.business_name?.[0]?.toUpperCase()}
@@ -172,7 +172,7 @@ export default function RequestAccessPage({ tenantId }) {
         </div>
 
         {error && (
-          <div className="mb-6 p-3 bg-red-900/20 rounded-lg border border-red-800">
+          <div className="mb-6 p-3 bg-red-900/20 rounded-sm border border-red-800">
             <p className="text-sm text-red-400 flex items-center gap-2">
               <span className="material-symbols-outlined text-base">error</span>{error}
             </p>

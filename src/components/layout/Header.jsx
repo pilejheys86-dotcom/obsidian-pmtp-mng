@@ -8,7 +8,7 @@ const LogoutConfirmModal = ({ onConfirm, onCancel, isLoading }) => createPortal(
     <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={isLoading ? undefined : onCancel} />
     <div className="relative bg-white dark:bg-neutral-800 rounded-sm shadow-xl w-full max-w-xs mx-4 overflow-hidden">
       <div className="px-6 pt-6 pb-4 text-center">
-        <div className="w-12 h-12 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center mx-auto mb-3">
+        <div className="w-12 h-12 rounded-sm bg-red-100 dark:bg-red-900/30 flex items-center justify-center mx-auto mb-3">
           <span className="material-symbols-outlined text-red-500 text-2xl">logout</span>
         </div>
         <h3 className="text-lg font-display font-bold text-neutral-900 dark:text-white">Logout?</h3>
@@ -136,7 +136,7 @@ const Header = ({ user = { name: 'User', initials: 'U', email: '' } }) => {
         <button
           ref={avatarRef}
           onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-          className="w-8 h-8 rounded-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold text-neutral-700 dark:text-white hover:ring-2 hover:ring-neutral-300 dark:hover:ring-neutral-600 transition-all"
+          className="w-8 h-8 rounded-sm bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-xs font-bold text-neutral-700 dark:text-white hover:ring-2 hover:ring-neutral-300 dark:hover:ring-neutral-600 transition-all"
         >
           {user.initials}
         </button>

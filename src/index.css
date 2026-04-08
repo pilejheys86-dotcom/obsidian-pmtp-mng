@@ -32,6 +32,8 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   /* Display font for headings and branding */
   --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  /* Code/editor mono font */
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   /* Font Sizes */
   --text-xs: 0.75rem;
@@ -189,15 +191,15 @@
 
   /* Landing Page */
   .landing-card {
-    @apply rounded-[0.75rem];
+    @apply rounded-sm;
   }
 
   .landing-card-lg {
-    @apply rounded-[1rem];
+    @apply rounded-sm;
   }
 
   .landing-card-inner {
-    @apply rounded-[0.5rem];
+    @apply rounded-sm;
   }
 
   /* Subtle line grid background — Vercel/Laravel style */
@@ -238,6 +240,24 @@
   /* Prevent horizontal overflow on the landing page */
   .landing-wrapper {
     @apply overflow-x-hidden;
+  }
+
+  /* Extend horizontal border lines to viewport edges */
+  .landing-border-extend::before,
+  .landing-border-extend::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    width: 100vw;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: inherit;
+  }
+  .landing-border-extend::before {
+    right: 100%;
+  }
+  .landing-border-extend::after {
+    left: 100%;
   }
 
   .landing-item-title {
@@ -521,7 +541,7 @@
   }
 
   .sidebar-link {
-    @apply flex items-center gap-2.5 px-2.5 py-2 mx-2 my-0.5 rounded-md text-[13px] font-medium text-neutral-500 dark:text-neutral-400 transition-all duration-200 ease-out hover:bg-neutral-100 dark:hover:bg-neutral-800/60 hover:text-neutral-800 dark:hover:text-neutral-200;
+    @apply flex items-center gap-2.5 px-2.5 py-2 mx-2 my-0.5 rounded-sm text-[13px] font-medium text-neutral-500 dark:text-neutral-400 transition-all duration-200 ease-out hover:bg-neutral-100 dark:hover:bg-neutral-800/60 hover:text-neutral-800 dark:hover:text-neutral-200;
   }
 
   .sidebar-link.active {
@@ -534,7 +554,7 @@
 
   /* Compact collapsed links (Supabase style) */
   [data-collapsed="true"] .sidebar-link {
-    @apply mx-1.5 my-0 px-2 py-1.5 rounded-md;
+    @apply mx-1.5 my-0 px-2 py-1.5 rounded-sm;
   }
 
   /* Hide text elements in collapsed state — icons stay visible via overflow clipping */
@@ -810,11 +830,11 @@
   }
 
   .profile-avatar-lg {
-    @apply w-24 h-24 rounded-full bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-600 dark:to-neutral-700 flex items-center justify-center text-2xl font-bold text-neutral-600 dark:text-neutral-300 border-4 border-white dark:border-neutral-800 shadow-lg overflow-hidden;
+    @apply w-24 h-24 rounded-sm bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-600 dark:to-neutral-700 flex items-center justify-center text-2xl font-bold text-neutral-600 dark:text-neutral-300 border-4 border-white dark:border-neutral-800 shadow-lg overflow-hidden;
   }
 
   .profile-avatar-edit {
-    @apply absolute bottom-0 right-0 p-1.5 bg-primary hover:bg-primary-hover text-white dark:text-neutral-900 rounded-full shadow-md border-2 border-white dark:border-neutral-800 transition-colors;
+    @apply absolute bottom-0 right-0 p-1.5 bg-primary hover:bg-primary-hover text-white dark:text-neutral-900 rounded-sm shadow-md border-2 border-white dark:border-neutral-800 transition-colors;
   }
 
   .profile-member-badge {
@@ -1039,11 +1059,11 @@
   }
 
   .auction-badge-live {
-    @apply px-3 py-1 bg-primary text-white dark:text-neutral-900 text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg;
+    @apply px-3 py-1 bg-primary text-white dark:text-neutral-900 text-[10px] font-black uppercase tracking-widest rounded-sm shadow-lg;
   }
 
   .auction-badge-scheduled {
-    @apply px-3 py-1 bg-neutral-500 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg;
+    @apply px-3 py-1 bg-neutral-500 text-white text-[10px] font-black uppercase tracking-widest rounded-sm shadow-lg;
   }
 
   .auction-card-timer {
@@ -1051,7 +1071,7 @@
   }
 
   .auction-card-fav-btn {
-    @apply w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white transition-colors;
+    @apply w-10 h-10 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-sm flex items-center justify-center text-white transition-colors;
   }
 
   .auction-card-btn-primary {
@@ -1063,7 +1083,7 @@
   }
 
   .auction-badge-completed {
-    @apply px-3 py-1 bg-blue-500 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg;
+    @apply px-3 py-1 bg-blue-500 text-white text-[10px] font-black uppercase tracking-widest rounded-sm shadow-lg;
   }
 
   /* ===========================================
@@ -1099,7 +1119,7 @@
   }
 
   .sub-popular-badge {
-    @apply absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-blue-500 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg;
+    @apply absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-blue-500 text-white text-[10px] font-black uppercase tracking-widest rounded-sm shadow-lg;
   }
 
   .sub-plan-btn {
@@ -1157,20 +1177,20 @@
   }
 
   .sa-filter-input {
-    @apply h-9 px-3 text-sm bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md text-neutral-800 dark:text-neutral-200 focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary;
+    @apply h-9 px-3 text-sm bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-sm text-neutral-800 dark:text-neutral-200 focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary;
   }
 
   .sa-filter-select {
-    @apply h-9 px-3 pr-8 text-sm bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-600 rounded-md text-neutral-800 dark:text-neutral-200 focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary appearance-none cursor-pointer;
+    @apply h-9 px-3 pr-8 text-sm bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-600 rounded-sm text-neutral-800 dark:text-neutral-200 focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary appearance-none cursor-pointer;
   }
 
   .sa-filter-btn {
-    @apply h-9 px-4 text-sm font-semibold rounded-md transition-colors;
+    @apply h-9 px-4 text-sm font-semibold rounded-sm transition-colors;
   }
 
   /* Period Toggle */
   .sa-period-toggle {
-    @apply inline-flex rounded-md border border-neutral-200 dark:border-neutral-700 overflow-hidden;
+    @apply inline-flex rounded-sm border border-neutral-200 dark:border-neutral-700 overflow-hidden;
   }
 
   .sa-period-btn {
@@ -1200,7 +1220,7 @@
   }
 
   .sa-settings-input {
-    @apply w-full h-10 px-3 text-sm bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md text-neutral-800 dark:text-neutral-200 focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary;
+    @apply w-full h-10 px-3 text-sm bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-sm text-neutral-800 dark:text-neutral-200 focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary;
   }
 
   .sa-permissions-table {
@@ -1226,7 +1246,7 @@
 
   /* Info Banner */
   .sa-info-banner {
-    @apply flex items-center gap-3 p-4 mb-6 rounded-md bg-blue-500/5 border border-blue-500/20;
+    @apply flex items-center gap-3 p-4 mb-6 rounded-sm bg-blue-500/5 border border-blue-500/20;
   }
 
   /* Generic SA table */

@@ -29,14 +29,12 @@ const Features = () => {
 
   return (
     <section className="px-4 sm:px-6" id="features">
-      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-16 sm:py-24">
+      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-10 sm:py-16">
         <div ref={headingRef} className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 sm:mb-16 reveal-fade-up">
           <div className="max-w-2xl">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
-              Features
-            </div>
+            <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 mb-6 uppercase tracking-widest">Features</p>
             <h2 className="landing-h2 font-display font-light">
-              Achieve <span className="underline decoration-2 underline-offset-4 decoration-neutral-300 dark:decoration-neutral-600">operational clarity</span> with tools designed to simplify and secure your management.
+              Simplify and secure your management.
             </h2>
           </div>
           <p className="text-neutral-500 dark:text-neutral-400 font-medium">Everything you need, nothing you don&apos;t.</p>
@@ -56,7 +54,7 @@ const Features = () => {
                   i % 2 === 0 ? 'md:border-r border-neutral-200 dark:border-neutral-800' : '',
                 ].join(' ')}
               >
-                <div className="w-10 h-10 rounded-lg border border-neutral-200 dark:border-neutral-800 flex items-center justify-center mb-5">
+                <div className="w-10 h-10 rounded-sm border border-neutral-200 dark:border-neutral-800 flex items-center justify-center mb-5">
                   <span className="material-symbols-outlined text-neutral-600 dark:text-neutral-400 text-xl">{feature.icon}</span>
                 </div>
                 <h3 className="text-lg font-bold mb-2">{feature.title}</h3>

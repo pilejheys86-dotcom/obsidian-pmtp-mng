@@ -81,7 +81,7 @@ const ProcessPage = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 px-6">
         <div ref={heroRef} className="max-w-3xl mx-auto text-center reveal-fade-up">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
+          <div className="inline-block px-4 py-1.5 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
             How It Works
           </div>
           <h1 className="text-4xl md:text-6xl font-display font-light leading-tight mb-6">
@@ -147,7 +147,7 @@ const ProcessPage = () => {
                     </div>
 
                     {/* Step number circle */}
-                    <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 flex items-center justify-center font-extrabold text-lg shadow-lg z-10">
+                    <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 flex items-center justify-center font-extrabold text-lg shadow-lg z-10">
                       {step.number}
                     </div>
                   </div>

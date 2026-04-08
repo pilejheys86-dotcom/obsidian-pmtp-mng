@@ -28,13 +28,13 @@ const Modal = ({ open, onClose, title, size = 'md', children }) => {
             <div className="absolute inset-0 bg-black/40 dark:bg-black/60" onClick={onClose} />
 
             {/* Panel */}
-            <div className={`relative w-full ${SIZES[size]} bg-white dark:bg-neutral-800 rounded-xl shadow-2xl border border-neutral-200/60 dark:border-neutral-700/50 flex flex-col max-h-[90vh]`}>
+            <div className={`relative w-full ${SIZES[size]} bg-white dark:bg-neutral-800 rounded-sm shadow-2xl border border-neutral-200/60 dark:border-neutral-700/50 flex flex-col max-h-[90vh]`}>
                 {/* Header */}
                 <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-100 dark:border-neutral-700/50 flex-shrink-0">
                     <h2 className="text-lg font-display font-bold text-neutral-800 dark:text-neutral-100">{title}</h2>
                     <button
                         onClick={onClose}
-                        className="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700/50 transition-colors"
+                        className="p-1.5 rounded-sm text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200 hover:bg-neutral-100 dark:hover:bg-neutral-700/50 transition-colors"
                     >
                         <span className="material-symbols-outlined text-xl">close</span>
                     </button>

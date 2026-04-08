@@ -25,7 +25,7 @@ const StatusBadge = ({ status, type = 'neutral' }) => {
     const style = STATUS_STYLES[type] || STATUS_STYLES.neutral;
 
     return (
-        <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-bold uppercase border ${style.badge}`}>
+        <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-sm text-xs font-bold uppercase border ${style.badge}`}>
             <span className={`w-1.5 h-1.5 rounded-full ${style.dot}`} />
             {status}
         </span>

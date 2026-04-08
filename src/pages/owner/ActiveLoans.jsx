@@ -242,7 +242,7 @@ const LoanDetailPage = ({ loan, onBack, onAction, penaltyRate = 3, serviceCharge
             <p className="text-[10px] font-bold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-1">Maturity Date</p>
             <p className="text-sm font-semibold text-neutral-800 dark:text-neutral-100">{loan.dueDate}</p>
           </div>
-          <div className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold ${daysLeft < 0 ? 'bg-red-50 dark:bg-red-900/20' : daysLeft <= 7 ? 'bg-amber-50 dark:bg-amber-900/20' : 'bg-emerald-50 dark:bg-emerald-900/20'} ${dueColor}`}>
+          <div className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm text-xs font-bold ${daysLeft < 0 ? 'bg-red-50 dark:bg-red-900/20' : daysLeft <= 7 ? 'bg-amber-50 dark:bg-amber-900/20' : 'bg-emerald-50 dark:bg-emerald-900/20'} ${dueColor}`}>
             <span className="material-symbols-outlined text-sm">{daysLeft < 0 ? 'error' : daysLeft <= 7 ? 'schedule' : 'check_circle'}</span>
             {dueLabel}
           </div>
@@ -279,7 +279,7 @@ const LoanDetailPage = ({ loan, onBack, onAction, penaltyRate = 3, serviceCharge
               <h3 className="text-sm font-bold text-neutral-900 dark:text-white">Renew Loan</h3>
               <p className="text-xs text-neutral-500">Extend maturity by 30 days</p>
             </div>
-            <button onClick={() => setInfoModal('renew')} className="w-7 h-7 rounded-full border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 hover:border-neutral-400 transition-colors cursor-pointer flex-shrink-0" aria-label="Info about renewal">
+            <button onClick={() => setInfoModal('renew')} className="w-7 h-7 rounded-sm border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 hover:border-neutral-400 transition-colors cursor-pointer flex-shrink-0" aria-label="Info about renewal">
               <span className="material-symbols-outlined text-[16px]">info</span>
             </button>
           </div>
@@ -316,7 +316,7 @@ const LoanDetailPage = ({ loan, onBack, onAction, penaltyRate = 3, serviceCharge
               <h3 className="text-sm font-bold text-neutral-900 dark:text-white">Partial Payment</h3>
               <p className="text-xs text-neutral-500">Pay interest + reduce principal</p>
             </div>
-            <button onClick={() => setInfoModal('partial')} className="w-7 h-7 rounded-full border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 hover:border-neutral-400 transition-colors cursor-pointer flex-shrink-0" aria-label="Info about partial payment">
+            <button onClick={() => setInfoModal('partial')} className="w-7 h-7 rounded-sm border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 hover:border-neutral-400 transition-colors cursor-pointer flex-shrink-0" aria-label="Info about partial payment">
               <span className="material-symbols-outlined text-[16px]">info</span>
             </button>
           </div>
@@ -353,7 +353,7 @@ const LoanDetailPage = ({ loan, onBack, onAction, penaltyRate = 3, serviceCharge
               <h3 className="text-sm font-bold text-neutral-900 dark:text-white">Redeem Item</h3>
               <p className="text-xs text-neutral-500">Full payment to release item</p>
             </div>
-            <button onClick={() => setInfoModal('redeem')} className="w-7 h-7 rounded-full border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 hover:border-neutral-400 transition-colors cursor-pointer flex-shrink-0" aria-label="Info about redemption">
+            <button onClick={() => setInfoModal('redeem')} className="w-7 h-7 rounded-sm border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 hover:border-neutral-400 transition-colors cursor-pointer flex-shrink-0" aria-label="Info about redemption">
               <span className="material-symbols-outlined text-[16px]">info</span>
             </button>
           </div>
@@ -388,14 +388,14 @@ const LoanDetailPage = ({ loan, onBack, onAction, penaltyRate = 3, serviceCharge
       {/* ── Info Modal ──────────────────────────────────── */}
       {infoModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" onClick={() => setInfoModal(null)}>
-          <div className="bg-white dark:bg-neutral-800 rounded-lg shadow-xl max-w-sm w-full mx-4 p-6" onClick={e => e.stopPropagation()}>
+          <div className="bg-white dark:bg-neutral-800 rounded-sm shadow-xl max-w-sm w-full mx-4 p-6" onClick={e => e.stopPropagation()}>
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-base font-bold text-neutral-900 dark:text-white">
                 {infoModal === 'renew' && 'Renew Loan'}
                 {infoModal === 'partial' && 'Partial Payment'}
                 {infoModal === 'redeem' && 'Redeem Item'}
               </h3>
-              <button onClick={() => setInfoModal(null)} className="w-7 h-7 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 flex items-center justify-center text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors cursor-pointer" aria-label="Close">
+              <button onClick={() => setInfoModal(null)} className="w-7 h-7 rounded-sm hover:bg-neutral-100 dark:hover:bg-neutral-700 flex items-center justify-center text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors cursor-pointer" aria-label="Close">
                 <span className="material-symbols-outlined text-[18px]">close</span>
               </button>
             </div>
@@ -440,7 +440,7 @@ const LoanDetailPage = ({ loan, onBack, onAction, penaltyRate = 3, serviceCharge
                   {paginatedHistory.map((h, i) => (
                     <tr key={i} className="hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors">
                       <td className="px-6 py-3.5">
-                        <span className={`inline-flex px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase ${typeBadgeStyles[h.type] || typeBadgeStyles.PAYMENT}`}>
+                        <span className={`inline-flex px-2.5 py-0.5 rounded-sm text-[10px] font-bold uppercase ${typeBadgeStyles[h.type] || typeBadgeStyles.PAYMENT}`}>
                           {h.type.replace(/_/g, ' ')}
                         </span>
                       </td>
@@ -482,7 +482,7 @@ const RENEW_MODES = [
 ];
 
 // Shared select + input classes
-const selectClass = 'w-full px-3 py-2.5 rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-sm text-neutral-800 dark:text-neutral-200 focus:outline-none focus:ring-2 focus:ring-primary/50';
+const selectClass = 'w-full px-3 py-2.5 rounded-sm border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-sm text-neutral-800 dark:text-neutral-200 focus:outline-none focus:ring-2 focus:ring-primary/50';
 
 // ── Renew Modal (3 modes) ─────────────────────────────────
 const RenewModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
@@ -579,14 +579,14 @@ const RenewModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
       <Modal open={open} onClose={onClose} title="Renewal Successful" size="md">
         <div className="space-y-5">
           <div className="flex flex-col items-center py-3">
-            <div className="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center mb-3">
+            <div className="w-14 h-14 rounded-sm bg-emerald-500/10 flex items-center justify-center mb-3">
               <span className="material-symbols-outlined text-3xl text-emerald-500">check_circle</span>
             </div>
             <p className="text-lg font-bold text-neutral-800 dark:text-neutral-100">Payment Processed</p>
             <p className="text-xs text-neutral-500 mt-1">Receipt #{receiptData?.receipt_number || '—'}</p>
           </div>
 
-          <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4 space-y-2.5">
+          <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-sm p-4 space-y-2.5">
             <div className="flex justify-between text-sm">
               <span className="text-neutral-500 dark:text-neutral-400">Ticket</span>
               <span className="font-medium text-neutral-700 dark:text-neutral-300">{loan.id}</span>
@@ -651,7 +651,7 @@ const RenewModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
 
           <button
             onClick={() => { onClose(); onSuccess(); }}
-            className="w-full py-3 text-sm font-bold rounded-lg bg-blue-500 hover:bg-blue-600 text-white transition-colors"
+            className="w-full py-3 text-sm font-bold rounded-sm bg-blue-500 hover:bg-blue-600 text-white transition-colors"
           >
             Done
           </button>
@@ -677,7 +677,7 @@ const RenewModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
 
         {/* Overdue warning */}
         {isOverdue && (
-          <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-red-50 dark:bg-red-900/15 border border-red-200/50 dark:border-red-800/30">
+          <div className="flex items-center gap-2 px-3 py-2 rounded-sm bg-red-50 dark:bg-red-900/15 border border-red-200/50 dark:border-red-800/30">
             <span className="material-symbols-outlined text-red-500 text-lg">warning</span>
             <p className="text-xs font-semibold text-red-700 dark:text-red-400">This loan is overdue. Penalty of {'\u20B1'}{penaltyAmount.toLocaleString()} is included.</p>
           </div>
@@ -692,13 +692,13 @@ const RenewModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
                 key={m.key}
                 type="button"
                 onClick={() => setMode(m.key)}
-                className={`w-full flex items-center gap-3 p-3.5 rounded-lg border-2 text-left transition-all ${
+                className={`w-full flex items-center gap-3 p-3.5 rounded-sm border-2 text-left transition-all ${
                   mode === m.key
                     ? 'border-blue-500 bg-blue-500/5 dark:bg-blue-500/10'
                     : 'border-neutral-200 dark:border-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600'
                 }`}
               >
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
+                <div className={`w-8 h-8 rounded-sm flex items-center justify-center flex-shrink-0 ${
                   mode === m.key
                     ? 'bg-blue-500 text-white'
                     : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-400'
@@ -741,7 +741,7 @@ const RenewModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
         )}
 
         {/* Calculation breakdown */}
-        <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4 space-y-2.5">
+        <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-sm p-4 space-y-2.5">
           {mode === 'interest_only' && (
             <div className="flex justify-between text-sm">
               <span className="text-neutral-500 dark:text-neutral-400">Monthly Interest ({interestRate}%)</span>
@@ -799,7 +799,7 @@ const RenewModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
         <button
           onClick={handleSubmit}
           disabled={!canSubmit}
-          className="w-full py-3 text-sm font-bold rounded-lg bg-blue-500 hover:bg-blue-600 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="w-full py-3 text-sm font-bold rounded-sm bg-blue-500 hover:bg-blue-600 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {processing ? (
             <span className="flex items-center justify-center gap-2">
@@ -863,13 +863,13 @@ const PartialPaymentModal = ({ open, onClose, loan, loanSettings, onSuccess }) =
       <Modal open={open} onClose={onClose} title="Partial Payment Successful" size="sm">
         <div className="space-y-5">
           <div className="flex flex-col items-center py-3">
-            <div className="w-14 h-14 rounded-full bg-amber-500/10 flex items-center justify-center mb-3">
+            <div className="w-14 h-14 rounded-sm bg-amber-500/10 flex items-center justify-center mb-3">
               <span className="material-symbols-outlined text-3xl text-amber-500">check_circle</span>
             </div>
             <p className="text-lg font-bold text-neutral-800 dark:text-neutral-100">Payment Processed</p>
             <p className="text-xs text-neutral-500 mt-1">A new ticket has been issued with the reduced principal.</p>
           </div>
-          <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4 space-y-2.5">
+          <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-sm p-4 space-y-2.5">
             <div className="flex justify-between text-sm">
               <span className="text-neutral-500">Interest Paid</span>
               <span className="font-medium">{'\u20B1'}{monthlyInterest.toLocaleString()}</span>
@@ -894,7 +894,7 @@ const PartialPaymentModal = ({ open, onClose, loan, loanSettings, onSuccess }) =
   return (
     <Modal open={open} onClose={onClose} title="Partial Payment" size="sm">
       <div className="space-y-5">
-        <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4 space-y-2.5">
+        <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-sm p-4 space-y-2.5">
           <div className="flex justify-between text-sm">
             <span className="text-neutral-500">Current Principal</span>
             <span className="font-bold">{'\u20B1'}{principal.toLocaleString()}</span>
@@ -1023,14 +1023,14 @@ const RedeemModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
       <Modal open={open} onClose={onClose} title="Redemption Successful" size="sm">
         <div className="space-y-5">
           <div className="flex flex-col items-center py-3">
-            <div className="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center mb-3">
+            <div className="w-14 h-14 rounded-sm bg-emerald-500/10 flex items-center justify-center mb-3">
               <span className="material-symbols-outlined text-3xl text-emerald-500">check_circle</span>
             </div>
             <p className="text-lg font-bold text-neutral-800 dark:text-neutral-100">Item Redeemed</p>
             <p className="text-xs text-neutral-500 mt-1">Receipt #{receiptData?.receipt_number || '—'}</p>
           </div>
 
-          <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4 space-y-2.5">
+          <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-sm p-4 space-y-2.5">
             <div className="flex justify-between text-sm">
               <span className="text-neutral-500 dark:text-neutral-400">Ticket</span>
               <span className="font-medium text-neutral-700 dark:text-neutral-300">{loan.id}</span>
@@ -1097,7 +1097,7 @@ const RedeemModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
 
           <button
             onClick={() => { onClose(); onSuccess(); }}
-            className="w-full py-3 text-sm font-bold rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white transition-colors flex items-center justify-center gap-2"
+            className="w-full py-3 text-sm font-bold rounded-sm bg-emerald-500 hover:bg-emerald-600 text-white transition-colors flex items-center justify-center gap-2"
           >
             <span className="material-symbols-outlined text-lg">assignment_turned_in</span>
             Confirm Item Released to Customer
@@ -1123,21 +1123,21 @@ const RedeemModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
         </div>
 
         {/* Mode label */}
-        <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/15 border border-emerald-200/50 dark:border-emerald-800/30">
+        <div className="flex items-center gap-2 px-3 py-2 rounded-sm bg-emerald-50 dark:bg-emerald-900/15 border border-emerald-200/50 dark:border-emerald-800/30">
           <span className="material-symbols-outlined text-emerald-500 text-lg">check_circle</span>
           <p className="text-xs font-semibold text-emerald-700 dark:text-emerald-400">Full payment of principal + accumulated interest</p>
         </div>
 
         {/* Overdue warning */}
         {isOverdue && (
-          <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-red-50 dark:bg-red-900/15 border border-red-200/50 dark:border-red-800/30">
+          <div className="flex items-center gap-2 px-3 py-2 rounded-sm bg-red-50 dark:bg-red-900/15 border border-red-200/50 dark:border-red-800/30">
             <span className="material-symbols-outlined text-red-500 text-lg">warning</span>
             <p className="text-xs font-semibold text-red-700 dark:text-red-400">This loan is overdue. Penalty of {'\u20B1'}{penaltyAmount.toLocaleString()} is included.</p>
           </div>
         )}
 
         {/* Calculation breakdown */}
-        <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-lg p-4 space-y-2.5">
+        <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-sm p-4 space-y-2.5">
           <div className="flex justify-between text-sm">
             <span className="text-neutral-500 dark:text-neutral-400">Principal</span>
             <span className="font-medium text-neutral-700 dark:text-neutral-300">{'\u20B1'}{principal.toLocaleString()}</span>
@@ -1188,7 +1188,7 @@ const RedeemModal = ({ open, onClose, loan, loanSettings, onSuccess }) => {
         <button
           onClick={handleSubmit}
           disabled={!canSubmit}
-          className="w-full py-3 text-sm font-bold rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="w-full py-3 text-sm font-bold rounded-sm bg-emerald-500 hover:bg-emerald-600 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {processing ? (
             <span className="flex items-center justify-center gap-2">

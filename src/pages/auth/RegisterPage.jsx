@@ -178,7 +178,7 @@ const RegisterPage = () => {
           {STEPS.map((s, i) => (
             <div key={s.number} className="flex items-center gap-2">
               <div className={`flex items-center gap-1.5 text-xs font-semibold ${step === s.number ? 'text-primary' : step > s.number ? 'text-primary' : 'text-neutral-400 dark:text-neutral-500'}`}>
-                <span className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold ${
+                <span className={`w-6 h-6 rounded-sm flex items-center justify-center text-[10px] font-bold ${
                   step > s.number ? 'bg-primary text-white dark:text-neutral-900' :
                   step === s.number ? 'bg-primary text-white dark:text-neutral-900' :
                   'bg-neutral-200 dark:bg-neutral-700 text-neutral-500'
@@ -198,13 +198,13 @@ const RegisterPage = () => {
 
         {/* Alerts */}
         {error && (
-          <div className="flex items-center gap-2 p-3 mb-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm">
+          <div className="flex items-center gap-2 p-3 mb-4 rounded-sm bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm">
             <span className="material-symbols-outlined text-base">error</span>
             {error}
           </div>
         )}
         {success && (
-          <div className="flex items-center gap-2 p-3 mb-4 rounded-lg bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 text-emerald-600 dark:text-emerald-400 text-sm">
+          <div className="flex items-center gap-2 p-3 mb-4 rounded-sm bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 text-emerald-600 dark:text-emerald-400 text-sm">
             <span className="material-symbols-outlined text-base">check_circle</span>
             {success}
           </div>

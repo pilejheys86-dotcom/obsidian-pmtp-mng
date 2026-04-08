@@ -179,7 +179,7 @@ const RecoverAcc = () => {
                     <div className={`w-8 h-px ${isCompleted || isActive ? 'bg-primary' : 'bg-neutral-300 dark:bg-neutral-700'}`} />
                   )}
                   <div className={`
-                    w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-200
+                    w-8 h-8 rounded-sm flex items-center justify-center text-xs font-bold transition-all duration-200
                     ${isActive ? 'bg-primary text-white dark:text-neutral-900 ring-4 ring-primary/20' : ''}
                     ${isCompleted ? 'bg-primary/20 text-primary' : ''}
                     ${!isActive && !isCompleted ? 'bg-neutral-200 dark:bg-neutral-800 text-neutral-400 dark:text-neutral-600' : ''}
@@ -198,7 +198,7 @@ const RecoverAcc = () => {
 
         {/* Error */}
         {error && (
-          <div className="flex items-center gap-2 p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm mb-5">
+          <div className="flex items-center gap-2 p-3 rounded-sm bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm mb-5">
             <span className="material-symbols-outlined text-base">error</span>
             {error}
           </div>
@@ -389,7 +389,7 @@ const RecoverAcc = () => {
         {/* ── STEP: Done ── */}
         {step === STEP.DONE && (
           <div className="text-center">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-primary/10 rounded-sm flex items-center justify-center mx-auto mb-6">
               <span className="material-symbols-outlined text-primary text-3xl">check_circle</span>
             </div>
             <h1 className="text-heading mb-2">Password Reset!</h1>

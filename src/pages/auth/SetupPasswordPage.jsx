@@ -53,7 +53,7 @@ const SetupPasswordPage = () => {
 
         {/* Welcome header */}
         <div className="text-center mb-8">
-          <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+          <div className="w-14 h-14 rounded-sm bg-primary/10 flex items-center justify-center mx-auto mb-4">
             <span className="material-symbols-outlined text-primary text-3xl">lock_reset</span>
           </div>
           <h1 className="text-xl font-display font-bold text-neutral-900 dark:text-white mb-1">
@@ -118,19 +118,19 @@ const SetupPasswordPage = () => {
 
           {/* Password strength hints */}
           <div className="flex flex-wrap gap-2 text-[11px]">
-            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border ${newPassword.length >= 8 ? 'bg-primary/10 border-primary/20 text-primary' : 'bg-neutral-50 dark:bg-neutral-700/30 border-neutral-200 dark:border-neutral-700 text-neutral-400'}`}>
+            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-sm border ${newPassword.length >= 8 ? 'bg-primary/10 border-primary/20 text-primary' : 'bg-neutral-50 dark:bg-neutral-700/30 border-neutral-200 dark:border-neutral-700 text-neutral-400'}`}>
               <span className="material-symbols-outlined text-[12px]">{newPassword.length >= 8 ? 'check' : 'close'}</span>
               8+ characters
             </span>
-            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border ${/[A-Z]/.test(newPassword) ? 'bg-primary/10 border-primary/20 text-primary' : 'bg-neutral-50 dark:bg-neutral-700/30 border-neutral-200 dark:border-neutral-700 text-neutral-400'}`}>
+            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-sm border ${/[A-Z]/.test(newPassword) ? 'bg-primary/10 border-primary/20 text-primary' : 'bg-neutral-50 dark:bg-neutral-700/30 border-neutral-200 dark:border-neutral-700 text-neutral-400'}`}>
               <span className="material-symbols-outlined text-[12px]">{/[A-Z]/.test(newPassword) ? 'check' : 'close'}</span>
               Uppercase
             </span>
-            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border ${/[0-9]/.test(newPassword) ? 'bg-primary/10 border-primary/20 text-primary' : 'bg-neutral-50 dark:bg-neutral-700/30 border-neutral-200 dark:border-neutral-700 text-neutral-400'}`}>
+            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-sm border ${/[0-9]/.test(newPassword) ? 'bg-primary/10 border-primary/20 text-primary' : 'bg-neutral-50 dark:bg-neutral-700/30 border-neutral-200 dark:border-neutral-700 text-neutral-400'}`}>
               <span className="material-symbols-outlined text-[12px]">{/[0-9]/.test(newPassword) ? 'check' : 'close'}</span>
               Number
             </span>
-            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border ${/[^A-Za-z0-9]/.test(newPassword) ? 'bg-primary/10 border-primary/20 text-primary' : 'bg-neutral-50 dark:bg-neutral-700/30 border-neutral-200 dark:border-neutral-700 text-neutral-400'}`}>
+            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-sm border ${/[^A-Za-z0-9]/.test(newPassword) ? 'bg-primary/10 border-primary/20 text-primary' : 'bg-neutral-50 dark:bg-neutral-700/30 border-neutral-200 dark:border-neutral-700 text-neutral-400'}`}>
               <span className="material-symbols-outlined text-[12px]">{/[^A-Za-z0-9]/.test(newPassword) ? 'check' : 'close'}</span>
               Special char
             </span>
@@ -138,7 +138,7 @@ const SetupPasswordPage = () => {
 
           {/* Error */}
           {error && (
-            <div className="flex items-center gap-2 px-3 py-2.5 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm">
+            <div className="flex items-center gap-2 px-3 py-2.5 rounded-sm bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 text-sm">
               <span className="material-symbols-outlined text-base">error</span>
               {error}
             </div>
@@ -148,7 +148,7 @@ const SetupPasswordPage = () => {
           <button
             type="submit"
             disabled={isLoading || newPassword.length < 8 || newPassword !== confirmPassword}
-            className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold bg-primary hover:bg-primary-hover text-white dark:text-neutral-900 shadow-sm shadow-primary/20 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-sm text-sm font-bold bg-primary hover:bg-primary-hover text-white dark:text-neutral-900 shadow-sm shadow-primary/20 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isLoading ? (
               <>

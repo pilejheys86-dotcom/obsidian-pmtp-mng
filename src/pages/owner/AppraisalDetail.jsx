@@ -37,7 +37,7 @@ const fmtDate = (iso) => {
 }
 
 const DataCell = ({ label, value, mono, large }) => (
-  <div className="bg-neutral-50 dark:bg-neutral-800/40 rounded-lg p-3.5 border border-neutral-100 dark:border-neutral-800">
+  <div className="bg-neutral-50 dark:bg-neutral-800/40 rounded-sm p-3.5 border border-neutral-100 dark:border-neutral-800">
     <p className="text-[10px] font-bold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">{label}</p>
     <p className={`${large ? 'text-base' : 'text-sm'} font-semibold text-neutral-800 dark:text-neutral-100 ${mono ? 'font-mono' : ''} break-all`}>{value || '---'}</p>
   </div>
@@ -46,7 +46,7 @@ const DataCell = ({ label, value, mono, large }) => (
 const TimelineStep = ({ icon, label, date, isLast }) => (
   <div className="flex gap-3">
     <div className="flex flex-col items-center">
-      <div className={`w-8 h-8 rounded-full flex items-center justify-center ${date ? 'bg-neutral-900 dark:bg-white' : 'bg-neutral-200 dark:bg-neutral-800'}`}>
+      <div className={`w-8 h-8 rounded-sm flex items-center justify-center ${date ? 'bg-neutral-900 dark:bg-white' : 'bg-neutral-200 dark:bg-neutral-800'}`}>
         <span className={`material-symbols-rounded text-sm ${date ? 'text-white dark:text-neutral-900' : 'text-neutral-400 dark:text-neutral-600'}`}>{icon}</span>
       </div>
       {!isLast && <div className={`w-px flex-1 mt-1 ${date ? 'bg-neutral-300 dark:bg-neutral-600' : 'bg-neutral-200 dark:bg-neutral-800'}`} />}
@@ -149,7 +149,7 @@ export default function AppraisalDetail({ itemId }) {
 
           {/* Message */}
           {message && (
-            <div className={`flex items-center gap-2 p-3 mb-5 rounded-lg text-sm font-medium ${message.type === 'success' ? 'bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/40 text-emerald-600 dark:text-emerald-400' : 'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/40 text-red-600 dark:text-red-400'}`}>
+            <div className={`flex items-center gap-2 p-3 mb-5 rounded-sm text-sm font-medium ${message.type === 'success' ? 'bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/40 text-emerald-600 dark:text-emerald-400' : 'bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800/40 text-red-600 dark:text-red-400'}`}>
               <span className="material-symbols-rounded text-base">{message.type === 'success' ? 'check_circle' : 'error'}</span>
               {message.text}
             </div>
@@ -171,7 +171,7 @@ export default function AppraisalDetail({ itemId }) {
               <div className="dashboard-card mb-6">
                 <div className="flex flex-col sm:flex-row sm:items-center gap-5">
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-xl bg-neutral-900 dark:bg-white flex items-center justify-center shrink-0">
+                  <div className="w-14 h-14 rounded-sm bg-neutral-900 dark:bg-white flex items-center justify-center shrink-0">
                     <span className="material-symbols-rounded text-2xl text-white dark:text-neutral-900">{catIcon}</span>
                   </div>
                   {/* Info */}
@@ -205,24 +205,24 @@ export default function AppraisalDetail({ itemId }) {
 
                   {/* Valuation Highlight */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                    <div className="bg-neutral-900 dark:bg-white rounded-xl p-4 text-center col-span-2 sm:col-span-1">
+                    <div className="bg-neutral-900 dark:bg-white rounded-sm p-4 text-center col-span-2 sm:col-span-1">
                       <p className="text-[10px] font-bold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Appraised</p>
                       <p className="text-lg font-extrabold text-white dark:text-neutral-900">{fmt(item.appraised_value)}</p>
                     </div>
                     {item.fair_market_value && (
-                      <div className="bg-neutral-50 dark:bg-neutral-800/40 rounded-xl p-4 text-center border border-neutral-100 dark:border-neutral-800">
+                      <div className="bg-neutral-50 dark:bg-neutral-800/40 rounded-sm p-4 text-center border border-neutral-100 dark:border-neutral-800">
                         <p className="text-[10px] font-bold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Fair Market</p>
                         <p className="text-lg font-extrabold text-neutral-800 dark:text-neutral-100">{fmt(item.fair_market_value)}</p>
                       </div>
                     )}
                     {loanSettings && (
-                      <div className="bg-neutral-50 dark:bg-neutral-800/40 rounded-xl p-4 text-center border border-neutral-100 dark:border-neutral-800">
+                      <div className="bg-neutral-50 dark:bg-neutral-800/40 rounded-sm p-4 text-center border border-neutral-100 dark:border-neutral-800">
                         <p className="text-[10px] font-bold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">LTV</p>
                         <p className="text-lg font-extrabold text-neutral-800 dark:text-neutral-100">{((loanSettings.ltv_ratio || 0.70) * 100).toFixed(0)}%</p>
                       </div>
                     )}
                     {loanSettings && (
-                      <div className="bg-neutral-50 dark:bg-neutral-800/40 rounded-xl p-4 text-center border border-neutral-100 dark:border-neutral-800">
+                      <div className="bg-neutral-50 dark:bg-neutral-800/40 rounded-sm p-4 text-center border border-neutral-100 dark:border-neutral-800">
                         <p className="text-[10px] font-bold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Max Loanable</p>
                         <p className="text-lg font-extrabold text-neutral-800 dark:text-neutral-100">{fmt(maxLoan)}</p>
                       </div>
@@ -286,8 +286,8 @@ export default function AppraisalDetail({ itemId }) {
                   {/* Customer */}
                   <div className="dashboard-card">
                     <h2 className="text-sm font-bold text-neutral-800 dark:text-neutral-100 uppercase tracking-wider mb-4">Customer</h2>
-                    <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-800/40 rounded-lg border border-neutral-100 dark:border-neutral-800">
-                      <div className="w-11 h-11 rounded-full bg-neutral-900 dark:bg-white flex items-center justify-center shrink-0">
+                    <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-800/40 rounded-sm border border-neutral-100 dark:border-neutral-800">
+                      <div className="w-11 h-11 rounded-sm bg-neutral-900 dark:bg-white flex items-center justify-center shrink-0">
                         <span className="text-sm font-bold text-white dark:text-neutral-900">
                           {item.customers ? `${item.customers.first_name[0]}${item.customers.last_name[0]}` : '?'}
                         </span>
@@ -319,7 +319,7 @@ export default function AppraisalDetail({ itemId }) {
                       <h2 className="text-sm font-bold text-neutral-800 dark:text-neutral-100 uppercase tracking-wider mb-4">Photos</h2>
                       <div className="grid grid-cols-2 gap-2">
                         {item.image_urls.map((url, i) => (
-                          <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="block rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-700 hover:opacity-80 transition-opacity aspect-square">
+                          <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="block rounded-sm overflow-hidden border border-neutral-200 dark:border-neutral-700 hover:opacity-80 transition-opacity aspect-square">
                             <img src={url} alt={`Photo ${i + 1}`} className="w-full h-full object-cover" />
                           </a>
                         ))}
@@ -337,8 +337,8 @@ export default function AppraisalDetail({ itemId }) {
       <Modal open={approveModal} onClose={() => setApproveModal(false)} title="Approve & Create Ticket" size="sm">
         {item && (
           <div className="space-y-5">
-            <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-700/30 rounded-lg">
-              <div className="w-10 h-10 rounded-lg bg-neutral-900 dark:bg-white flex items-center justify-center shrink-0">
+            <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-700/30 rounded-sm">
+              <div className="w-10 h-10 rounded-sm bg-neutral-900 dark:bg-white flex items-center justify-center shrink-0">
                 <span className="material-symbols-rounded text-white dark:text-neutral-900">{catIcon}</span>
               </div>
               <div>
@@ -409,8 +409,8 @@ export default function AppraisalDetail({ itemId }) {
       <Modal open={rejectModal} onClose={() => setRejectModal(false)} title="Reject Appraisal" size="sm">
         {item && (
           <div className="space-y-5">
-            <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-700/30 rounded-lg">
-              <div className="w-10 h-10 rounded-lg bg-neutral-900 dark:bg-white flex items-center justify-center shrink-0">
+            <div className="flex items-center gap-3 p-3 bg-neutral-50 dark:bg-neutral-700/30 rounded-sm">
+              <div className="w-10 h-10 rounded-sm bg-neutral-900 dark:bg-white flex items-center justify-center shrink-0">
                 <span className="material-symbols-rounded text-white dark:text-neutral-900">{catIcon}</span>
               </div>
               <div>

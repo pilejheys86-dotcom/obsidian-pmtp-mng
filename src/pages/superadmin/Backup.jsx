@@ -95,7 +95,7 @@ const BackupOverlay = ({ active, mode, onComplete, done }) => {
 // ── Tenant Selector Modal ────────────────────────────────────────────────────
 const TenantSelectorModal = ({ tenants, loading, onSelect, onClose }) => (
   <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
-    <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-2xl w-full max-w-md mx-4 max-h-[70vh] flex flex-col" onClick={e => e.stopPropagation()}>
+    <div className="bg-white dark:bg-neutral-800 rounded-sm shadow-2xl w-full max-w-md mx-4 max-h-[70vh] flex flex-col" onClick={e => e.stopPropagation()}>
       <div className="flex items-center justify-between p-5 border-b border-neutral-100 dark:border-neutral-700">
         <h3 className="text-base font-display font-bold text-neutral-900 dark:text-white">Select Tenant</h3>
         <button onClick={onClose} className="header-icon-btn">
@@ -118,9 +118,9 @@ const TenantSelectorModal = ({ tenants, loading, onSelect, onClose }) => (
             <button
               key={t.id}
               onClick={() => onSelect(t)}
-              className="w-full text-left px-4 py-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700/50 transition-colors flex items-center gap-3 group"
+              className="w-full text-left px-4 py-3 rounded-sm hover:bg-neutral-50 dark:hover:bg-neutral-700/50 transition-colors flex items-center gap-3 group"
             >
-              <div className="h-8 w-8 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <div className="h-8 w-8 rounded-sm bg-primary/10 flex items-center justify-center flex-shrink-0">
                 <span className="text-xs font-bold text-primary">
                   {(t.business_name || '?').slice(0, 2).toUpperCase()}
                 </span>
@@ -147,7 +147,7 @@ const RestorePreviewModal = ({ preview, onConfirm, onClose, restoring }) => {
 
   return (
     <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/50 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-2xl w-full max-w-lg mx-4 max-h-[85vh] flex flex-col" onClick={e => e.stopPropagation()}>
+      <div className="bg-white dark:bg-neutral-800 rounded-sm shadow-2xl w-full max-w-lg mx-4 max-h-[85vh] flex flex-col" onClick={e => e.stopPropagation()}>
         <div className="flex items-center justify-between p-5 border-b border-neutral-100 dark:border-neutral-700">
           <h3 className="text-base font-display font-bold text-neutral-900 dark:text-white">Restore Preview</h3>
           <button onClick={onClose} className="header-icon-btn">
@@ -184,7 +184,7 @@ const RestorePreviewModal = ({ preview, onConfirm, onClose, restoring }) => {
               <p className="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-3">Table Row Counts</p>
               <div className="grid grid-cols-2 gap-2">
                 {Object.entries(preview.table_counts).map(([table, count]) => (
-                  <div key={table} className="flex items-center justify-between px-3 py-2 rounded-lg bg-neutral-50 dark:bg-neutral-700/40">
+                  <div key={table} className="flex items-center justify-between px-3 py-2 rounded-sm bg-neutral-50 dark:bg-neutral-700/40">
                     <span className="text-xs text-neutral-600 dark:text-neutral-300 font-medium">{table}</span>
                     <span className="text-xs font-bold text-neutral-800 dark:text-white">{count.toLocaleString()}</span>
                   </div>
@@ -194,7 +194,7 @@ const RestorePreviewModal = ({ preview, onConfirm, onClose, restoring }) => {
           )}
 
           {/* Warning */}
-          <div className="rounded-lg bg-red-500/10 border border-red-500/20 p-4">
+          <div className="rounded-sm bg-red-500/10 border border-red-500/20 p-4">
             <div className="flex items-start gap-2.5">
               <span className="material-symbols-outlined text-red-500 text-lg flex-shrink-0 mt-0.5">warning</span>
               <p className="text-sm text-red-600 dark:text-red-400">
@@ -246,7 +246,7 @@ const RestorePreviewModal = ({ preview, onConfirm, onClose, restoring }) => {
 
 // ── Format Dropdown ──────────────────────────────────────────────────────────
 const FormatDropdown = ({ onSelect, onClose }) => (
-  <div className="absolute right-0 top-full mt-1 z-30 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg shadow-lg overflow-hidden min-w-[120px]">
+  <div className="absolute right-0 top-full mt-1 z-30 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-sm shadow-lg overflow-hidden min-w-[120px]">
     {['json', 'csv'].map(fmt => (
       <button
         key={fmt}
@@ -517,7 +517,7 @@ const Backup = () => {
 
           {/* ── Message Banner ───────────────────────────── */}
           {message && (
-            <div className={`mb-6 flex items-center gap-3 px-4 py-3 rounded-lg border ${
+            <div className={`mb-6 flex items-center gap-3 px-4 py-3 rounded-sm border ${
               message.type === 'success'
                 ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-600 dark:text-emerald-400'
                 : 'bg-red-500/10 border-red-500/20 text-red-600 dark:text-red-400'
@@ -673,7 +673,7 @@ const Backup = () => {
               onDragLeave={handleDragLeave}
               onDrop={handleDrop}
               onClick={() => document.getElementById('restore-file-input')?.click()}
-              className={`relative border-2 border-dashed rounded-xl p-10 text-center cursor-pointer transition-colors ${
+              className={`relative border-2 border-dashed rounded-sm p-10 text-center cursor-pointer transition-colors ${
                 dragOver
                   ? 'border-primary bg-primary/5'
                   : 'border-neutral-200 dark:border-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600'

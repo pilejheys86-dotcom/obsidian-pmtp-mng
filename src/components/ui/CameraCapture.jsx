@@ -102,7 +102,7 @@ const CameraCapture = ({ onCapture, guideLabel, onClose }) => {
         <button
           type="button"
           onClick={() => { stopCamera(); onClose() }}
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="w-8 h-8 flex items-center justify-center rounded-sm bg-white/10 hover:bg-white/20 transition-colors"
         >
           <span className="material-symbols-outlined text-white text-lg">close</span>
         </button>
@@ -115,14 +115,14 @@ const CameraCapture = ({ onCapture, guideLabel, onClose }) => {
             <img
               src={preview.url}
               alt="Captured ID"
-              className="w-full rounded-lg border border-neutral-700"
+              className="w-full rounded-sm border border-neutral-700"
             />
           </div>
           <div className="flex gap-3">
             <button
               type="button"
               onClick={handleRetake}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-neutral-600 text-white font-semibold text-sm hover:bg-neutral-800 transition-colors"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-sm border border-neutral-600 text-white font-semibold text-sm hover:bg-neutral-800 transition-colors"
             >
               <span className="material-symbols-outlined text-lg">replay</span>
               Retake
@@ -130,7 +130,7 @@ const CameraCapture = ({ onCapture, guideLabel, onClose }) => {
             <button
               type="button"
               onClick={handleUse}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-neutral-900 font-semibold text-sm hover:bg-primary/90 transition-colors"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-sm bg-primary text-neutral-900 font-semibold text-sm hover:bg-primary/90 transition-colors"
             >
               <span className="material-symbols-outlined text-lg">check</span>
               Use this photo
@@ -165,7 +165,7 @@ const CameraCapture = ({ onCapture, guideLabel, onClose }) => {
               {/* Right dark bar */}
               <div className="absolute bg-black/60" style={{ top: 'calc(50% - 110px)', bottom: 'calc(50% - 110px)', right: 0, width: 'calc(50% - 170px)' }} />
               {/* Card guide border */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-dashed border-primary rounded-lg" style={{ width: '340px', height: '220px' }}>
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-dashed border-primary rounded-sm" style={{ width: '340px', height: '220px' }}>
                 {/* Corner accents */}
                 <div className="absolute -top-0.5 -left-0.5 w-6 h-6 border-t-3 border-l-3 border-primary rounded-tl-lg" />
                 <div className="absolute -top-0.5 -right-0.5 w-6 h-6 border-t-3 border-r-3 border-primary rounded-tr-lg" />

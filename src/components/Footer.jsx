@@ -7,13 +7,16 @@ const Footer = () => {
 
   return (
     <footer className="px-4 sm:px-6" id="pricing">
-      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 pt-16 sm:pt-24 pb-12">
-        {/* Pricing Section */}
-        <div ref={pricingRef} className="grid lg:grid-cols-2 gap-16 mb-24 reveal-fade-up">
-          <div className="space-y-6">
-            <div className="inline-block px-4 py-1.5 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold">
-              Pricing
-            </div>
+      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 pt-16 sm:pt-24 pb-12">
+        {/* Pricing Section — enclosed grid, no container padding so borders connect */}
+        <div className="relative border-t border-neutral-200 dark:border-neutral-800 landing-border-extend">
+          <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+        </div>
+        <div ref={pricingRef} className="grid grid-cols-1 lg:grid-cols-2 reveal-fade-up">
+          {/* Left — pricing text */}
+          <div className="space-y-6 py-10 sm:py-14 px-4 sm:px-6 pr-8 sm:pr-16">
+            <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest">Pricing</p>
             <h2 className="landing-h2 font-display font-light">
               The future of pawnshop management starts here.
             </h2>
@@ -29,79 +32,53 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="bg-neutral-100 dark:bg-neutral-900 p-5 sm:p-8 landing-card border border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5 sm:gap-8">
-            <div>
-              <p className="text-neutral-500 dark:text-neutral-400 font-bold mb-2">Professional Plan</p>
-              <div className="flex items-baseline gap-1">
-                <span className="text-3xl sm:text-4xl font-extrabold">₱1,500</span>
-                <span className="text-neutral-500">/mo</span>
-              </div>
+          {/* Right — plan details */}
+          <div className="border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 py-10 sm:py-14 px-4 sm:px-6 pl-8 sm:pl-16 flex flex-col justify-center space-y-6">
+            <p className="text-xs font-bold uppercase tracking-widest text-neutral-400">Professional Plan</p>
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-4xl sm:text-5xl font-extrabold">₱1,500</span>
+              <span className="text-neutral-500">/mo</span>
             </div>
-            <button className="w-full sm:w-auto bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-8 sm:px-10 py-4 rounded-sm font-bold transition-all transform hover:scale-105 min-h-[44px]">
+            <p className="text-sm text-neutral-500 dark:text-neutral-400">Everything you need to run your pawnshop.</p>
+            <a className="w-full sm:w-auto bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-8 py-4 rounded-sm font-bold transition-all text-center min-h-[44px]" href="/register">
               Get Started Now
-            </button>
+            </a>
           </div>
         </div>
-
-        {/* Footer Links */}
-        <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+        <div className="relative border-t border-neutral-200 dark:border-neutral-800 landing-border-extend">
           <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
           <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
         </div>
-        <div ref={linksRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12 pt-12 sm:pt-16 reveal-fade-up">
-          <div className="sm:col-span-2 md:col-span-1">
-            <div className="mb-6">
+
+        {/* Footer */}
+        <div ref={linksRef} className="px-4 sm:px-6 pt-10 sm:pt-12 space-y-8 reveal-fade-up">
+          {/* Brand + Contact row */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
               <Logo size="sm" />
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 hidden sm:block">
+                Digital solutions for modern pawnbroking.
+              </p>
             </div>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
-              Leading provider of digital solutions for the modern pawnbroking industry. Secure, reliable, and efficient.
-            </p>
-          </div>
-          <div>
-            <h5 className="font-bold mb-6 uppercase text-xs tracking-widest text-neutral-400">Product</h5>
-            <ul className="space-y-4 text-sm font-semibold">
-              <li><a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Features</a></li>
-              <li><a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Dashboard</a></li>
-              <li><a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Appraisal Engine</a></li>
-              <li><a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Mobile App</a></li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="font-bold mb-6 uppercase text-xs tracking-widest text-neutral-400">Company</h5>
-            <ul className="space-y-4 text-sm font-semibold">
-              <li><a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">About Us</a></li>
-              <li><a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Careers</a></li>
-              <li><a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Security</a></li>
-              <li><a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-              <li><a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/terms">Terms and Conditions</a></li>
-            </ul>
-          </div>
-          <div>
-            <h5 className="font-bold mb-6 uppercase text-xs tracking-widest text-neutral-400">Contact</h5>
-            <ul className="space-y-4 text-sm font-semibold">
-              <li className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-neutral-500 text-sm">email</span> support@obsidian.com
+            <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-neutral-500 dark:text-neutral-400">
+              <li className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-sm">email</span> support@obsidian.tech
               </li>
-              <li className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-neutral-500 text-sm">phone</span> +1 (555) 000-0000
+              <li className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-sm">phone</span> 0906-708-0332
               </li>
-              <li className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-neutral-500 text-sm">location_on</span> Silicon Valley, CA
+              <li className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-sm">location_on</span> Baliuag, Bulacan, Philippines
               </li>
             </ul>
           </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="relative mt-12 sm:mt-16 border-t border-neutral-200 dark:border-neutral-800">
-          <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
-          <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
-        </div>
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold text-neutral-400 text-center md:text-left">
-          <p>&copy; 2026 Obsidian MIS Platform. All rights reserved.</p>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
-            <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/terms">Terms and Conditions</a>
-            <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Cookie Policy</a>
+          {/* Copyright */}
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-6 border-t border-neutral-200/60 dark:border-neutral-800/60 text-xs font-bold text-neutral-400">
+            <p>&copy; 2026 Obsidian MIS Platform. All rights reserved.</p>
+            <div className="flex gap-6">
+              <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/terms">Terms and Conditions</a>
+              <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Cookie Policy</a>
+            </div>
           </div>
         </div>
       </div>

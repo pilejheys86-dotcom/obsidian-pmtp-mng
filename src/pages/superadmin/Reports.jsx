@@ -47,9 +47,9 @@ const fmtDate = (str) => {
 const HealthBadge = ({ score }) => {
   if (score == null) return <span className="text-neutral-400">—</span>
   const n = Number(score)
-  if (n >= 70) return <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">{n}</span>
-  if (n >= 30) return <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">{n}</span>
-  return <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">{n}</span>
+  if (n >= 70) return <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-sm text-xs font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">{n}</span>
+  if (n >= 30) return <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-sm text-xs font-semibold bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">{n}</span>
+  return <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-sm text-xs font-semibold bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">{n}</span>
 }
 
 // ── Spinner / Empty helpers ───────────────────────────────────────────────────
@@ -481,7 +481,7 @@ const Reports = () => {
               {/* Summary KPIs */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="dashboard-card flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-sm bg-emerald-500 flex items-center justify-center flex-shrink-0">
                     <span className="material-symbols-outlined text-white text-[20px]">check_circle</span>
                   </div>
                   <div>
@@ -492,7 +492,7 @@ const Reports = () => {
                   </div>
                 </div>
                 <div className="dashboard-card flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-sm bg-amber-500 flex items-center justify-center flex-shrink-0">
                     <span className="material-symbols-outlined text-white text-[20px]">warning</span>
                   </div>
                   <div>
@@ -503,7 +503,7 @@ const Reports = () => {
                   </div>
                 </div>
                 <div className="dashboard-card flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-red-500 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-sm bg-red-500 flex items-center justify-center flex-shrink-0">
                     <span className="material-symbols-outlined text-white text-[20px]">error</span>
                   </div>
                   <div>
@@ -575,7 +575,7 @@ const Reports = () => {
                             <td className="text-center">{row.active_loans?.toLocaleString() ?? '—'}</td>
                             <td>
                               <span className={[
-                                'inline-flex px-2 py-0.5 rounded-full text-xs font-semibold',
+                                'inline-flex px-2 py-0.5 rounded-sm text-xs font-semibold',
                                 row.subscription_status === 'PAID'    ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
                                 row.subscription_status === 'OVERDUE' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' :
                                 row.subscription_status === 'PENDING' ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400' :
@@ -627,7 +627,7 @@ const Reports = () => {
                   },
                 ].map(card => (
                   <div key={card.label} className="dashboard-card flex items-center gap-4">
-                    <div className={`w-10 h-10 rounded-xl ${card.bg} flex items-center justify-center flex-shrink-0`}>
+                    <div className={`w-10 h-10 rounded-sm ${card.bg} flex items-center justify-center flex-shrink-0`}>
                       <span className={`material-symbols-outlined ${card.color} text-[20px]`}>{card.icon}</span>
                     </div>
                     <div>
@@ -712,7 +712,7 @@ const Reports = () => {
                                 <tr key={i}>
                                   <td>
                                     <span className={[
-                                      'inline-flex px-2 py-0.5 rounded-full text-xs font-semibold',
+                                      'inline-flex px-2 py-0.5 rounded-sm text-xs font-semibold',
                                       row.status === 'PAID'    ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400' :
                                       row.status === 'OVERDUE' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' :
                                       row.status === 'PENDING' ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400' :
@@ -753,7 +753,7 @@ const Reports = () => {
                     key={opt.value}
                     onClick={() => setPawnPeriod(opt.value)}
                     className={[
-                      'px-3 py-1 rounded-lg text-xs font-medium transition-colors',
+                      'px-3 py-1 rounded-sm text-xs font-medium transition-colors',
                       pawnPeriod === opt.value
                         ? 'bg-primary text-neutral-900'
                         : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700',
@@ -775,7 +775,7 @@ const Reports = () => {
                   { icon: 'calculate',    bg: 'bg-neutral-600',   color: 'text-white',                       label: 'Avg Loan Value',               value: fmtCurrency(pawnData?.avg_loan_value) },
                 ].map(card => (
                   <div key={card.label} className="dashboard-card flex items-center gap-3">
-                    <div className={`w-10 h-10 rounded-xl ${card.bg} flex items-center justify-center flex-shrink-0`}>
+                    <div className={`w-10 h-10 rounded-sm ${card.bg} flex items-center justify-center flex-shrink-0`}>
                       <span className={`material-symbols-outlined ${card.color} text-[20px]`}>{card.icon}</span>
                     </div>
                     <div className="min-w-0">
@@ -858,7 +858,7 @@ const Reports = () => {
                       key={opt.value}
                       onClick={() => setRankPeriod(opt.value)}
                       className={[
-                        'px-3 py-1 rounded-lg text-xs font-medium transition-colors',
+                        'px-3 py-1 rounded-sm text-xs font-medium transition-colors',
                         rankPeriod === opt.value
                           ? 'bg-primary text-neutral-900'
                           : 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-200 dark:hover:bg-neutral-700',
@@ -923,7 +923,7 @@ const Reports = () => {
                             <tr key={i}>
                               <td className="text-center">
                                 <span className={[
-                                  'inline-flex w-6 h-6 items-center justify-center rounded-full text-xs font-bold',
+                                  'inline-flex w-6 h-6 items-center justify-center rounded-sm text-xs font-bold',
                                   i === 0 ? 'bg-amber-400 text-amber-900' :
                                   i === 1 ? 'bg-neutral-300 text-neutral-800 dark:bg-neutral-600 dark:text-neutral-200' :
                                   i === 2 ? 'bg-orange-300 text-orange-900' :

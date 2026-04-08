@@ -27,9 +27,9 @@ const WelcomeModal = ({ kycStatus }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-      <div className="bg-white dark:bg-neutral-800 rounded-xl shadow-2xl max-w-md w-full mx-4 p-8">
+      <div className="bg-white dark:bg-neutral-800 rounded-sm shadow-2xl max-w-md w-full mx-4 p-8">
         <div className="flex justify-center mb-6">
-          <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+          <div className="w-16 h-16 rounded-sm bg-primary/10 flex items-center justify-center">
             <span className="material-symbols-outlined text-primary text-3xl">verified</span>
           </div>
         </div>

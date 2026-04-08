@@ -188,7 +188,7 @@ const ConfirmToggleModal = ({ admin, onConfirm, onCancel, loading }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
       <div className="dashboard-card w-full max-w-sm mx-4 p-6">
         <div className="text-center mb-5">
-          <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full mb-3 ${
+          <div className={`inline-flex items-center justify-center w-12 h-12 rounded-sm mb-3 ${
             admin.is_active ? 'bg-red-500/10' : 'bg-emerald-500/10'
           }`}>
             <span className={`material-symbols-outlined text-2xl ${
