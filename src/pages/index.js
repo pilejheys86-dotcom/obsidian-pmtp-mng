@@ -1,5 +1,5 @@
 // Public pages
-export { LandingPage, ProcessPage, PricingPage, AboutPage, TermsPage, RequestAccessPage } from './public'
+export { LandingPage, ProcessPage, PricingPage, AboutPage, TermsPage, CookiePolicyPage, RequestAccessPage } from './public'
 
 // Auth pages
 export { LoginPage, RegisterPage, RecoverAcc, SetupPasswordPage } from './auth'

@@ -26,32 +26,43 @@ const values = [
   },
 ]
 
+const capabilities = [
+  { icon: 'diamond', label: 'Gold & Item Appraisal' },
+  { icon: 'receipt_long', label: 'Pawn Ticket Management' },
+  { icon: 'group', label: 'Customer KYC Profiles' },
+  { icon: 'monitoring', label: 'Dashboard & Analytics' },
+  { icon: 'gavel', label: 'Auction Management' },
+  { icon: 'notifications', label: 'Automated Notices' },
+  { icon: 'inventory_2', label: 'Inventory Tracking' },
+  { icon: 'payments', label: 'Payment Processing' },
+]
+
 const AboutPage = () => {
   const headingRef = useScrollReveal({ threshold: 0.1 })
   const missionRef = useScrollReveal()
   const statsRef = useStaggerReveal({ stagger: 100 })
   const valuesRef = useStaggerReveal({ stagger: 150 })
+  const capRef = useStaggerReveal({ stagger: 60 })
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors duration-300 landing-wrapper">
       <Navbar />
 
-      <div className="pt-4 sm:pt-6 px-4 sm:px-6">
+      {/* Header — no side borders */}
+      <div className="px-4 sm:px-6 pt-4 sm:pt-6">
+        <div ref={headingRef} className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center reveal-fade-up">
+          <div className="inline-block px-4 py-1.5 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-[family-name:var(--font-mono)] font-bold uppercase tracking-widest mb-6">About</div>
+          <h1 className="landing-h2 font-display font-light">
+            Built for Philippine Pawnbrokers.
+          </h1>
+        </div>
+      </div>
+
+      <div className="px-4 sm:px-6">
         <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800">
 
-          {/* Header */}
-          <div ref={headingRef} className="px-4 sm:px-6 py-12 sm:py-16 text-center reveal-fade-up">
-            <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-6">About</p>
-            <h1 className="landing-h2 font-display font-light">
-              Built for Philippine Pawnbrokers.
-            </h1>
-          </div>
-
           {/* Divider */}
-          <div className="relative border-t border-neutral-200 dark:border-neutral-800">
-            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
-            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
-          </div>
+          <div className="border-t border-neutral-200 dark:border-neutral-800"></div>
 
           {/* Mission row — split */}
           <div ref={missionRef} className="grid grid-cols-1 lg:grid-cols-2 reveal-fade-up">
@@ -123,6 +134,42 @@ const AboutPage = () => {
                 <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{v.description}</p>
               </div>
             ))}
+          </div>
+
+          {/* Divider */}
+          <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          </div>
+
+          {/* Platform capabilities — dark inverse section */}
+          <div className="bg-neutral-900 dark:bg-white">
+            <div className="px-4 sm:px-6 py-10 sm:py-14 text-center">
+              <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-400 dark:text-neutral-500 uppercase tracking-widest mb-3">Platform</p>
+              <h2 className="landing-h2 font-display font-light text-white dark:text-neutral-900">
+                Everything you need, nothing you don't.
+              </h2>
+            </div>
+            <div className="border-t border-neutral-800 dark:border-neutral-200"></div>
+            <div ref={capRef} className="grid grid-cols-2 md:grid-cols-4 reveal-fade-in">
+              {capabilities.map((cap, i) => (
+                <div
+                  key={i}
+                  data-reveal-child
+                  className={[
+                    'px-4 sm:px-6 py-6 sm:py-8 flex flex-col items-center gap-3 text-center',
+                    i > 0 ? 'border-l border-neutral-800 dark:border-neutral-200' : '',
+                    i >= 4 ? 'border-t border-neutral-800 dark:border-neutral-200' : '',
+                    i >= 2 && i < 4 ? 'border-t md:border-t-0 border-neutral-800 dark:border-neutral-200' : '',
+                  ].join(' ')}
+                >
+                  <div className="w-10 h-10 rounded-sm border border-neutral-700 dark:border-neutral-300 flex items-center justify-center">
+                    <span className="material-symbols-outlined text-neutral-400 dark:text-neutral-500" style={{ fontSize: '20px' }}>{cap.icon}</span>
+                  </div>
+                  <p className="text-xs font-bold text-neutral-300 dark:text-neutral-600 uppercase tracking-wider">{cap.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Divider */}

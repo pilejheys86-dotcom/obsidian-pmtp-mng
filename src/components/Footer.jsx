@@ -7,7 +7,7 @@ const Footer = ({ showPricing = false }) => {
 
   return (
     <footer className="px-4 sm:px-6" id="pricing">
-      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 pt-16 sm:pt-24 pb-12">
+      <div className={`max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 pb-12 ${showPricing ? 'pt-16 sm:pt-24' : ''}`}>
         {showPricing && (
           <>
             {/* Pricing Section — enclosed grid, no container padding so borders connect */}
@@ -81,7 +81,7 @@ const Footer = ({ showPricing = false }) => {
             <p>&copy; 2026 Obsidian MIS Platform. All rights reserved.</p>
             <div className="flex gap-6">
               <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/terms">Terms and Conditions</a>
-              <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="#">Cookie Policy</a>
+              <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/cookies">Cookie Policy</a>
             </div>
           </div>
         </div>

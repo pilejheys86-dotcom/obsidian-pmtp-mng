@@ -1,23 +1,54 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useScrollReveal } from '../lib/useScrollReveal'
 
 const VERBS = ['Revolutionize', 'Streamline', 'Transform', 'Modernize', 'Elevate']
+const TYPE_SPEED = 150
+const DELETE_SPEED = 70
+const HOLD_DURATION = 3000
+const NEXT_DELAY = 500
 
 const Hero = () => {
   const textRef = useScrollReveal({ threshold: 0.1 })
   const mockupRef = useScrollReveal({ threshold: 0.1 })
-  const [verbIdx, setVerbIdx] = useState(0)
-  const [exiting, setExiting] = useState(false)
+  const [displayed, setDisplayed] = useState('')
+  const verbIdx = useRef(0)
+  const deleting = useRef(false)
+  const typedRef = useRef('')
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setExiting(true)
-      setTimeout(() => {
-        setVerbIdx(i => (i + 1) % VERBS.length)
-        setExiting(false)
-      }, 320)
-    }, 2800)
-    return () => clearInterval(interval)
+    let timeout
+
+    const tick = () => {
+      const current = VERBS[verbIdx.current]
+
+      if (!deleting.current) {
+        const next = current.slice(0, typedRef.current.length + 1)
+        typedRef.current = next
+        setDisplayed(next)
+
+        if (next === current) {
+          deleting.current = true
+          timeout = setTimeout(tick, HOLD_DURATION)
+        } else {
+          timeout = setTimeout(tick, TYPE_SPEED)
+        }
+      } else {
+        const next = typedRef.current.slice(0, -1)
+        typedRef.current = next
+        setDisplayed(next)
+
+        if (next === '') {
+          verbIdx.current = (verbIdx.current + 1) % VERBS.length
+          deleting.current = false
+          timeout = setTimeout(tick, NEXT_DELAY)
+        } else {
+          timeout = setTimeout(tick, DELETE_SPEED)
+        }
+      }
+    }
+
+    timeout = setTimeout(tick, NEXT_DELAY)
+    return () => clearTimeout(timeout)
   }, [])
 
   return (
@@ -32,10 +63,8 @@ const Hero = () => {
             The Next-Gen MIS is Here
           </div>
           <h1 className="landing-h1 font-display font-light">
-            <span className="inline-block overflow-hidden align-bottom" style={{ minWidth: '1ch' }}>
-              <span key={verbIdx} className={exiting ? 'hero-verb-exit' : 'hero-verb-enter'}>
-                {VERBS[verbIdx]}
-              </span>
+            <span className="inline-block align-bottom">
+              {displayed}<span className="hero-cursor">|</span>
             </span>
             <br />
             Your Pawnshop <br />

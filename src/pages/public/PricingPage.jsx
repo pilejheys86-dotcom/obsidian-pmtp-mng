@@ -68,22 +68,21 @@ const PricingPage = () => {
     <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors duration-300 landing-wrapper">
       <Navbar />
 
-      <div className="pt-4 sm:pt-6 px-4 sm:px-6">
+      {/* Header — no side borders */}
+      <div className="px-4 sm:px-6 pt-4 sm:pt-6">
+        <div ref={headingRef} className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center reveal-fade-up">
+          <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-6">Pricing</p>
+          <h1 className="landing-h2 font-display font-light">
+            Simple, transparent pricing.
+          </h1>
+        </div>
+      </div>
+
+      <div className="px-4 sm:px-6">
         <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800">
 
-          {/* Header */}
-          <div ref={headingRef} className="px-4 sm:px-6 py-12 sm:py-16 text-center reveal-fade-up">
-            <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-6">Pricing</p>
-            <h1 className="landing-h2 font-display font-light">
-              Simple, transparent pricing.
-            </h1>
-          </div>
-
           {/* Divider */}
-          <div className="relative border-t border-neutral-200 dark:border-neutral-800">
-            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
-            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
-          </div>
+          <div className="border-t border-neutral-200 dark:border-neutral-800"></div>
 
           {/* Plan row — split */}
           <div ref={cardRef} className="grid grid-cols-1 lg:grid-cols-2 reveal-scale">
