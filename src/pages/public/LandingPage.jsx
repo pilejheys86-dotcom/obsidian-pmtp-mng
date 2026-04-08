@@ -28,7 +28,7 @@ const LandingPage = () => {
       <SectionDivider />
       <MobileApp />
       <SectionDivider />
-      <Footer />
+      <Footer showPricing />
     </div>
   )
 }

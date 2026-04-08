@@ -2,127 +2,156 @@ import { Navbar, Footer } from '../../components'
 import { useScrollReveal, useStaggerReveal } from '../../lib/useScrollReveal'
 
 const stats = [
-  { value: '99.9%', label: 'Uptime SLA', icon: 'cloud_done' },
-  { value: 'RLS', label: 'Row-Level Security', icon: 'lock' },
-  { value: 'BSP', label: 'Compliance Ready', icon: 'verified' },
-  { value: '∞', label: 'Multi-branch Scale', icon: 'lan' },
+  { value: '99.9%', label: 'Uptime SLA' },
+  { value: 'RLS', label: 'Row-Level Security' },
+  { value: 'BSP', label: 'Compliance Ready' },
+  { value: '∞', label: 'Multi-branch Scale' },
 ]
 
 const values = [
   {
     icon: 'shield',
     title: 'Security First',
-    description: 'Bank-grade data isolation with Supabase Row-Level Security. Every tenant\'s data is siloed — no cross-contamination, no shortcuts. JWT authentication and encrypted connections protect every request.',
+    description: 'Bank-grade data isolation with Supabase Row-Level Security. Every tenant\'s data is siloed — no cross-contamination, no shortcuts.',
   },
   {
     icon: 'speed',
     title: 'Operational Efficiency',
-    description: 'From appraisal to disbursement in minutes, not hours. Automated overdue detection, one-click renewals, and real-time inventory tracking eliminate manual work and reduce human error.',
+    description: 'From appraisal to disbursement in minutes, not hours. Automated overdue detection, one-click renewals, and real-time tracking.',
   },
   {
     icon: 'gavel',
     title: 'Regulatory Compliance',
-    description: 'Built with BSP pawnshop regulations in mind. Proper KYC document management, audit trails for every transaction, and notice logs that satisfy compliance requirements.',
+    description: 'Built with BSP pawnshop regulations in mind. Proper KYC management, audit trails, and notice logs that satisfy compliance.',
   },
 ]
 
 const AboutPage = () => {
-  const heroRef = useScrollReveal({ threshold: 0.1 })
+  const headingRef = useScrollReveal({ threshold: 0.1 })
   const missionRef = useScrollReveal()
   const statsRef = useStaggerReveal({ stagger: 100 })
   const valuesRef = useStaggerReveal({ stagger: 150 })
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors duration-300 landing-wrapper">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 px-6">
-        <div ref={heroRef} className="max-w-3xl mx-auto text-center reveal-fade-up">
-          <div className="inline-block px-4 py-1.5 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
-            About
-          </div>
-          <h1 className="text-4xl md:text-6xl font-display font-light leading-tight mb-6">
-            Built for Philippine Pawnbrokers
-          </h1>
-          <p className="text-lg text-neutral-500 dark:text-neutral-400 max-w-2xl mx-auto">
-            Obsidian is the management information system that the Philippine pawnshop industry has been waiting for — modern, secure, and purpose-built.
-          </p>
-        </div>
-      </section>
+      <div className="pt-4 sm:pt-6 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800">
 
-      {/* Mission */}
-      <section className="py-16 px-6">
-        <div ref={missionRef} className="max-w-3xl mx-auto reveal-fade-up">
-          <div className="bg-stone-100 dark:bg-neutral-900 landing-card p-10 md:p-14">
-            <h2 className="text-2xl font-display font-light mb-6">Our Mission</h2>
-            <div className="space-y-4 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-              <p>
-                The Philippine pawnshop industry serves millions of Filipinos who rely on asset-backed lending for their daily needs. Yet most shops still run on paper ledgers, spreadsheets, and disconnected processes.
-              </p>
-              <p>
-                Obsidian exists to change that. We provide a single, integrated platform that handles everything — from customer onboarding and gold appraisal to loan management, auctions, and compliance reporting — so pawnshop owners can focus on serving their communities instead of fighting their tools.
-              </p>
-              <p>
-                Every feature is designed with Philippine regulations, workflows, and business realities in mind. Multi-tenant architecture means each shop gets its own secure environment, while our cloud infrastructure ensures your data is always available, always backed up, and always yours.
-              </p>
+          {/* Header */}
+          <div ref={headingRef} className="px-4 sm:px-6 py-12 sm:py-16 text-center reveal-fade-up">
+            <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-6">About</p>
+            <h1 className="landing-h2 font-display font-light">
+              Built for Philippine Pawnbrokers.
+            </h1>
+          </div>
+
+          {/* Divider */}
+          <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          </div>
+
+          {/* Mission row — split */}
+          <div ref={missionRef} className="grid grid-cols-1 lg:grid-cols-2 reveal-fade-up">
+            <div className="px-4 sm:px-6 py-8 sm:py-10 flex flex-col justify-center">
+              <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-2">Our Mission</p>
+              <h2 className="landing-h2 font-display font-light">
+                Modernizing an industry that serves millions.
+              </h2>
+            </div>
+            <div className="border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-8 sm:py-10 flex items-center">
+              <div className="space-y-4 text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">
+                <p>
+                  The Philippine pawnshop industry serves millions of Filipinos who rely on asset-backed lending for their daily needs. Yet most shops still run on paper ledgers, spreadsheets, and disconnected processes.
+                </p>
+                <p>
+                  Obsidian provides a single, integrated platform that handles everything — from customer onboarding and gold appraisal to loan management, auctions, and compliance reporting.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Stats */}
-      <section className="py-16 px-6">
-        <div ref={statsRef} className="max-w-4xl mx-auto reveal-fade-in">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {/* Divider */}
+          <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          </div>
+
+          {/* Stats row */}
+          <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 reveal-fade-in">
             {stats.map((stat, i) => (
-              <div key={i} className="text-center p-6 bg-neutral-900 dark:bg-white landing-card" data-reveal-child>
-                <span className="material-symbols-outlined text-neutral-400 dark:text-neutral-500 text-2xl mb-3 block">{stat.icon}</span>
-                <p className="text-3xl font-extrabold text-white dark:text-neutral-900 mb-1">{stat.value}</p>
-                <p className="text-xs font-bold text-neutral-400 dark:text-neutral-500 uppercase tracking-widest">{stat.label}</p>
+              <div
+                key={i}
+                data-reveal-child
+                className={[
+                  'px-4 sm:px-6 py-8 sm:py-10 text-center',
+                  i > 0 ? 'border-l border-neutral-200 dark:border-neutral-800' : '',
+                  i === 2 ? 'border-t md:border-t-0 border-neutral-200 dark:border-neutral-800' : '',
+                  i === 3 ? 'border-t md:border-t-0 border-neutral-200 dark:border-neutral-800' : '',
+                ].join(' ')}
+              >
+                <p className="text-3xl sm:text-4xl font-extrabold mb-2">{stat.value}</p>
+                <p className="text-xs font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest">{stat.label}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Values */}
-      <section className="py-16 px-6 bg-stone-100 dark:bg-neutral-900">
-        <div className="max-w-5xl mx-auto">
-          <h2 ref={useScrollReveal()} className="text-3xl font-display font-light text-center mb-12 reveal-fade-up">
-            What we stand for
-          </h2>
-          <div ref={valuesRef} className="grid md:grid-cols-3 gap-8 reveal-fade-in">
+          {/* Divider */}
+          <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          </div>
+
+          {/* Values row */}
+          <div ref={valuesRef} className="grid grid-cols-1 md:grid-cols-3 reveal-fade-in">
             {values.map((v, i) => (
-              <div key={i} className="bg-white dark:bg-neutral-800 landing-card p-8 border border-neutral-200 dark:border-neutral-700" data-reveal-child>
-                <div className="w-12 h-12 rounded-sm bg-neutral-900 dark:bg-white flex items-center justify-center mb-6">
-                  <span className="material-symbols-outlined text-white dark:text-neutral-900">{v.icon}</span>
+              <div
+                key={i}
+                data-reveal-child
+                className={[
+                  'px-4 sm:px-6 py-8 sm:py-10 space-y-4',
+                  i > 0 ? 'border-t md:border-t-0 md:border-l border-neutral-200 dark:border-neutral-800' : '',
+                ].join(' ')}
+              >
+                <div className="w-10 h-10 rounded-sm border border-neutral-200 dark:border-neutral-800 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-neutral-600 dark:text-neutral-400" style={{ fontSize: '20px' }}>{v.icon}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{v.title}</h3>
-                <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">{v.description}</p>
+                <h3 className="text-sm font-bold">{v.title}</h3>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{v.description}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-display font-light mb-4">Ready to transform your pawnshop?</h2>
-          <p className="text-neutral-500 dark:text-neutral-400 mb-8">
-            Join the next generation of Philippine pawnbrokers running on Obsidian.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/register" className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-10 py-4 rounded-sm font-bold text-lg transition-all transform hover:scale-105">
-              Get Started Free
-            </a>
-            <a href="/pricing" className="bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 px-10 py-4 rounded-sm font-bold text-lg transition-all">
-              View Pricing
-            </a>
+          {/* Divider */}
+          <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
           </div>
+
+          {/* CTA row */}
+          <div className="px-4 sm:px-6 py-10 sm:py-14 text-center space-y-6">
+            <h2 className="landing-h2 font-display font-light">Ready to transform your pawnshop?</h2>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/register" className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-8 py-4 rounded-sm font-bold transition-colors">
+                Get Started
+              </a>
+              <a href="/pricing" className="border border-neutral-300 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 px-8 py-4 rounded-sm font-bold transition-colors">
+                View Pricing
+              </a>
+            </div>
+          </div>
+
+          {/* Bottom border */}
+          <div className="relative border-t border-neutral-200 dark:border-neutral-800 landing-border-extend">
+            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          </div>
+
         </div>
-      </section>
+      </div>
 
       <Footer />
     </div>

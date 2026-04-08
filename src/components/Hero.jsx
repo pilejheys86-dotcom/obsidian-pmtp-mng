@@ -21,7 +21,7 @@ const Hero = () => {
   }, [])
 
   return (
-    <section className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-6 hero-gradient overflow-hidden">
+    <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 px-4 sm:px-6 hero-gradient overflow-hidden">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div ref={textRef} className="space-y-8 reveal-fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-neutral-900/10 dark:bg-white/10 border border-neutral-900/20 dark:border-white/20 text-neutral-900 dark:text-white font-bold text-xs uppercase tracking-widest">

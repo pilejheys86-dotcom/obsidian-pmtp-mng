@@ -1,44 +1,68 @@
 import { useScrollReveal, useStaggerReveal } from '../lib/useScrollReveal'
 
+const appFeatures = [
+  {
+    icon: 'notifications_active',
+    title: 'Loan Reminders',
+    description: 'Get notified before due dates so you never miss a payment.'
+  },
+  {
+    icon: 'receipt_long',
+    title: 'Transaction History',
+    description: 'View all your pawn tickets, payments, and receipts.'
+  },
+  {
+    icon: 'qr_code_scanner',
+    title: 'Digital Tickets',
+    description: 'Access your pawn tickets digitally — no more lost paper.'
+  },
+  {
+    icon: 'storefront',
+    title: 'Browse Auctions',
+    description: 'Discover and bid on auction items from your phone.'
+  }
+]
+
 const MobileApp = () => {
   const headingRef = useScrollReveal()
   const phoneRef = useScrollReveal({ threshold: 0.1 })
   const featuresRef = useStaggerReveal({ stagger: 150 })
 
-  const appFeatures = [
-    {
-      icon: 'notifications_active',
-      title: 'Loan Reminders',
-      description: 'Get notified before due dates so you never miss a payment or renewal window.'
-    },
-    {
-      icon: 'receipt_long',
-      title: 'Transaction History',
-      description: 'View all your pawn tickets, payments, and receipts in one place.'
-    },
-    {
-      icon: 'qr_code_scanner',
-      title: 'Digital Tickets',
-      description: 'Access your pawn tickets digitally — no more lost paper slips.'
-    },
-    {
-      icon: 'storefront',
-      title: 'Browse Auctions',
-      description: 'Discover and bid on auction items directly from your phone.'
-    }
-  ]
-
   return (
-    <section className="px-4 sm:px-6 bg-white dark:bg-neutral-950 overflow-hidden" id="mobile-app">
-      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-16 sm:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section className="px-4 sm:px-6 bg-white dark:bg-neutral-950" id="mobile-app">
+      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800">
 
-          {/* Phone Mockup — always dark themed */}
-          <div ref={phoneRef} className="relative flex justify-center lg:justify-start order-2 lg:order-1 reveal-scale">
-            <div className="relative w-[280px] sm:w-[300px]">
+        {/* Top row — heading + phone */}
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+
+          {/* Left — heading + CTA */}
+          <div ref={headingRef} className="px-4 sm:px-6 py-6 sm:py-8 flex flex-col items-center justify-center text-center gap-6 reveal-fade-up">
+            <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest">Mobile App</p>
+            <h2 className="landing-h2 font-display font-light">
+              Your pawnshop,<br />
+              right in your pocket.
+            </h2>
+            <div className="flex flex-col sm:flex-row items-start gap-4 pt-2">
+              <a
+                href="#"
+                className="inline-flex items-center gap-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-8 py-4 rounded-sm font-bold text-lg transition-colors"
+              >
+                <span className="material-symbols-outlined text-2xl">download</span>
+                Download Now
+              </a>
+            </div>
+            <p className="text-xs font-bold text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
+              <span className="material-symbols-outlined text-sm">android</span> Available for Android
+            </p>
+          </div>
+
+          {/* Right — phone mockup */}
+          <div ref={phoneRef} className="border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-6 sm:py-8 flex items-center justify-center reveal-scale">
+            <div className="relative w-[260px] sm:w-[280px]">
               <div className="relative bg-neutral-800 rounded-[2.5rem] p-3 shadow-2xl border border-neutral-700">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-6 bg-neutral-800 rounded-b-2xl z-20"></div>
                 <div className="bg-neutral-950 rounded-[2rem] overflow-hidden">
+                  {/* Status bar */}
                   <div className="flex justify-between items-center px-6 pt-8 pb-2">
                     <span className="text-[10px] font-bold text-white">9:41</span>
                     <div className="flex items-center gap-1">
@@ -47,11 +71,13 @@ const MobileApp = () => {
                     </div>
                   </div>
 
+                  {/* Header */}
                   <div className="px-5 pt-4 pb-3">
                     <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest">Obsidian</p>
                     <h3 className="text-lg font-extrabold text-white mt-1">My Loans</h3>
                   </div>
 
+                  {/* Loan card */}
                   <div className="px-5 pb-3">
                     <div className="bg-white/10 rounded-sm p-4 border border-white/5">
                       <div className="flex items-center justify-between mb-3">
@@ -69,7 +95,7 @@ const MobileApp = () => {
                       <div className="flex justify-between text-[10px]">
                         <div>
                           <p className="text-neutral-500">Loan Amount</p>
-                          <p className="text-sm font-extrabold text-white mt-0.5">₱12,500</p>
+                          <p className="text-sm font-extrabold text-white mt-0.5">&#8369;12,500</p>
                         </div>
                         <div className="text-right">
                           <p className="text-neutral-500">Due Date</p>
@@ -88,6 +114,7 @@ const MobileApp = () => {
                     </div>
                   </div>
 
+                  {/* Quick actions */}
                   <div className="px-5 pb-3">
                     <p className="text-[10px] font-bold text-neutral-500 uppercase tracking-widest mb-2">Quick Actions</p>
                     <div className="grid grid-cols-3 gap-2">
@@ -106,6 +133,7 @@ const MobileApp = () => {
                     </div>
                   </div>
 
+                  {/* Tab bar */}
                   <div className="flex justify-around items-center py-3 mt-2 border-t border-white/10">
                     <div className="flex flex-col items-center gap-0.5">
                       <span className="material-symbols-outlined text-white" style={{ fontSize: '18px' }}>home</span>
@@ -126,56 +154,39 @@ const MobileApp = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-gradient-radial from-neutral-900/5 dark:from-white/5 to-transparent rounded-full blur-3xl"></div>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="order-1 lg:order-2 space-y-8">
-            <div ref={headingRef} className="space-y-6 reveal-fade-up">
-              <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest">Mobile App</p>
-              <h2 className="landing-h2 font-display font-light">
-                Your pawnshop, <br />
-                <span>right in your pocket.</span>
-              </h2>
-              <p className="text-neutral-600 dark:text-neutral-400 text-base sm:text-lg leading-relaxed max-w-lg">
-                Track your loans, get payment reminders, view digital tickets, and browse auction items — all from the Obsidian customer app.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center gap-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-8 py-4 rounded-sm font-bold text-lg transition-all transform hover:scale-105"
-                >
-                  <span className="material-symbols-outlined text-2xl">download</span>
-                  Download Now
-                </a>
-              </div>
-              <p className="text-xs font-bold text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
-                <span className="material-symbols-outlined text-sm">android</span> Available for Android
-              </p>
-            </div>
-
-            <div ref={featuresRef} className="grid sm:grid-cols-2 gap-4 pt-4 reveal-fade-in">
-              {appFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  data-reveal-child
-                  className="flex items-start gap-3 p-4 rounded-sm bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800"
-                >
-                  <div className="flex-shrink-0 w-10 h-10 rounded-sm bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
-                    <span className="material-symbols-outlined text-neutral-700 dark:text-neutral-300" style={{ fontSize: '20px' }}>{feature.icon}</span>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold mb-1">{feature.title}</h4>
-                    <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
+
+        {/* Divider */}
+        <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+          <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          <div className="hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+        </div>
+
+        {/* Features grid */}
+        <div ref={featuresRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 reveal-fade-in">
+          {appFeatures.map((feature, i) => (
+            <div
+              key={i}
+              data-reveal-child
+              className={[
+                'px-4 sm:px-6 py-6 sm:py-8 space-y-3',
+                i > 0 ? 'border-t sm:border-t-0 sm:border-l border-neutral-200 dark:border-neutral-800' : '',
+                i === 2 ? 'md:border-t-0 sm:border-t border-neutral-200 dark:border-neutral-800' : '',
+              ].join(' ')}
+            >
+              <div className="w-10 h-10 rounded-sm border border-neutral-200 dark:border-neutral-800 flex items-center justify-center">
+                <span className="material-symbols-outlined text-neutral-600 dark:text-neutral-400" style={{ fontSize: '20px' }}>{feature.icon}</span>
+              </div>
+              <h3 className="text-sm font-bold text-neutral-900 dark:text-white">{feature.title}</h3>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   )

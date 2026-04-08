@@ -42,101 +42,112 @@ const FAQItem = ({ question, answer }) => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div className="border-b border-neutral-200 dark:border-neutral-800">
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full py-5 flex items-center justify-between text-left group"
-      >
+    <button
+      onClick={() => setOpen(!open)}
+      className="w-full text-left"
+    >
+      <div className="py-5 flex items-center justify-between">
         <span className="font-bold text-sm pr-4">{question}</span>
         <span className={`material-symbols-outlined text-neutral-400 transition-transform duration-300 flex-shrink-0 ${open ? 'rotate-45' : ''}`}>
           add
         </span>
-      </button>
+      </div>
       <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-40 pb-5' : 'max-h-0'}`}>
         <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">{answer}</p>
       </div>
-    </div>
+    </button>
   )
 }
 
 const PricingPage = () => {
-  const heroRef = useScrollReveal({ threshold: 0.1 })
+  const headingRef = useScrollReveal({ threshold: 0.1 })
   const cardRef = useScrollReveal()
   const faqRef = useStaggerReveal({ stagger: 100 })
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors duration-300 landing-wrapper">
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-32 pb-8 px-6">
-        <div ref={heroRef} className="max-w-3xl mx-auto text-center reveal-fade-up">
-          <div className="inline-block px-4 py-1.5 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
-            Pricing
+      <div className="pt-4 sm:pt-6 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800">
+
+          {/* Header */}
+          <div ref={headingRef} className="px-4 sm:px-6 py-12 sm:py-16 text-center reveal-fade-up">
+            <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-6">Pricing</p>
+            <h1 className="landing-h2 font-display font-light">
+              Simple, transparent pricing.
+            </h1>
           </div>
-          <h1 className="text-4xl md:text-6xl font-display font-light leading-tight mb-6">
-            Simple, transparent pricing
-          </h1>
-          <p className="text-lg text-neutral-500 dark:text-neutral-400 max-w-xl mx-auto">
-            One plan, everything included. No hidden fees, no feature gates.
-          </p>
-        </div>
-      </section>
 
-      {/* Pricing Card */}
-      <section className="py-16 px-6">
-        <div ref={cardRef} className="max-w-lg mx-auto reveal-scale">
-          <div className="bg-neutral-900 dark:bg-white landing-card p-10 text-center">
-            <p className="text-neutral-400 dark:text-neutral-500 font-bold text-sm mb-2">Professional Plan</p>
-            <div className="flex items-baseline justify-center gap-1 mb-2">
-              <span className="text-5xl font-extrabold text-white dark:text-neutral-900">₱1,500</span>
-              <span className="text-neutral-400 dark:text-neutral-500 font-medium">/mo</span>
-            </div>
-            <p className="text-neutral-500 dark:text-neutral-400 text-sm mb-8">per tenant &middot; billed monthly</p>
-
-            <ul className="space-y-3 text-left mb-10">
-              {features.map((f, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm">
-                  <span className="material-symbols-outlined text-emerald-400 text-base mt-0.5 flex-shrink-0">check_circle</span>
-                  <span className="text-neutral-300 dark:text-neutral-600">{f}</span>
-                </li>
-              ))}
-            </ul>
-
-            <a href="/register" className="block w-full bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 py-4 rounded-sm font-bold text-lg transition-all transform hover:scale-[1.02]">
-              Start 14-day Free Trial
-            </a>
-            <p className="text-neutral-500 text-xs mt-4">No credit card required</p>
+          {/* Divider */}
+          <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
           </div>
-        </div>
-      </section>
 
-      {/* FAQ */}
-      <section className="py-16 px-6">
-        <div className="max-w-2xl mx-auto">
-          <h2 ref={useScrollReveal()} className="text-3xl font-display font-light text-center mb-12 reveal-fade-up">
-            Frequently asked questions
-          </h2>
-          <div ref={faqRef} className="reveal-fade-in">
-            {faqs.map((faq, i) => (
-              <div key={i} data-reveal-child>
-                <FAQItem question={faq.question} answer={faq.answer} />
+          {/* Plan row — split */}
+          <div ref={cardRef} className="grid grid-cols-1 lg:grid-cols-2 reveal-scale">
+            {/* Left — plan + price + CTA */}
+            <div className="px-4 sm:px-6 py-8 sm:py-10 flex flex-col items-center justify-center text-center space-y-6">
+              <div className="inline-block px-4 py-1.5 rounded-sm border border-neutral-300 dark:border-neutral-700 text-neutral-500 dark:text-neutral-400 text-xs font-bold uppercase tracking-widest">
+                Professional Plan
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <div className="flex items-baseline gap-1.5">
+                <span className="text-5xl sm:text-6xl font-extrabold">&#8369;1,500</span>
+                <span className="text-lg text-neutral-500">/mo</span>
+              </div>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400">Per tenant. Everything included. No feature gates.</p>
+              <a className="inline-block bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-8 py-4 rounded-sm font-bold transition-colors" href="/register">
+                Get Started Now
+              </a>
+            </div>
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-stone-100 dark:bg-neutral-900">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-display font-light mb-4">Still have questions?</h2>
-          <p className="text-neutral-500 dark:text-neutral-400 mb-8">Our team is happy to walk you through Obsidian and answer anything.</p>
-          <a href="mailto:support@obsidian.com" className="inline-block bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-10 py-4 rounded-sm font-bold transition-all transform hover:scale-105">
-            Talk to Us
-          </a>
+            {/* Right — feature list */}
+            <div className="border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-8 sm:py-10">
+              <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-6">What's included</p>
+              <ul className="space-y-3">
+                {features.map((f, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <span className="material-symbols-outlined text-neutral-900 dark:text-white text-base mt-0.5 flex-shrink-0">check</span>
+                    <span className="text-neutral-600 dark:text-neutral-400">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="relative border-t border-neutral-200 dark:border-neutral-800">
+            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          </div>
+
+          {/* FAQ */}
+          <div ref={faqRef} className="grid grid-cols-1 lg:grid-cols-2 reveal-fade-in">
+            <div className="px-4 sm:px-6 py-8 sm:py-10 flex flex-col items-center justify-center text-center">
+              <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-2">FAQ</p>
+              <h2 className="landing-h2 font-display font-light">
+                Common questions.
+              </h2>
+            </div>
+            <div className="border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-4 sm:py-6 divide-y divide-neutral-200 dark:divide-neutral-800">
+              {faqs.map((faq, i) => (
+                <div key={i} data-reveal-child>
+                  <FAQItem question={faq.question} answer={faq.answer} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom border */}
+          <div className="relative border-t border-neutral-200 dark:border-neutral-800 landing-border-extend">
+            <div className="absolute top-0 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+            <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
+          </div>
+
         </div>
-      </section>
+      </div>
 
       <Footer />
     </div>

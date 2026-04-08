@@ -86,6 +86,7 @@ function App() {
   useEffect(() => {
     const handlePopState = () => {
       setCurrentPath(window.location.pathname)
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     }
 
     window.addEventListener('popstate', handlePopState)
@@ -99,6 +100,7 @@ function App() {
         const path = link.pathname
         window.history.pushState({}, '', path + link.search)
         setCurrentPath(path)
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
       }
     }
 

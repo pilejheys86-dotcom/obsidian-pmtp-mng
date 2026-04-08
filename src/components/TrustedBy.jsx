@@ -1,27 +1,43 @@
-import { useStaggerReveal } from '../lib/useScrollReveal'
+import { useScrollReveal } from '../lib/useScrollReveal'
+
+const brands = [
+  { icon: 'security', name: 'SHIELD' },
+  { icon: 'savings', name: 'VAULT' },
+  { icon: 'account_balance', name: 'RESERVE' },
+  { icon: 'bolt', name: 'FLASH' },
+  { icon: 'hub', name: 'MERIDIAN' },
+  { icon: 'trending_up', name: 'APEX' },
+  { icon: 'shield', name: 'CREST' },
+  { icon: 'diamond', name: 'PINNACLE' },
+]
 
 const TrustedBy = () => {
-  const ref = useStaggerReveal({ stagger: 120 })
+  const headingRef = useScrollReveal()
 
   return (
     <section className="px-4 sm:px-6 bg-white dark:bg-neutral-950">
-      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-10 sm:py-16">
-        <p className="text-center text-xs font-bold text-neutral-500 uppercase tracking-widest mb-8 sm:mb-10">
-          Trusted by modern lending institutions
-        </p>
-        <div ref={ref} className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-20 opacity-60 dark:opacity-40 grayscale hover:grayscale-0 transition-all reveal-fade-in">
-          <div className="flex items-center gap-2 text-xl sm:text-2xl font-bold font-display" data-reveal-child>
-            <span className="material-symbols-outlined text-neutral-700 dark:text-neutral-300">security</span> SHIELD
+      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+
+          {/* Left — single-column scrolling brand ticker */}
+          <div className="px-4 sm:px-6 py-8 sm:py-10 flex items-center justify-center">
+            <div className="trusted-single-ticker">
+              {[...brands, ...brands].map((b, i) => (
+                <div key={i} className="trusted-single-item flex items-center justify-center gap-4">
+                  <span className="material-symbols-outlined text-neutral-500 dark:text-neutral-600" style={{ fontSize: '36px' }}>{b.icon}</span>
+                  <span className="text-3xl sm:text-4xl font-bold font-display text-neutral-600 dark:text-neutral-400 uppercase tracking-widest">{b.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="flex items-center gap-2 text-xl sm:text-2xl font-bold font-display" data-reveal-child>
-            <span className="material-symbols-outlined text-neutral-700 dark:text-neutral-300">savings</span> VAULT
+
+          {/* Right — heading */}
+          <div ref={headingRef} className="border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-8 sm:py-10 flex items-center reveal-fade-up">
+            <h2 className="landing-h2 font-display font-light">
+              Powering the next generation of pawnshop management.
+            </h2>
           </div>
-          <div className="flex items-center gap-2 text-xl sm:text-2xl font-bold font-display" data-reveal-child>
-            <span className="material-symbols-outlined text-neutral-700 dark:text-neutral-300">account_balance</span> RESERVE
-          </div>
-          <div className="flex items-center gap-2 text-xl sm:text-2xl font-bold font-display" data-reveal-child>
-            <span className="material-symbols-outlined text-neutral-700 dark:text-neutral-300">bolt</span> FLASH
-          </div>
+
         </div>
       </div>
     </section>

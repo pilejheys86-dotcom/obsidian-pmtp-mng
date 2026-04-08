@@ -79,7 +79,7 @@ const ProcessPage = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6">
+      <section className="pt-12 pb-16 px-6">
         <div ref={heroRef} className="max-w-3xl mx-auto text-center reveal-fade-up">
           <div className="inline-block px-4 py-1.5 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-bold mb-6">
             How It Works
@@ -162,9 +162,9 @@ const ProcessPage = () => {
       <section className="py-20 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-display font-light mb-4">Ready to get started?</h2>
-          <p className="text-neutral-500 dark:text-neutral-400 mb-8">Set up your pawnshop on Obsidian today. No credit card required for the 14-day trial.</p>
-          <a href="/register" className="inline-block bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-10 py-4 rounded-sm font-bold text-lg transition-all transform hover:scale-105">
-            Start Free Trial
+          <p className="text-neutral-500 dark:text-neutral-400 mb-8">Set up your pawnshop on Obsidian today.</p>
+          <a href="/register" className="inline-block bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-10 py-4 rounded-sm font-bold text-lg transition-colors">
+            Get Started
           </a>
         </div>
       </section>

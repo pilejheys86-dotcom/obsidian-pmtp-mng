@@ -5,7 +5,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
+    <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
         <Logo />
         <div className="hidden md:flex items-center gap-8">
@@ -15,7 +15,7 @@ const Navbar = () => {
           <a className="text-sm font-semibold hover:text-neutral-900 dark:hover:text-white transition-colors" href="/about">About</a>
         </div>
         <div className="flex items-center gap-2 sm:gap-4">
-          <a className="hidden md:inline-flex text-sm font-semibold min-h-[44px] items-center px-2" href="/login">Log In</a>
+          <a className="hidden md:inline-flex text-sm font-semibold min-h-[44px] items-center px-5 sm:px-6 py-2.5 rounded-sm border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors" href="/login">Log In</a>
           <a className="hidden md:inline-flex bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 px-5 sm:px-6 py-2.5 rounded-sm font-bold transition-all transform hover:scale-105 min-h-[44px] items-center text-sm" href="/register">
             Sign Up
           </a>
