@@ -4,6 +4,11 @@
 node_modules/
 .pnp/
 .pnp.js
+.agent
+.agents
+.claude
+.playwright-mcp
+.superpowers
 
 # =====================================================
 # ENVIRONMENT & SECRETS
