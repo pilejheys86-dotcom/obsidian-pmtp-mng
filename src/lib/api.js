@@ -2,27 +2,15 @@ const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 /**
  * Get the current Supabase session token from localStorage.
+ * Reads synchronously to avoid triggering auth state change loops.
  */
 const getToken = () => {
-  const raw = localStorage.getItem('sb-auth-token');
-  if (raw) {
-    try {
-      const parsed = JSON.parse(raw);
-      return parsed.access_token;
-    } catch {
-      return raw;
-    }
-  }
-
-  // Fallback: try to get from supabase stored session
   for (const key of Object.keys(localStorage)) {
     if (key.startsWith('sb-') && key.endsWith('-auth-token')) {
       try {
         const session = JSON.parse(localStorage.getItem(key));
-        return session?.access_token;
-      } catch {
-        continue;
-      }
+        return session?.access_token || null;
+      } catch { continue; }
     }
   }
   return null;
@@ -33,8 +21,9 @@ const getToken = () => {
  */
 const apiFetch = async (endpoint, options = {}) => {
   const token = getToken();
+  const isFormData = options.body instanceof FormData;
   const headers = {
-    'Content-Type': 'application/json',
+    ...(isFormData ? {} : { 'Content-Type': 'application/json' }),
     ...(token ? { Authorization: `Bearer ${token}` } : {}),
     ...options.headers,
   };
@@ -49,6 +38,7 @@ const apiFetch = async (endpoint, options = {}) => {
     throw new Error(body.error || `API error: ${res.status}`);
   }
 
+  if (options.rawResponse) return res;
   return res.json();
 };
 
@@ -62,6 +52,33 @@ export const authApi = {
 
   recover: (email) =>
     apiFetch('/auth/recover', { method: 'POST', body: JSON.stringify({ email }) }),
+
+  verifyOtp: (email, otp) =>
+    apiFetch('/auth/verify-otp', { method: 'POST', body: JSON.stringify({ email, otp }) }),
+
+  resetPassword: (resetToken, newPassword) =>
+    apiFetch('/auth/reset-password', { method: 'POST', body: JSON.stringify({ resetToken, newPassword }) }),
+
+  checkEmail: (email) =>
+    apiFetch('/auth/check-email', { method: 'POST', body: JSON.stringify({ email }) }),
+
+  signupInit: (data) =>
+    apiFetch('/auth/signup-init', { method: 'POST', body: JSON.stringify(data) }),
+
+  verifySignupOtp: (email, otp) =>
+    apiFetch('/auth/verify-signup-otp', { method: 'POST', body: JSON.stringify({ email, otp }) }),
+
+  resolveEmail: (email) =>
+    apiFetch('/auth/resolve-email', { method: 'POST', body: JSON.stringify({ email }) }),
+
+  completeKyc: (data) =>
+    apiFetch('/auth/complete-kyc', { method: 'POST', body: JSON.stringify(data) }),
+
+  updateProfile: (data) =>
+    apiFetch('/auth/profile', { method: 'PATCH', body: JSON.stringify(data) }),
+
+  forceChangePassword: (newPassword) =>
+    apiFetch('/auth/force-change-password', { method: 'POST', body: JSON.stringify({ newPassword }) }),
 
   getProfile: () =>
     apiFetch('/auth/profile'),
@@ -86,6 +103,14 @@ export const customersApi = {
     apiFetch(`/customers/${id}`, { method: 'PATCH', body: JSON.stringify(data) }),
   delete: (id) =>
     apiFetch(`/customers/${id}`, { method: 'DELETE' }),
+  archived: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return apiFetch(`/customers/archived?${qs}`);
+  },
+  restore: (id) =>
+    apiFetch(`/customers/${id}/restore`, { method: 'POST' }),
+  permanentDelete: (id) =>
+    apiFetch(`/customers/${id}/permanent`, { method: 'DELETE' }),
 };
 
 // ── Employees ───────────────────────────────────────────
@@ -102,6 +127,12 @@ export const employeesApi = {
     apiFetch(`/employees/${id}`, { method: 'PATCH', body: JSON.stringify(data) }),
   delete: (id) =>
     apiFetch(`/employees/${id}`, { method: 'DELETE' }),
+  approveKyc: (id) =>
+    apiFetch(`/employees/${id}/kyc-approve`, { method: 'POST' }),
+  rejectKyc: (id) =>
+    apiFetch(`/employees/${id}/kyc-reject`, { method: 'POST' }),
+  resendInvite: (id) =>
+    apiFetch(`/employees/${id}/resend-invite`, { method: 'POST' }),
 };
 
 // ── Pawn Items (Inventory) ──────────────────────────────
@@ -205,13 +236,87 @@ export const tenantsApi = {
     return apiFetch(`/tenants?${qs}`)
   },
   stats: () => apiFetch('/tenants/stats'),
+  analytics: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/tenants/analytics?${qs}`)
+  },
   get: (id) => apiFetch(`/tenants/${id}`),
   block: (id, data) =>
     apiFetch(`/tenants/${id}/block`, { method: 'POST', body: JSON.stringify(data) }),
   reactivate: (id) =>
     apiFetch(`/tenants/${id}/reactivate`, { method: 'POST' }),
+  approve: (id) =>
+    apiFetch(`/tenants/${id}/approve`, { method: 'POST' }),
+  reject: (id, data) =>
+    apiFetch(`/tenants/${id}/reject`, { method: 'POST', body: JSON.stringify(data) }),
+  deactivate: (id, data) =>
+    apiFetch(`/tenants/${id}/deactivate`, { method: 'POST', body: JSON.stringify(data) }),
   updatePlan: (id, data) =>
     apiFetch(`/tenants/${id}/plan`, { method: 'PATCH', body: JSON.stringify(data) }),
+  // Super admin modules
+  admins: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/tenants/admins?${qs}`)
+  },
+  createAdmin: (data) =>
+    apiFetch('/tenants/admins', { method: 'POST', body: JSON.stringify(data) }),
+  toggleAdmin: (id) =>
+    apiFetch(`/tenants/admins/${id}/toggle`, { method: 'PATCH' }),
+  auditLogs: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/tenants/audit-logs?${qs}`)
+  },
+  reports: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/tenants/reports?${qs}`)
+  },
+  sales: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/tenants/sales?${qs}`)
+  },
+  health: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/tenants/health?${qs}`)
+  },
+  subscriptionAnalytics: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/tenants/subscription-analytics?${qs}`)
+  },
+  pawnVolume: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/tenants/pawn-volume?${qs}`)
+  },
+  rankings: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/tenants/rankings?${qs}`)
+  },
+  platformSettings: {
+    get: () => apiFetch('/tenants/platform-settings'),
+    update: (data) =>
+      apiFetch('/tenants/platform-settings', { method: 'PUT', body: JSON.stringify(data) }),
+  },
+}
+
+// ── Backup ─────────────────────────────────────────────
+export const backupApi = {
+  generate: (data) =>
+    apiFetch('/backup/generate', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      rawResponse: true,
+    }),
+  preview: async (file) => {
+    const text = await file.text()
+    return apiFetch('/backup/restore', { method: 'POST', body: text })
+  },
+  restore: async (file) => {
+    const text = await file.text()
+    return apiFetch('/backup/restore?confirm=true', { method: 'POST', body: text })
+  },
+  history: (params = {}) => {
+    const qs = new URLSearchParams(params).toString()
+    return apiFetch(`/backup/history?${qs}`)
+  },
 }
 
 // ── Subscriptions ───────────────────────────────────────
@@ -221,6 +326,9 @@ export const subscriptionsApi = {
     apiFetch('/subscriptions', { method: 'POST', body: JSON.stringify(data) }),
   update: (id, data) =>
     apiFetch(`/subscriptions/${id}`, { method: 'PATCH', body: JSON.stringify(data) }),
+  checkout: (data) =>
+    apiFetch('/subscriptions/checkout', { method: 'POST', body: JSON.stringify(data) }),
+  verify: (id) => apiFetch('/subscriptions/verify', { method: 'POST', body: JSON.stringify({ subscription_id: id }) }),
 };
 
 // ── Reports ─────────────────────────────────────────────
@@ -235,6 +343,19 @@ export const reportsApi = {
   },
   customers: () => apiFetch('/reports/customers'),
   inventory: () => apiFetch('/reports/inventory'),
+  dailyTransactions: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return apiFetch(`/reports/daily-transactions?${qs}`);
+  },
+  overdueLoans: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return apiFetch(`/reports/overdue-loans?${qs}`);
+  },
+  branchComparison: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return apiFetch(`/reports/branch-comparison?${qs}`);
+  },
+  customerHistory: (customerId) => apiFetch(`/reports/customer-history/${customerId}`),
 };
 
 // ── Appraisals ────────────────────────────────────────
@@ -243,6 +364,7 @@ export const appraisalsApi = {
     const qs = new URLSearchParams(params).toString();
     return apiFetch(`/appraisals/queue?${qs}`);
   },
+  get: (id) => apiFetch(`/appraisals/${id}`),
   stats: () => apiFetch('/appraisals/stats'),
   calculate: (data) =>
     apiFetch('/appraisals/calculate', { method: 'POST', body: JSON.stringify(data) }),
@@ -254,6 +376,13 @@ export const appraisalsApi = {
     apiFetch(`/appraisals/${itemId}/approve`, { method: 'POST', body: JSON.stringify(data) }),
   reject: (itemId, data) =>
     apiFetch(`/appraisals/${itemId}/reject`, { method: 'POST', body: JSON.stringify(data) }),
+  myItems: () => apiFetch('/appraisals/my-items'),
+  intake: (data) =>
+    apiFetch('/appraisals/intake', { method: 'POST', body: JSON.stringify(data) }),
+  issue: (itemId, data) =>
+    apiFetch(`/appraisals/${itemId}/issue`, { method: 'POST', body: JSON.stringify(data) }),
+  decline: (itemId, data) =>
+    apiFetch(`/appraisals/${itemId}/decline`, { method: 'POST', body: JSON.stringify(data) }),
 };
 
 // ── Renewals ──────────────────────────────────────────
@@ -290,6 +419,27 @@ export const loanSettingsApi = {
     apiFetch('/loan-settings/gold-rates', { method: 'PUT', body: JSON.stringify(data) }),
 };
 
+// ── Branding ─────────────────────────────────────────────
+export const brandingApi = {
+  get: () => apiFetch('/branding'),
+  update: (data) =>
+    apiFetch('/branding', { method: 'PUT', body: JSON.stringify(data) }),
+  checkSubdomain: (slug) => apiFetch(`/branding/check-subdomain/${encodeURIComponent(slug)}`),
+};
+
+// ── Access Requests ─────────────────────────────────────
+export const accessRequestsApi = {
+  list: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return apiFetch(`/access-requests/admin${qs ? '?' + qs : ''}`);
+  },
+  get: (id) => apiFetch(`/access-requests/admin/${id}`),
+  approve: (id) =>
+    apiFetch(`/access-requests/admin/${id}/approve`, { method: 'PATCH' }),
+  reject: (id, notes) =>
+    apiFetch(`/access-requests/admin/${id}/reject`, { method: 'PATCH', body: JSON.stringify({ notes }) }),
+};
+
 // ── Cron ──────────────────────────────────────────────
 export const cronApi = {
   checkOverdue: () => apiFetch('/cron/check-overdue', { method: 'POST' }),
@@ -302,11 +452,55 @@ export const uploadApi = {
   imagekitAuth: () => apiFetch('/upload/imagekit-auth'),
 };
 
-// ── Branding ───────────────────────────────────────────
-export const brandingApi = {
-  get: () => apiFetch('/branding'),
-  update: (data) => apiFetch('/branding', { method: 'PUT', body: JSON.stringify(data) }),
-  checkSubdomain: (slug) => apiFetch(`/branding/check-subdomain/${encodeURIComponent(slug)}`),
+// ── Exports (CSV downloads) ──────────────────────────────
+export const exportsApi = {
+  download: async (reportType, params = {}) => {
+    const token = getToken();
+    const qs = new URLSearchParams(params).toString();
+    const url = `${API_BASE}/exports/${reportType}${qs ? '?' + qs : ''}`;
+    const res = await fetch(url, {
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
+    });
+    if (!res.ok) throw new Error('Export failed');
+    const blob = await res.blob();
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = res.headers.get('Content-Disposition')?.split('filename=')[1]?.replace(/"/g, '') || `${reportType}.csv`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+  },
+};
+
+// ── Pricing ───────────────────────────────────────────
+export const pricingApi = {
+  // Gold
+  getGoldRates: () => apiFetch('/loan-settings/gold-rates'),
+  updateGoldRates: (rates) =>
+    apiFetch('/loan-settings/gold-rates/bulk', { method: 'PUT', body: JSON.stringify({ rates }) }),
+  getGoldHistory: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return apiFetch(`/loan-settings/gold-rates/history?${qs}`);
+  },
+  // Silver
+  getSilverRates: () => apiFetch('/pricing/silver-rates'),
+  updateSilverRates: (rates) =>
+    apiFetch('/pricing/silver-rates/bulk', { method: 'PUT', body: JSON.stringify({ rates }) }),
+  getSilverHistory: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return apiFetch(`/pricing/silver-rates/history?${qs}`);
+  },
+  // Item Conditions
+  getItemConditions: () => apiFetch('/pricing/item-conditions'),
+  updateItemConditions: (conditions) =>
+    apiFetch('/pricing/item-conditions', { method: 'PUT', body: JSON.stringify({ conditions }) }),
+};
+
+// ── Audit Logs ───────────────────────────────────────────
+export const auditLogApi = {
+  list: (params = {}) => {
+    const qs = new URLSearchParams(params).toString();
+    return apiFetch(`/audit-logs?${qs}`);
+  },
 };
 
 // ── Locations (PH provinces + cities) ──────────────────
