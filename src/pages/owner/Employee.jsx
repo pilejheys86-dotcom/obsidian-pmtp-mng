@@ -8,29 +8,15 @@ import { useAuth } from '../../context';
 import { employeesApi } from '../../lib/api';
 
 // Stats Card Component
-const StatsCard = ({ icon, iconBg, iconColor, badge, badgeType, label, value }) => {
+const StatsCard = ({ badge, badgeType, label, value }) => {
     const isPositive = badgeType === 'success';
     const isWarning = badgeType === 'danger';
 
     return (
         <div className="kpi-card">
-            {/* Header Row */}
-            <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                    <div className={`kpi-icon ${iconBg}`}>
-                        <span className={`material-symbols-outlined text-xl ${iconColor}`}>{icon}</span>
-                    </div>
-                    <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-200">{label}</span>
-                </div>
-                <button className="p-1 rounded-sm hover:bg-neutral-200/50 dark:hover:bg-neutral-600/50 text-neutral-400 dark:text-neutral-500 transition-colors">
-                    <span className="material-symbols-outlined text-lg">more_vert</span>
-                </button>
-            </div>
-
-            {/* Value */}
+            <p className="text-sm font-bold text-neutral-700 dark:text-neutral-200">{label}</p>
+            <div className="-mx-4 sm:-mx-5 my-2 sm:my-3 border-t border-neutral-100 dark:border-neutral-800" />
             <h3 className="kpi-value">{value}</h3>
-
-            {/* Badge Row */}
             <div className="flex items-center gap-2 mt-3">
                 <span className={`kpi-badge ${isPositive ? 'kpi-badge-success' : isWarning ? 'kpi-badge-warning' : 'kpi-badge-neutral'}`}>
                     {isPositive && <span className="material-symbols-outlined text-xs">trending_up</span>}

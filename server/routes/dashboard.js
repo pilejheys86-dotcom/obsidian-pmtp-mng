@@ -6,10 +6,11 @@ const asyncHandler = require('../utils/asyncHandler');
 // GET /api/dashboard — Aggregated KPI + recent activity
 router.get('/', asyncHandler(async (req, res) => {
   const tenantId = req.tenantId;
+  const days = Math.min(Math.max(parseInt(req.query.days) || 7, 1), 365);
 
   const [kpiResult, chartResult, activitiesResult] = await Promise.all([
     supabaseAdmin.rpc('get_tenant_kpis', { p_tenant_id: tenantId }),
-    supabaseAdmin.rpc('get_dashboard_chart_data', { p_tenant_id: tenantId, p_days: 7 }),
+    supabaseAdmin.rpc('get_dashboard_chart_data', { p_tenant_id: tenantId, p_days: days }),
     supabaseAdmin
       .from('transactions')
       .select(`

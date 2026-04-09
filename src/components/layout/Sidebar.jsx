@@ -2,12 +2,12 @@ import { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { WelcomeModal, KycBanner } from '../ui';
 
-import { useAuth } from '../../context';
+import { useAuth, useSecondaryNav } from '../../context';
 
 const useMobile = () => {
-  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 1024);
   useEffect(() => {
-    const mq = window.matchMedia('(max-width: 767px)');
+    const mq = window.matchMedia('(max-width: 1023px)');
     const handler = (e) => setIsMobile(e.matches);
     mq.addEventListener('change', handler);
     return () => mq.removeEventListener('change', handler);
@@ -82,9 +82,17 @@ const Sidebar = ({
   onNavigate,
 }) => {
   const { subscriptionActive, kycStatus, profile } = useAuth();
+  const { config: secondaryNav } = useSecondaryNav();
   const isOwner = profile?.role === 'OWNER';
   const isMobile = useMobile();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  // Mobile drawer view: 'secondary' (default when secondaryNav exists) or 'main'
+  const [mobileView, setMobileView] = useState('secondary');
+
+  // When opening on a page with a secondary nav, default to that view
+  useEffect(() => {
+    if (isMobileOpen) setMobileView(secondaryNav ? 'secondary' : 'main');
+  }, [isMobileOpen, secondaryNav]);
   const [hideOperations, setHideOperations] = useState(() => localStorage.getItem('pref_hide_operations') === 'true');
 
   useEffect(() => {
@@ -191,7 +199,56 @@ const Sidebar = ({
         }`}
         data-collapsed={collapsed}
       >
-        {/* Navigation — main items (excludes Settings) */}
+        {/* Mobile: Secondary nav view (Supabase-style hierarchical drawer) */}
+        {isMobile && mobileView === 'secondary' && secondaryNav && (
+          <>
+            <div className="flex items-center gap-2 px-3 h-12 border-b border-neutral-200 dark:border-neutral-800 shrink-0">
+              <button
+                onClick={() => setMobileView('main')}
+                className="p-1.5 -ml-1 rounded-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-500 dark:text-neutral-400"
+                aria-label="Back to main menu"
+              >
+                <span className="material-symbols-outlined text-[20px]">chevron_left</span>
+              </button>
+              <span className="text-sm font-bold text-neutral-800 dark:text-neutral-100 truncate">
+                {secondaryNav.title}
+              </span>
+            </div>
+            <nav className="flex-1 py-3 flex flex-col gap-0.5 px-2 overflow-y-auto">
+              {secondaryNav.items.map(({ id, label, icon }) => {
+                const isActive = secondaryNav.activeId === id;
+                const count = secondaryNav.badge?.[id];
+                return (
+                  <button
+                    key={id}
+                    onClick={() => {
+                      secondaryNav.onSelect(id);
+                      setIsMobileOpen(false);
+                    }}
+                    className={`flex items-center gap-3 rounded-sm text-[13px] font-medium px-2.5 py-2.5 w-full transition-all duration-150
+                      ${isActive
+                        ? 'bg-neutral-100 dark:bg-neutral-800/80 text-neutral-900 dark:text-white shadow-sm'
+                        : 'text-neutral-500 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800/60 hover:text-neutral-800 dark:hover:text-neutral-200'
+                      }`}
+                  >
+                    <span className="flex items-center justify-center shrink-0 w-[20px] h-[20px]">
+                      <span className={`material-symbols-outlined text-[20px] ${isActive ? 'text-primary' : ''}`}>{icon}</span>
+                    </span>
+                    <span className="flex-1 text-left truncate">{label}</span>
+                    {count > 0 && (
+                      <span className="px-1.5 py-0.5 text-[10px] font-bold rounded-sm bg-primary text-neutral-900 leading-none">
+                        {count}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </nav>
+          </>
+        )}
+
+        {/* Main navigation — hidden on mobile when showing secondary view */}
+        {!(isMobile && mobileView === 'secondary' && secondaryNav) && (
         <nav
           className={`sidebar-nav overflow-x-hidden ${navHovered ? 'custom-scrollbar' : 'hover-scrollbar'}`}
           onMouseEnter={() => setNavHovered(true)}
@@ -238,6 +295,7 @@ const Sidebar = ({
             );
           })}
         </nav>
+        )}
 
         {/* Bottom section — collapse toggle (lower right) */}
         <div className="sidebar-bottom-section flex justify-end">
