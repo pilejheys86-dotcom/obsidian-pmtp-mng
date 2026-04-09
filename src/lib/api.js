@@ -302,6 +302,13 @@ export const uploadApi = {
   imagekitAuth: () => apiFetch('/upload/imagekit-auth'),
 };
 
+// ── Branding ───────────────────────────────────────────
+export const brandingApi = {
+  get: () => apiFetch('/branding'),
+  update: (data) => apiFetch('/branding', { method: 'PUT', body: JSON.stringify(data) }),
+  checkSubdomain: (slug) => apiFetch(`/branding/check-subdomain/${encodeURIComponent(slug)}`),
+};
+
 // ── Locations (PH provinces + cities) ──────────────────
 export const locationsApi = {
   provinces: () => apiFetch('/locations/provinces'),
