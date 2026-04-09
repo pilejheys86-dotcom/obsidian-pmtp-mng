@@ -29,6 +29,10 @@ router.patch('/', async (req, res) => {
   const { data: profile, error } = await supabaseAdmin.from('customers')
     .update(updates).eq('id', req.customerId).eq('tenant_id', req.activeTenantId).select().single();
   if (error) return res.status(400).json({ error: error.message });
+
+  // Sync profile across all tenant rows for this auth user
+  try { await supabaseAdmin.rpc('sync_customer_profile', { p_auth_id: req.userId, p_source_customer_id: req.customerId }); } catch (_) {}
+
   res.json({ profile });
 });
 
@@ -52,6 +56,10 @@ router.post('/avatar', async (req, res) => {
       .single();
 
     if (error) return res.status(400).json({ error: error.message });
+
+    // Sync avatar across all tenant rows for this auth user
+    try { await supabaseAdmin.rpc('sync_customer_profile', { p_auth_id: req.userId, p_source_customer_id: req.customerId }); } catch (_) {}
+
     res.json({ avatar_url: profile.avatar_url });
   } catch (err) {
     console.error('[AVATAR UPLOAD]', err.message);

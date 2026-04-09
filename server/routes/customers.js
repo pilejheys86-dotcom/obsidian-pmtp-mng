@@ -554,7 +554,25 @@ router.post('/', async (req, res) => {
 
           logEvent('customer_welcome_sent', { email: payload.email, customerId: customer.id });
         } else if (authError) {
-          logError('customer_auth_create_failed', authError, { email: payload.email });
+          // Auth user may already exist (customer registered at another tenant) — try to link instead
+          if (authError.message?.includes('already been registered')) {
+            try {
+              const { data: existingUsers } = await supabaseAdmin.auth.admin.listUsers();
+              const existingAuth = existingUsers?.users?.find(u => u.email?.toLowerCase() === payload.email.toLowerCase());
+              if (existingAuth) {
+                await supabaseAdmin.from('customers').update({ auth_id: existingAuth.id }).eq('id', customer.id);
+                // Sync profile data from any existing tenant record for this auth user
+                try { await supabaseAdmin.rpc('sync_customer_profile', { p_auth_id: existingAuth.id, p_source_customer_id: customer.id }); } catch (_) {}
+                logEvent('customer_linked_to_existing_auth', { email: payload.email, customerId: customer.id });
+              } else {
+                logError('customer_auth_create_failed', authError, { email: payload.email });
+              }
+            } catch (linkErr) {
+              logError('customer_auth_link_failed', linkErr, { email: payload.email });
+            }
+          } else {
+            logError('customer_auth_create_failed', authError, { email: payload.email });
+          }
         }
       } catch (authErr) {
         logError('customer_auth_setup_failed', authErr, { email: payload.email });
