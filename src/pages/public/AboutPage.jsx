@@ -51,7 +51,7 @@ const AboutPage = () => {
       {/* Header — no side borders */}
       <div className="px-4 sm:px-6 pt-4 sm:pt-6">
         <div ref={headingRef} className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center reveal-fade-up">
-          <div className="inline-block px-4 py-1.5 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-[family-name:var(--font-mono)] font-bold uppercase tracking-widest mb-6">About</div>
+          <div className="inline-block px-4 py-1.5 rounded-sm border border-neutral-900 dark:border-white text-neutral-900 dark:text-white text-xs font-[family-name:var(--font-mono)] font-bold uppercase tracking-widest mb-6">About</div>
           <h1 className="landing-h2 font-display font-light">
             Built for Philippine Pawnbrokers.
           </h1>

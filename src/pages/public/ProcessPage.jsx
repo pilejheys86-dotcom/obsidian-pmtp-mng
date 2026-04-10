@@ -81,7 +81,7 @@ const ProcessPage = () => {
       {/* Header — no side borders */}
       <div className="px-4 sm:px-6 pt-4 sm:pt-6">
         <div ref={headingRef} className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center reveal-fade-up">
-          <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mb-6">How It Works</p>
+          <div className="inline-block px-4 py-1.5 rounded-sm border border-neutral-900 dark:border-white text-neutral-900 dark:text-white text-xs font-[family-name:var(--font-mono)] font-bold uppercase tracking-widest mb-6">How It Works</div>
           <h1 className="landing-h2 font-display font-light">
             From signup to operations in one afternoon.
           </h1>

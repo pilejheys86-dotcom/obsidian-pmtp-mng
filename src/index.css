@@ -339,6 +339,29 @@
     @apply transition-all hover:-translate-y-2;
   }
 
+  /* Hero grid background — strobing cells */
+  @keyframes hero-grid-strobe {
+    0%, 100% {
+      opacity: 0;
+    }
+    40%, 60% {
+      opacity: var(--strobe-max, 0.6);
+    }
+  }
+
+  /* Hero grid background — drag burst cells */
+  @keyframes hero-grid-burst {
+    0% {
+      opacity: 0;
+    }
+    15% {
+      opacity: var(--burst-max, 0.8);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
   /* Arrow line-tracing animation */
   @keyframes trace-arrow {
     0% {

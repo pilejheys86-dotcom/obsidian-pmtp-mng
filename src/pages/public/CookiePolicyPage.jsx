@@ -79,7 +79,7 @@ const CookiePolicyContent = () => {
       {/* Hero — no side borders */}
       <div className="px-4 sm:px-6 pt-4 sm:pt-6">
         <div ref={headingRef} className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center reveal-fade-up">
-          <div className="inline-block px-4 py-1.5 rounded-sm bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-[family-name:var(--font-mono)] font-bold uppercase tracking-widest mb-6">
+          <div className="inline-block px-4 py-1.5 rounded-sm border border-neutral-900 dark:border-white text-neutral-900 dark:text-white text-xs font-[family-name:var(--font-mono)] font-bold uppercase tracking-widest mb-6">
             Legal
           </div>
           <h1 className="landing-h1 font-display font-light mb-4">
@@ -100,53 +100,54 @@ const CookiePolicyContent = () => {
             <div className="absolute top-0 right-0 translate-x-[calc(50%+1px)] -translate-y-1/2 w-[7px] h-[7px] bg-neutral-200 dark:bg-neutral-800"></div>
           </div>
 
-          {/* Privacy notice banner */}
-          <div className="px-5 sm:px-8 py-6 bg-neutral-900 dark:bg-white">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-sm border border-neutral-700 dark:border-neutral-300 flex items-center justify-center flex-shrink-0">
-                <span className="material-symbols-outlined text-neutral-400 dark:text-neutral-500" style={{ fontSize: '20px' }}>shield</span>
-              </div>
-              <div>
-                <p className="text-sm font-bold text-white dark:text-neutral-900 mb-1">We do not collect personal information</p>
-                <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">
-                  Obsidian does not use cookies to collect, store, or process any personally identifiable information (PII) from visitors to this website. The cookies we use are strictly functional and necessary for the Platform to operate.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-neutral-200 dark:border-neutral-800"></div>
-
           {/* Sidebar + Content */}
-          <div ref={contentRef} className="flex reveal-fade-up">
+          <div ref={contentRef} className="flex reveal-fade-in">
 
             {/* Desktop sticky sidebar */}
-            <aside aria-label="Section navigation" className="hidden lg:block w-64 flex-shrink-0">
-              <div className="sticky top-0 py-8 px-5">
-                <p className="font-[family-name:var(--font-mono)] text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-5">
-                  On this page
-                </p>
-                <nav className="space-y-0.5">
-                  {sections.map((s) => (
-                    <a
-                      key={s.id}
-                      href={`#${s.id}`}
-                      className={`flex items-center gap-2.5 text-sm py-1.5 pl-3 border-l-2 transition-colors ${
-                        activeSection === s.id
-                          ? 'border-neutral-900 dark:border-white font-bold text-neutral-900 dark:text-white'
-                          : 'border-transparent text-neutral-400 dark:text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300'
-                      }`}
-                    >
-                      <span className="font-[family-name:var(--font-mono)] text-xs font-bold text-neutral-300 dark:text-neutral-700">{s.number}</span>
-                      <span className="truncate">{s.title}</span>
-                    </a>
-                  ))}
-                </nav>
-              </div>
+            <aside
+              aria-label="Section navigation"
+              className="hidden lg:block w-64 flex-shrink-0 self-start sticky top-24 py-8 px-5 max-h-[calc(100vh-6rem)] overflow-y-auto"
+            >
+              <p className="font-[family-name:var(--font-mono)] text-xs font-bold uppercase tracking-widest text-neutral-400 dark:text-neutral-500 mb-5">
+                On this page
+              </p>
+              <nav className="space-y-0.5">
+                {sections.map((s) => (
+                  <a
+                    key={s.id}
+                    href={`#${s.id}`}
+                    className={`flex items-center gap-2.5 text-sm py-1.5 pl-3 border-l-2 transition-colors ${
+                      activeSection === s.id
+                        ? 'border-neutral-900 dark:border-white font-bold text-neutral-900 dark:text-white'
+                        : 'border-transparent text-neutral-400 dark:text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300'
+                    }`}
+                  >
+                    <span className="font-[family-name:var(--font-mono)] text-xs font-bold text-neutral-300 dark:text-neutral-700">{s.number}</span>
+                    <span className="truncate">{s.title}</span>
+                  </a>
+                ))}
+              </nav>
             </aside>
 
             {/* Content */}
             <div className="flex-1 min-w-0 lg:border-l border-neutral-200 dark:border-neutral-800">
+
+              {/* Privacy notice banner */}
+              <div className="px-5 sm:px-8 py-6 bg-neutral-900 dark:bg-white">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-sm border border-neutral-700 dark:border-neutral-300 flex items-center justify-center flex-shrink-0">
+                    <span className="material-symbols-outlined text-neutral-400 dark:text-neutral-500" style={{ fontSize: '20px' }}>shield</span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-white dark:text-neutral-900 mb-1">We do not collect personal information</p>
+                    <p className="text-xs text-neutral-400 dark:text-neutral-500 leading-relaxed">
+                      Obsidian does not use cookies to collect, store, or process any personally identifiable information (PII) from visitors to this website. The cookies we use are strictly functional and necessary for the Platform to operate.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-t border-neutral-200 dark:border-neutral-800"></div>
 
               {/* 01. Introduction */}
               <div className="px-5 sm:px-8 py-8 sm:py-10">
@@ -361,13 +362,14 @@ const CookiePolicyContent = () => {
           </aside>
         </div>
       </div>
+
     </>
   )
 }
 
 const CookiePolicyPage = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors duration-300 landing-wrapper">
+    <div className="min-h-screen bg-white dark:bg-neutral-950 transition-colors duration-300">
       <Navbar />
       <CookiePolicyContent />
       <Footer />
