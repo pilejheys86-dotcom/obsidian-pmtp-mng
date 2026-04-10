@@ -81,6 +81,7 @@ const Footer = ({ showPricing = false }) => {
             <p>&copy; 2026 Obsidian MIS Platform. All rights reserved.</p>
             <div className="flex gap-6">
               <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/terms">Terms and Conditions</a>
+              <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/privacy">Privacy Policy</a>
               <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/cookies">Cookie Policy</a>
             </div>
           </div>

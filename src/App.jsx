@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import {
-  LandingPage, ProcessPage, PricingPage, AboutPage, TermsPage, CookiePolicyPage, RequestAccessPage,
+  LandingPage, ProcessPage, PricingPage, AboutPage, TermsPage, CookiePolicyPage, PrivacyPolicyPage, RequestAccessPage,
   LoginPage, RegisterPage, RecoverAcc, SetupPasswordPage,
   // Owner pages
   AdminDash, ProfilePage, SettingsPage, ActiveLoans, Inventory,
@@ -271,6 +271,8 @@ function App() {
         return <TermsPage />
       case '/cookies':
         return <CookiePolicyPage />
+      case '/privacy':
+        return <PrivacyPolicyPage />
 
       // ── Auth ──────────────────────────────────────────
       case '/login':
