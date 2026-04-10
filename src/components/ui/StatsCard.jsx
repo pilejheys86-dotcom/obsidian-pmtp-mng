@@ -1,18 +1,19 @@
-const StatsCard = ({ icon, iconBg, iconColor, badge, badgeType, label, value }) => {
+const StatsCard = ({ badge, badgeType, label, value }) => {
     const isPositive = badgeType === 'success';
     const isWarning = badgeType === 'warning';
 
     return (
         <div className="kpi-card">
-            <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-3">
-                    <div className={`kpi-icon ${iconBg}`}>
-                        <span className={`material-symbols-outlined text-xl ${iconColor}`}>{icon}</span>
-                    </div>
-                    <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-200">{label}</span>
-                </div>
-            </div>
+            {/* Label */}
+            <p className="text-xs sm:text-sm font-bold text-neutral-700 dark:text-neutral-200">{label}</p>
+
+            {/* Divider — extends to card edges */}
+            <div className="-mx-4 sm:-mx-5 my-2 sm:my-3 border-t border-neutral-100 dark:border-neutral-800" />
+
+            {/* Value */}
             <h3 className="kpi-value">{value}</h3>
+
+            {/* Badge Row */}
             {badge && (
                 <div className="flex items-center gap-2 mt-3">
                     <span className={`kpi-badge ${isPositive ? 'kpi-badge-success' : isWarning ? 'kpi-badge-warning' : 'kpi-badge-neutral'}`}>

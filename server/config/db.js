@@ -26,13 +26,9 @@ if (!process.env.SUPABASE_SERVICE_KEY && !process.env.SUPABASE_SERVICE_ROLE_KEY)
 }
 
 // Service-role client for backend (bypasses RLS when needed)
-const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey, {
-  auth: { autoRefreshToken: false, persistSession: false },
-});
+const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
 // Anon client (respects RLS — use when acting on behalf of a user)
-const supabaseAnon = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: { autoRefreshToken: false, persistSession: false },
-});
+const supabaseAnon = createClient(supabaseUrl, supabaseAnonKey);
 
 module.exports = { supabaseAdmin, supabaseAnon };

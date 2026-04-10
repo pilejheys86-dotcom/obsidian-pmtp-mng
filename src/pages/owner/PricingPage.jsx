@@ -193,41 +193,43 @@ const GoldPanel = () => {
         </button>
       </div>
 
-      <table className="w-full text-sm border-collapse mb-4">
-        <thead>
-          <tr className="bg-neutral-100 dark:bg-neutral-800">
-            <th className="px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Karat</th>
-            <th className="px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Purity</th>
-            <th className="px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Common Name</th>
-            <th className="px-4 py-2.5 text-right text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Rate per Gram (₱)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {GOLD_KARATS.map((k, i) => (
-            <tr key={k.karat} className={`border-b border-neutral-100 dark:border-neutral-800 ${i % 2 === 1 ? 'bg-neutral-50 dark:bg-neutral-800/50' : ''}`}>
-              <td className="px-4 py-2.5 font-bold text-primary">{k.karat}</td>
-              <td className="px-4 py-2.5 text-neutral-500 dark:text-neutral-400">{k.purity}</td>
-              <td className="px-4 py-2.5 text-neutral-700 dark:text-neutral-300">{k.name}</td>
-              <td className="px-4 py-2.5 text-right">
-                <div className="flex items-center justify-end gap-1.5">
-                  <span className="text-xs text-neutral-400">₱</span>
-                  <input
-                    type="number"
-                    min="0"
-                    step="0.01"
-                    value={rates[k.karat] || ''}
-                    onChange={e => setRates(prev => ({ ...prev, [k.karat]: e.target.value }))}
-                    className="profile-input w-28 text-right text-sm font-semibold"
-                  />
-                </div>
-              </td>
+      <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0 mb-4">
+        <table className="w-full min-w-[480px] text-sm border-collapse">
+          <thead>
+            <tr className="bg-neutral-100 dark:bg-neutral-800">
+              <th className="px-3 sm:px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Karat</th>
+              <th className="px-3 sm:px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Purity</th>
+              <th className="px-3 sm:px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700 hidden sm:table-cell">Common Name</th>
+              <th className="px-3 sm:px-4 py-2.5 text-right text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Rate per Gram (₱)</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {GOLD_KARATS.map((k, i) => (
+              <tr key={k.karat} className={`border-b border-neutral-100 dark:border-neutral-800 ${i % 2 === 1 ? 'bg-neutral-50 dark:bg-neutral-800/50' : ''}`}>
+                <td className="px-3 sm:px-4 py-2.5 font-bold text-primary whitespace-nowrap">{k.karat}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-neutral-500 dark:text-neutral-400 whitespace-nowrap">{k.purity}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-neutral-700 dark:text-neutral-300 hidden sm:table-cell">{k.name}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-right">
+                  <div className="flex items-center justify-end gap-1.5">
+                    <span className="text-xs text-neutral-400">₱</span>
+                    <input
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value={rates[k.karat] || ''}
+                      onChange={e => setRates(prev => ({ ...prev, [k.karat]: e.target.value }))}
+                      className="profile-input w-24 sm:w-28 text-right text-sm font-semibold"
+                    />
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      <div className="flex items-center gap-3 mb-6">
-        <button onClick={handleSave} disabled={saving} className="btn-primary">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-6">
+        <button onClick={handleSave} disabled={saving} className="btn-primary whitespace-nowrap">
           {saving ? 'Saving...' : 'Save Gold Rates'}
         </button>
         {lastUpdated && (
@@ -404,41 +406,43 @@ const SilverPanel = () => {
         </button>
       </div>
 
-      <table className="w-full text-sm border-collapse mb-4">
-        <thead>
-          <tr className="bg-neutral-100 dark:bg-neutral-800">
-            <th className="px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Purity Mark</th>
-            <th className="px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Purity %</th>
-            <th className="px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Common Name</th>
-            <th className="px-4 py-2.5 text-right text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Rate per Gram (₱)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {SILVER_PURITIES.map((s, i) => (
-            <tr key={s.mark} className={`border-b border-neutral-100 dark:border-neutral-800 ${i % 2 === 1 ? 'bg-neutral-50 dark:bg-neutral-800/50' : ''}`}>
-              <td className="px-4 py-2.5 font-bold text-neutral-700 dark:text-neutral-200">{s.mark}</td>
-              <td className="px-4 py-2.5 text-neutral-500 dark:text-neutral-400">{s.purity}</td>
-              <td className="px-4 py-2.5 text-neutral-700 dark:text-neutral-300">{s.name}</td>
-              <td className="px-4 py-2.5 text-right">
-                <div className="flex items-center justify-end gap-1.5">
-                  <span className="text-xs text-neutral-400">₱</span>
-                  <input
-                    type="number"
-                    min="0"
-                    step="0.01"
-                    value={rates[s.mark] || ''}
-                    onChange={e => setRates(prev => ({ ...prev, [s.mark]: e.target.value }))}
-                    className="profile-input w-28 text-right text-sm font-semibold"
-                  />
-                </div>
-              </td>
+      <div className="overflow-x-auto -mx-4 sm:mx-0 px-4 sm:px-0 mb-4">
+        <table className="w-full min-w-[480px] text-sm border-collapse">
+          <thead>
+            <tr className="bg-neutral-100 dark:bg-neutral-800">
+              <th className="px-3 sm:px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Purity Mark</th>
+              <th className="px-3 sm:px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Purity %</th>
+              <th className="px-3 sm:px-4 py-2.5 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700 hidden sm:table-cell">Common Name</th>
+              <th className="px-3 sm:px-4 py-2.5 text-right text-xs font-semibold text-neutral-500 dark:text-neutral-400 border-b border-neutral-200 dark:border-neutral-700">Rate per Gram (₱)</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {SILVER_PURITIES.map((s, i) => (
+              <tr key={s.mark} className={`border-b border-neutral-100 dark:border-neutral-800 ${i % 2 === 1 ? 'bg-neutral-50 dark:bg-neutral-800/50' : ''}`}>
+                <td className="px-3 sm:px-4 py-2.5 font-bold text-neutral-700 dark:text-neutral-200 whitespace-nowrap">{s.mark}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-neutral-500 dark:text-neutral-400 whitespace-nowrap">{s.purity}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-neutral-700 dark:text-neutral-300 hidden sm:table-cell">{s.name}</td>
+                <td className="px-3 sm:px-4 py-2.5 text-right">
+                  <div className="flex items-center justify-end gap-1.5">
+                    <span className="text-xs text-neutral-400">₱</span>
+                    <input
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      value={rates[s.mark] || ''}
+                      onChange={e => setRates(prev => ({ ...prev, [s.mark]: e.target.value }))}
+                      className="profile-input w-24 sm:w-28 text-right text-sm font-semibold"
+                    />
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      <div className="flex items-center gap-3 mb-6">
-        <button onClick={handleSave} disabled={saving} className="btn-primary">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-6">
+        <button onClick={handleSave} disabled={saving} className="btn-primary whitespace-nowrap">
           {saving ? 'Saving...' : 'Save Silver Rates'}
         </button>
         {lastUpdated && (

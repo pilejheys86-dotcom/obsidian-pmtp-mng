@@ -1,11 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useSecondaryNav } from '../../context';
 
 const SettingsNav = ({ items, activeId, onSelect, title, badge = {} }) => {
   const [collapsed, setCollapsed] = useState(false);
+  const { register, unregister } = useSecondaryNav();
+
+  // Keep latest callback in a ref so we don't re-register when it changes identity
+  const onSelectRef = useRef(onSelect);
+  onSelectRef.current = onSelect;
+
+  // Stable key derived from item IDs + title — only re-register on real shape changes
+  const itemsKey = items.map(i => i.id).join('|');
+  const badgeKey = items.map(i => `${i.id}:${badge[i.id] || 0}`).join('|');
+
+  useEffect(() => {
+    register({
+      items,
+      activeId,
+      title,
+      badge,
+      onSelect: (id) => onSelectRef.current?.(id),
+    });
+    return () => unregister();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [itemsKey, activeId, title, badgeKey]);
 
   return (
     <aside
-      className={`hidden md:flex flex-col flex-shrink-0 h-full border-r border-neutral-200 dark:border-neutral-800 bg-background-light dark:bg-background-dark transition-[width] duration-300 ease-in-out overflow-hidden ${collapsed ? 'w-[50px]' : 'w-52'}`}
+      className={`hidden lg:flex flex-col flex-shrink-0 h-full border-r border-neutral-200 dark:border-neutral-800 bg-background-light dark:bg-background-dark transition-[width] duration-300 ease-in-out overflow-hidden ${collapsed ? 'w-[50px]' : 'w-52'}`}
     >
       {/* Header */}
       <div className={`flex items-center h-12 border-b border-neutral-200 dark:border-neutral-800 px-3 shrink-0 ${collapsed ? 'justify-center' : 'justify-start'}`}>
@@ -47,7 +69,7 @@ const SettingsNav = ({ items, activeId, onSelect, title, badge = {} }) => {
         })}
       </nav>
 
-      {/* Bottom section — collapse toggle (aligned with main sidebar) */}
+      {/* Bottom section — collapse toggle */}
       <div className="flex-shrink-0 border-t border-neutral-200 dark:border-neutral-800 pt-2 pb-2 flex justify-end">
         <button
           onClick={() => setCollapsed(c => !c)}

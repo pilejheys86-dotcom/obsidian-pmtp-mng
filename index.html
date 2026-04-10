@@ -7,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obsidian - Revolutionary Pawnshop MIS</title>
     
-    <!-- 
-      FONTS: To change fonts, update these imports AND the CSS variables in src/index.css
-      Current fonts: Inter (body) and Plus Jakarta Sans (headings)
-    -->
+    <!-- Preload LCP image first — highest priority -->
+    <link rel="preload" as="image" href="/obsidiandash.png" fetchpriority="high" />
+
+    <!-- Font preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    
-    <!-- Material Symbols for UI icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <!-- Inter (body + display) — only weights actually used -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Material Symbols — load async to avoid blocking LCP -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /></noscript>
   </head>
   <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-sans antialiased">
     <div id="root"></div>

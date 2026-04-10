@@ -302,7 +302,7 @@ const calculateAge = (dob) => {
 };
 
 // --- Main form component ---
-const AddCustomer = ({ onCancel, onSave, publicMode = false, submitting = false }) => {
+const AddCustomer = ({ onCancel, onSave }) => {
     const [form, setForm] = useState({
         // Personal
         firstName: '',
@@ -491,14 +491,12 @@ const AddCustomer = ({ onCancel, onSave, publicMode = false, submitting = false 
         if (!form.city) e.city = 'Required';
         if (!form.barangay.trim()) e.barangay = 'Required';
 
-        // KYC — optional in public mode
-        if (!publicMode) {
-            if (form.kycMode === 'primary') {
-                Object.assign(e, validateIdBlock(form.primaryId, 'primaryId'));
-            } else {
-                Object.assign(e, validateIdBlock(form.secondaryId1, 'secondaryId1'));
-                Object.assign(e, validateIdBlock(form.secondaryId2, 'secondaryId2'));
-            }
+        // KYC
+        if (form.kycMode === 'primary') {
+            Object.assign(e, validateIdBlock(form.primaryId, 'primaryId'));
+        } else {
+            Object.assign(e, validateIdBlock(form.secondaryId1, 'secondaryId1'));
+            Object.assign(e, validateIdBlock(form.secondaryId2, 'secondaryId2'));
         }
 
         return e;
@@ -705,7 +703,7 @@ const AddCustomer = ({ onCancel, onSave, publicMode = false, submitting = false 
                 </SectionCard>
 
                 {/* -- 3. Identity Verification (KYC) -- */}
-                <SectionCard id="identity" icon="verified_user" title={publicMode ? 'Identity Verification (Optional)' : 'Identity Verification'} description={publicMode ? 'You may provide KYC documents now or during your visit' : 'BSP-required KYC documentation'} accent={!publicMode} badge={publicMode ? null : 'Compliance'}>
+                <SectionCard id="identity" icon="verified_user" title="Identity Verification" description="BSP-required KYC documentation" accent badge="Compliance">
                     {/* KYC Mode Toggle */}
                     <div className="mb-6">
                         <Toggle
@@ -762,12 +760,9 @@ const AddCustomer = ({ onCancel, onSave, publicMode = false, submitting = false 
                             <button type="button" onClick={onCancel} className="px-4 py-2 rounded-sm text-sm font-semibold text-neutral-500 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors">
                                 Cancel
                             </button>
-                            <button type="submit" disabled={submitting} className="inline-flex items-center gap-1.5 px-5 py-2 rounded-sm text-sm font-bold bg-primary hover:bg-primary-hover text-neutral-900 shadow-sm shadow-primary/20 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
-                                {submitting ? (
-                                    <><span className="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>Submitting...</>
-                                ) : (
-                                    <><span className="material-symbols-outlined text-[18px]">{publicMode ? 'send' : 'person_add'}</span>{publicMode ? 'Submit Request' : 'Save Customer'}</>
-                                )}
+                            <button type="submit" className="inline-flex items-center gap-1.5 px-5 py-2 rounded-sm text-sm font-bold bg-primary hover:bg-primary-hover text-neutral-900 shadow-sm shadow-primary/20 transition-all active:scale-[0.98]">
+                                <span className="material-symbols-outlined text-[18px]">person_add</span>
+                                Save Customer
                             </button>
                         </div>
                     </div>

@@ -196,7 +196,7 @@ const CashierWorkspace = () => {
         <div className="admin-content custom-scrollbar">
 
           {/* Mobile tab selector (visible only below md) */}
-          <div className="flex md:hidden gap-1 mb-6 overflow-x-auto">
+          <div className="flex lg:hidden gap-1 mb-6 overflow-x-auto">
             {NAV_ITEMS.map(item => (
               <button
                 key={item.id}
@@ -490,17 +490,13 @@ const CashierWorkspace = () => {
               {/* KPI Stats */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {[
-                  { icon: 'assignment_turned_in', iconBg: 'bg-emerald-500', iconColor: 'text-white', label: 'Ready for Release', value: String(stats.readyForRelease || 0) },
-                  { icon: 'receipt_long', iconBg: 'bg-blue-500', iconColor: 'text-white', label: 'Issued Today', value: String(stats.issuedToday || 0) },
-                  { icon: 'payments', iconBg: 'bg-primary', iconColor: 'text-white dark:text-neutral-900', label: 'Cash Disbursed Today', value: formatCurrency(stats.cashDisbursedToday || 0) },
+                  { label: 'Ready for Release', value: String(stats.readyForRelease || 0) },
+                  { label: 'Issued Today', value: String(stats.issuedToday || 0) },
+                  { label: 'Cash Disbursed Today', value: formatCurrency(stats.cashDisbursedToday || 0) },
                 ].map(s => (
                   <div key={s.label} className="kpi-card">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className={`kpi-icon ${s.iconBg}`}>
-                        <span className={`material-symbols-outlined text-xl ${s.iconColor}`}>{s.icon}</span>
-                      </div>
-                      <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-200">{s.label}</span>
-                    </div>
+                    <p className="text-sm font-bold text-neutral-700 dark:text-neutral-200">{s.label}</p>
+                    <div className="-mx-4 sm:-mx-5 my-2 sm:my-3 border-t border-neutral-100 dark:border-neutral-800" />
                     <h3 className="kpi-value">{s.value}</h3>
                   </div>
                 ))}

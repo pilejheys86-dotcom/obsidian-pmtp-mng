@@ -7,19 +7,10 @@ import { useTheme, useAuth } from '../../context';
 import { reportsApi, exportsApi, customersApi, branchesApi } from '../../lib/api';
 
 // ── KPI Card ────────────────────────────────────────────
-const StatsCard = ({ icon, iconBg, label, value, sub, subType }) => (
+const StatsCard = ({ label, value, sub, subType }) => (
     <div className="kpi-card">
-        <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
-                <div className={`kpi-icon ${iconBg}`}>
-                    <span className={`material-symbols-outlined text-xl text-white`}>{icon}</span>
-                </div>
-                <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-200">{label}</span>
-            </div>
-            <button className="p-1 rounded-sm hover:bg-neutral-200/50 dark:hover:bg-neutral-600/50 text-neutral-400 dark:text-neutral-500 transition-colors">
-                <span className="material-symbols-outlined text-lg">more_vert</span>
-            </button>
-        </div>
+        <p className="text-sm font-bold text-neutral-700 dark:text-neutral-200">{label}</p>
+        <div className="-mx-4 sm:-mx-5 my-2 sm:my-3 border-t border-neutral-100 dark:border-neutral-800" />
         <h3 className="kpi-value">{value}</h3>
         {sub && (
             <div className="flex items-center gap-2 mt-3">

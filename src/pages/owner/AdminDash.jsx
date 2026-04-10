@@ -7,25 +7,18 @@ import { useTheme } from '../../context';
 import { useAuth } from '../../context';
 import { dashboardApi, brandingApi } from '../../lib/api';
 
-// Stats Card Component
-const StatsCard = ({ icon, iconBg, iconColor, badge, badgeType, label, value }) => {
+// Stats Card Component — icon-less, typographic hierarchy
+const StatsCard = ({ badge, badgeType, label, value }) => {
   const isPositive = badgeType === 'success';
   const isWarning = badgeType === 'warning';
 
   return (
     <div className="kpi-card">
-      {/* Header Row */}
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className={`kpi-icon ${iconBg}`}>
-            <span className={`material-symbols-outlined text-xl ${iconColor}`}>{icon}</span>
-          </div>
-          <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-200">{label}</span>
-        </div>
-        <button className="p-1 rounded-sm hover:bg-neutral-200/50 dark:hover:bg-neutral-600/50 text-neutral-400 dark:text-neutral-500 transition-colors">
-          <span className="material-symbols-outlined text-lg">more_vert</span>
-        </button>
-      </div>
+      {/* Label */}
+      <p className="text-sm font-bold text-neutral-700 dark:text-neutral-200">{label}</p>
+
+      {/* Divider — extends to card edges */}
+      <div className="-mx-4 sm:-mx-5 my-2 sm:my-3 border-t border-neutral-100 dark:border-neutral-800" />
 
       {/* Value */}
       <h3 className="kpi-value">{value}</h3>
@@ -332,61 +325,51 @@ const AdminDash = () => {
   // ── Role-based KPI definitions ──────────────────────────
   const allKpis = {
     activeLoans: {
-      icon: 'monetization_on', iconBg: 'bg-primary', iconColor: 'text-white dark:text-neutral-900',
       badge: `${stats.activeLoansCount || 0}`, badgeType: 'success',
       label: 'Total Active Loans',
       value: `₱${(stats.totalActiveLoanValue || 0).toLocaleString()}`,
     },
     inventoryValue: {
-      icon: 'inventory_2', iconBg: 'bg-blue-500', iconColor: 'text-white',
       badge: '', badgeType: 'success',
       label: 'Inventory Value',
       value: `₱${(stats.inventoryValue || 0).toLocaleString()}`,
     },
     newCustomers: {
-      icon: 'person_add', iconBg: 'bg-purple-500', iconColor: 'text-white',
       badge: '', badgeType: 'success',
       label: 'New Customers',
       value: `${stats.newCustomers || 0}`,
     },
     pendingAppraisals: {
-      icon: 'assignment_late', iconBg: 'bg-orange-500', iconColor: 'text-white',
       badge: '', badgeType: 'warning',
       label: 'Pending Appraisals',
       value: `${stats.pendingAppraisals || 0}`,
     },
     revenueToday: {
-      icon: 'payments', iconBg: 'bg-emerald-500', iconColor: 'text-white',
       badge: '', badgeType: 'success',
       label: 'Revenue Today',
       value: `₱${(stats.revenueToday || 0).toLocaleString()}`,
     },
     overdueItems: {
-      icon: 'schedule', iconBg: 'bg-red-500', iconColor: 'text-white',
       badge: '', badgeType: 'warning',
       label: 'Overdue Items',
       value: `${stats.overdueItems || 0}`,
     },
     appraisalsCompleted: {
-      icon: 'verified', iconBg: 'bg-emerald-500', iconColor: 'text-white',
       badge: '', badgeType: 'success',
       label: 'Appraisals Completed',
       value: `${stats.appraisalsCompleted || 0}`,
     },
     pendingAudits: {
-      icon: 'fact_check', iconBg: 'bg-amber-500', iconColor: 'text-white',
       badge: '', badgeType: 'warning',
       label: 'Pending Audits',
       value: `${stats.pendingAudits || 0}`,
     },
     transactionsToday: {
-      icon: 'receipt_long', iconBg: 'bg-blue-500', iconColor: 'text-white',
       badge: '', badgeType: 'success',
       label: 'Transactions Today',
       value: `${stats.transactionsToday || 0}`,
     },
     paymentsCollected: {
-      icon: 'account_balance_wallet', iconBg: 'bg-primary', iconColor: 'text-white dark:text-neutral-900',
       badge: '', badgeType: 'success',
       label: 'Payments Collected',
       value: `₱${(stats.paymentsCollected || 0).toLocaleString()}`,
@@ -490,7 +473,7 @@ const AdminDash = () => {
           )}
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8">
             {statsData.map((stat, index) => (
               <StatsCard key={index} {...stat} />
             ))}
