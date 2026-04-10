@@ -33,9 +33,22 @@ const HowItWorks = () => {
               Start managing your shop in 3 easy steps.
             </h2>
           </div>
-          <div className="border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-8 sm:py-10 flex items-start lg:items-end">
-            <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest">How It Works</p>
-          </div>
+          <a href="/process" className="group border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-8 sm:py-10 flex flex-col justify-between items-end lg:items-stretch min-h-[140px]">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="w-14 h-14 sm:w-16 sm:h-16 text-neutral-900 dark:text-white self-end"
+              aria-hidden="true"
+            >
+              <line x1="12" y1="36" x2="36" y2="12" pathLength="1" className="trace-arrow-path" />
+              <polyline points="16,12 36,12 36,32" pathLength="1" className="trace-arrow-path" style={{ animationDelay: '0.2s' }} />
+            </svg>
+            <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 uppercase tracking-widest mt-4 lg:mt-0 self-start lg:self-auto">How It Works</p>
+          </a>
         </div>
 
         {/* Divider */}

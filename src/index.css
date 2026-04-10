@@ -339,6 +339,42 @@
     @apply transition-all hover:-translate-y-2;
   }
 
+  /* Arrow line-tracing animation */
+  @keyframes trace-arrow {
+    0% {
+      stroke-dashoffset: 1;
+    }
+    40% {
+      stroke-dashoffset: 0;
+    }
+    70% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    85% {
+      stroke-dashoffset: 0;
+      opacity: 0;
+    }
+    86% {
+      stroke-dashoffset: 1;
+      opacity: 0;
+    }
+    100% {
+      stroke-dashoffset: 1;
+      opacity: 1;
+    }
+  }
+
+  .trace-arrow-path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: trace-arrow 3.5s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+
+  .group:hover .trace-arrow-path {
+    animation-duration: 1.5s;
+  }
+
   /* Hero Demo Animation — 12s scripted loop */
   .hero-demo {
     --demo-duration: 12s;
