@@ -199,13 +199,19 @@ const HeroGridBackground = () => {
       for (let c = 0; c < cols; c++) {
         const x = c * CELL_SIZE
         const y = r * CELL_SIZE
-        if (isInsideTextZone(x, y, dims.width, dims.height)) continue
-        if (Math.random() < FILL_PROBABILITY) {
+        // Cells inside the text safe-zone are still allowed, but with much
+        // lower density and softer opacity so the headline + CTA don't get
+        // crowded by strobing squares.
+        const inTextZone = isInsideTextZone(x, y, dims.width, dims.height)
+        const probability = inTextZone ? FILL_PROBABILITY * 0.2 : FILL_PROBABILITY
+        if (Math.random() < probability) {
           result.push({
             x,
             y,
             gradIdx: Math.floor(Math.random() * 4),
-            maxOpacity: 0.15 + Math.random() * 0.3,
+            maxOpacity: inTextZone
+              ? 0.06 + Math.random() * 0.12
+              : 0.15 + Math.random() * 0.3,
             delay: Math.random() * 6,
             duration: 2 + Math.random() * 4,
           })
