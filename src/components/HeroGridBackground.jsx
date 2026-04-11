@@ -113,8 +113,10 @@ const HeroGridBackground = () => {
         if (gridX < 0 || gridY < 0) continue
         if (gridX + CELL_SIZE > width || gridY + CELL_SIZE > height) continue
 
-        // Never paint over or directly beneath the text
-        if (isInsideTextZone(gridX, gridY, width, height)) continue
+        // Interaction cells may spawn anywhere in the hero. The grid sits
+        // beneath the text (stacking order) and has pointer-events:none, so
+        // text and CTA remain clickable and visually on top. Ambient cells
+        // still respect the text safe-zone.
 
         // Per-cell cooldown so the same square can't re-fire rapidly
         const key = `${gridX},${gridY}`
