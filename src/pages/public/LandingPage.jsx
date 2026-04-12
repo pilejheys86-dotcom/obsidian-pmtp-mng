@@ -1,4 +1,4 @@
-import { Navbar, Hero, TrustedBy, Features, HowItWorks, MobileApp, Footer } from '../../components'
+import { Navbar, Hero, TrustedBy, Features, HowItWorks, MobileApp, PricingHeadline, Footer } from '../../components'
 
 const SectionDivider = () => (
   <div className="relative h-4">
@@ -28,6 +28,7 @@ const LandingPage = () => {
       <SectionDivider />
       <MobileApp />
       <SectionDivider />
+      <PricingHeadline />
       <Footer showPricing />
     </div>
   )

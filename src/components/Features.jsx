@@ -30,14 +30,13 @@ const Features = () => {
   return (
     <section className="px-4 sm:px-6" id="features">
       <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-10 sm:py-16">
-        <div ref={headingRef} className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12 sm:mb-16 reveal-fade-up">
+        <div ref={headingRef} className="mb-12 sm:mb-16 reveal-fade-up">
           <div className="max-w-2xl">
             <p className="font-[family-name:var(--font-mono)] text-sm font-bold text-neutral-500 dark:text-neutral-400 mb-6 uppercase tracking-widest">Features</p>
             <h2 className="landing-h2 font-display font-light">
               Simplify and secure your management.
             </h2>
           </div>
-          <p className="text-neutral-500 dark:text-neutral-400 font-medium">Everything you need, nothing you don&apos;t.</p>
         </div>
 
         {/* 2x2 Grid */}

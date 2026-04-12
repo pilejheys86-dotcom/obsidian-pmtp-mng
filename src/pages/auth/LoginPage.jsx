@@ -153,14 +153,6 @@ const LoginPage = () => {
             </a>
           </p>
         </div>
-
-        {/* Security Badge */}
-        <div className="mt-5 flex justify-center">
-          <div className="security-badge">
-            <span className="material-symbols-outlined">verified_user</span>
-            256-bit SSL Encrypted
-          </div>
-        </div>
       </div>
     </div>
   )

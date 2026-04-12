@@ -17,10 +17,6 @@ const features = [
 
 const faqs = [
   {
-    question: 'What happens after the 14-day trial?',
-    answer: 'Your account continues with full access. We\'ll send a reminder before the trial ends. If you choose not to subscribe, your data is preserved for 30 days so you can pick up where you left off.',
-  },
-  {
     question: 'Can I cancel anytime?',
     answer: 'Yes. There are no long-term contracts. Cancel from your account settings at any time and your subscription stops at the end of the current billing period.',
   },

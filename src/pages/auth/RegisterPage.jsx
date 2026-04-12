@@ -411,14 +411,6 @@ const RegisterPage = () => {
             <a href="/login" className="link-dark">Sign in instead</a>
           </p>
         </div>
-
-        {/* Security Badge */}
-        <div className="mt-6 flex justify-center">
-          <div className="security-badge">
-            <span className="material-symbols-outlined">verified_user</span>
-            256-bit SSL Encrypted
-          </div>
-        </div>
       </div>
     </div>
   )

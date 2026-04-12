@@ -7,7 +7,7 @@ const Footer = ({ showPricing = false }) => {
 
   return (
     <footer className="px-4 sm:px-6" id="pricing">
-      <div className={`max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 pb-12 ${showPricing ? 'pt-16 sm:pt-24' : ''}`}>
+      <div className="max-w-7xl mx-auto border-x border-neutral-200 dark:border-neutral-800 pb-12">
         {showPricing && (
           <>
             {/* Pricing Section — enclosed grid, no container padding so borders connect */}
@@ -25,18 +25,12 @@ const Footer = ({ showPricing = false }) => {
                 <p className="text-neutral-500 dark:text-neutral-400">
                   Flexible plans that grow with your business. No hidden fees, just pure efficiency.
                 </p>
-                <div className="flex items-center gap-4 text-sm font-bold text-neutral-500">
-                  <span className="flex items-center gap-1">
-                    <span className="material-symbols-outlined text-neutral-900 dark:text-white text-lg">check_circle</span> Cancel anytime
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <span className="material-symbols-outlined text-neutral-900 dark:text-white text-lg">check_circle</span> Upgrade anytime
-                  </span>
-                </div>
               </div>
               {/* Right — plan details */}
               <div className="border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 py-10 sm:py-14 px-4 sm:px-6 flex flex-col items-center justify-center text-center space-y-6">
-                <p className="text-xs font-bold uppercase tracking-widest text-neutral-400">Professional Plan</p>
+                <span className="inline-block px-4 py-1.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
+                  Professional Plan
+                </span>
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-4xl sm:text-5xl font-extrabold">₱1,500</span>
                   <span className="text-neutral-500">/mo</span>
