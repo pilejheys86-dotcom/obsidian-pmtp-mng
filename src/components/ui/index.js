@@ -1,4 +1,5 @@
 export { default as ThemeToggle } from './ThemeToggle'
+export { default as ThemeModeSelector } from './ThemeModeSelector'
 export { default as Logo } from './Logo'
 export { default as FormInput } from './FormInput'
 export { default as Pagination } from './Pagination'

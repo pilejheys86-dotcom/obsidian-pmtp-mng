@@ -1,4 +1,4 @@
-import { Logo } from './ui'
+import { Logo, ThemeModeSelector } from './ui'
 import { useScrollReveal } from '../lib/useScrollReveal'
 
 const Footer = ({ showPricing = false }) => {
@@ -28,7 +28,7 @@ const Footer = ({ showPricing = false }) => {
               </div>
               {/* Right — plan details */}
               <div className="border-t lg:border-t-0 lg:border-l border-neutral-200 dark:border-neutral-800 py-10 sm:py-14 px-4 sm:px-6 flex flex-col items-center justify-center text-center space-y-6">
-                <span className="inline-block px-4 py-1.5 rounded-full border border-neutral-300 dark:border-neutral-700 text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
+                <span className="inline-block px-4 py-1.5 rounded-sm border border-neutral-300 dark:border-neutral-700 text-xs font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
                   Professional Plan
                 </span>
                 <div className="flex items-baseline gap-1.5">
@@ -71,12 +71,15 @@ const Footer = ({ showPricing = false }) => {
             </ul>
           </div>
           {/* Copyright */}
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pt-6 border-t border-neutral-200/60 dark:border-neutral-800/60 text-xs font-bold text-neutral-400">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 border-t border-neutral-200/60 dark:border-neutral-800/60 text-xs font-bold text-neutral-400">
             <p>&copy; 2026 Obsidian MIS Platform. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/terms">Terms and Conditions</a>
-              <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/privacy">Privacy Policy</a>
-              <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/cookies">Cookie Policy</a>
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+              <div className="flex gap-6">
+                <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/terms">Terms and Conditions</a>
+                <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/privacy">Privacy Policy</a>
+                <a className="hover:text-neutral-900 dark:hover:text-white transition-colors" href="/cookies">Cookie Policy</a>
+              </div>
+              <ThemeModeSelector />
             </div>
           </div>
         </div>
