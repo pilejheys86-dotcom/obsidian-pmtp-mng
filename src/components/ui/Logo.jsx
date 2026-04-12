@@ -8,17 +8,25 @@ const ObsidianIcon = ({ className = '' }) => (
   </svg>
 )
 
-const Logo = ({ size = 'default', className = '' }) => {
+const Logo = ({ size = 'default', weight = 'light', className = '' }) => {
   let textSize = 'text-2xl'
   let iconSize = 'w-6 h-6'
   let gap = 'gap-2'
   if (size === 'lg') { textSize = 'text-3xl'; iconSize = 'w-7 h-7'; gap = 'gap-2.5' }
   if (size === 'sm') { textSize = 'text-xl'; iconSize = 'w-5 h-5'; gap = 'gap-1.5' }
 
+  const weightClass = {
+    light: 'font-light',
+    normal: 'font-normal',
+    medium: 'font-medium',
+    semibold: 'font-semibold',
+    bold: 'font-bold',
+  }[weight] || 'font-light'
+
   return (
     <a href="/" className={`flex items-center ${gap} ${className}`} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
       <ObsidianIcon className={`${iconSize} text-neutral-900 dark:text-white`} />
-      <span className={`${textSize} font-display font-light tracking-tight text-neutral-900 dark:text-white`}>
+      <span className={`${textSize} font-display ${weightClass} tracking-tight text-neutral-900 dark:text-white`}>
         Obsidian
       </span>
     </a>

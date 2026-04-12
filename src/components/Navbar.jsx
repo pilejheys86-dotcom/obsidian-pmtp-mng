@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 w-full z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
-        <Logo />
+        <Logo weight="bold" />
         <div className="hidden md:flex items-center gap-8">
           <a className="text-sm font-semibold hover:text-neutral-900 dark:hover:text-white transition-colors" href="/#features">Features</a>
           <a className="text-sm font-semibold hover:text-neutral-900 dark:hover:text-white transition-colors" href="/process">Process</a>
